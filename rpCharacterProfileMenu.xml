@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://daries.info/XSD/rp/characterProfileMenu.xsd">
+    <import>
+        <characterprofilemenuitem name="about">
+            <classname>rp\system\menu\character\profile\content\AboutCharacterProfileMenuContent</classname>
+            <showorder>1</showorder>
+        </characterprofilemenuitem>
+        <characterprofilemenuitem name="points">
+            <classname>rp\system\menu\character\profile\content\PointsCharacterProfileMenuContent</classname>
+            <showorder>2</showorder>
+        </characterprofilemenuitem>
+        <characterprofilemenuitem name="item">
+            <classname>rp\system\menu\character\profile\content\ItemCharacterProfileMenuContent</classname>
+            <showorder>3</showorder>
+        </characterprofilemenuitem>
+        <characterprofilemenuitem name="raid">
+            <classname>rp\system\menu\character\profile\content\RaidCharacterProfileMenuContent</classname>
+            <showorder>4</showorder>
+        </characterprofilemenuitem>
+        <characterprofilemenuitem name="raid.attendance">
+            <classname>rp\system\menu\character\profile\content\RaidAttendanceCharacterProfileMenuContent</classname>
+            <showorder>5</showorder>
+        </characterprofilemenuitem>
+    </import>
+</data>

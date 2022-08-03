@@ -1,0 +1,156 @@
+@keyframes pulse-blue {
+    0% {
+        transform: scale(0.99);
+        box-shadow: 0 0 0 0 rgba(52, 172, 224, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 5px rgba(52, 172, 224, 0);
+    }
+
+    100% {
+        transform: scale(0.99);
+        box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+    }
+}
+
+.rpCalendar {
+    display: flex;
+    flex-flow: column;
+
+    .rpDays {
+        border: 1px solid $wcfContentBorder;
+        display: flex;
+        flex-flow: wrap;
+
+        .rpDay {
+            border: 1px solid $wcfContentBorder;
+            color: $wcfContentText;
+            display: flex;
+            flex-flow: column;
+            font-weight: bold;
+            min-height: 100px;
+            padding: 5px;
+            width: calc(100% / 7);
+
+            > span {
+                display: inline-flex;
+                font-size: 14px;
+                width: 30px;
+            }
+
+            .rpEvent {
+                display: flex;
+                background-color: $wcfContentBackground;
+                border: 1px solid $wcfContentBorder;
+                border-radius: 10px;
+                color: $wcfContentText;
+                font-weight: 500;
+                font-size: 12px;
+                height: 22px;
+                word-wrap: break-word;
+                align-items: center;
+
+                &.rpEventDeleted {
+                    border: 1px solid red;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 3px;
+                }
+
+                > .icon,
+                > img {
+                    margin-left: 5px;
+                }
+
+                > span + a,
+                > img + a {
+                    padding-left: 5px;
+                }
+
+                > a {
+                    display: block;
+                    padding: 0px 5px;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                    background: transparent;
+                }
+
+                &.isNew {
+                    box-shadow: 0 0 0 0 rgba(52, 172, 224, 1);
+                    animation: pulse-blue 2s infinite;
+                }
+
+                &.rpEventCenter {
+                    border-left: 0px;
+                    border-right: 0px;
+                    margin-left: -6px;
+                    margin-right: -6px;
+                    border-radius: 0px;
+                }
+
+                &.rpEventEnd {
+                    border-left: 0px;
+                    margin-left: -6px;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+
+                &.rpEventStart {
+                    border-right: 0px;
+                    margin-right: -6px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+
+                &.rpEventCenter,
+                &.rpEventStart {
+                    > a {
+                        overflow: visible;
+                    }
+                }
+
+                &.rpEventCenter,
+                &.rpEventEnd,
+                &.rpEventStart {
+                    > a {
+                        position: relative;
+                    }
+                }
+
+                &.rpEmptyEvent {
+                    background: transparent;
+                    border: transparent;
+                }
+            }
+
+            &.ignore,
+            &.selected {
+                background-color: $wcfContentBorderInner;
+            }
+
+            &.ignore {
+                color: $wcfContentDimmedText;
+            }
+
+            &:hover {
+                background-color: $wcfContentBorderInner;
+            }
+        }
+
+        .rpDayName {
+            background-color: $wcfContentContainerBackground;
+            border: 1px solid $wcfContentBorder;
+            color: $wcfContentText;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            width: calc(100% / 7);
+        }
+    }
+}

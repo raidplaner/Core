@@ -1,0 +1,269 @@
+.attendeeBox {
+    .contentItemLink {
+        display: flex;
+        flex: unset;
+
+        .contentItemImage {
+            flex: 0 0 24px;
+        }
+
+        .contentItemContent {
+            flex: 0 auto;
+        }
+    }
+
+    .attendeeList {
+        padding: 5px 15px;
+
+        > li {
+            position: relative;
+            transition: background-color 0.2s;
+
+            &.draggable {
+                &:hover {
+                    border: 1px solid $wcfContentBorder !important;
+                    background-color: $wcfTabularBoxBackgroundActive;
+                    cursor: move;
+                }
+            }
+
+            &:not(:first-child) {
+                margin-top: 5px;
+            }
+        }
+
+        .box24 {
+            align-items: center;
+            min-height: 20px;
+        }
+
+        .attendeeName {
+            flex: 1 auto;
+
+            > img:first-child {
+                height: auto;
+            }
+
+            // prevents text being hidden when displayed in user panel
+            > span {
+                display: inline !important;
+            }
+        }
+
+        .statusDisplay {
+            flex: 0 auto;
+
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &.droppable {
+        border: 1px solid $wcfContentBorder;
+
+        &.selected {
+            background-color: $wcfTabularBoxBackgroundActive;
+        }
+    }
+}
+
+.eventNavigation {
+    @include screen-md-up {
+        > nav > ul {
+            display: flex;
+        }
+    }
+
+    .previousEventButton,
+    .nextEventButton {
+        display: flex;
+
+        @include screen-md-up {
+            flex: 0 0 50%;
+        }
+
+        > a {
+            color: $wcfContentText;
+            display: flex;
+
+            &::before {
+                align-self: center;
+                display: block;
+                flex: 0 0 auto;
+                font-family: FontAwesome;
+                font-size: 36px;
+            }
+
+            > div {
+                flex: 1 1 auto;
+            }
+
+            .eventNavigationEntityName,
+            .eventNavigationEventTitle {
+                display: block;
+            }
+
+            .eventNavigationEntityName {
+                text-transform: uppercase;
+            }
+
+            .eventNavigationEventTitle {
+                margin-top: 3px;
+
+                @include wcfFontHeadline;
+            }
+
+            .eventNavigationEventImage {
+                > img {
+                    border-radius: 2px;
+                    opacity: .85;
+                    transition: .2s ease opacity;
+                }
+            }
+
+            &:hover {
+                &::before {
+                    color: $wcfContentLinkActive;
+                }
+
+                .eventNavigationEventTitle {
+                    color: $wcfContentLinkActive;
+                }
+
+                .eventNavigationEventImage {
+                    > img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .previousEventButton {
+        @include screen-md-up {
+            padding-right: 10px;
+        }
+
+        > a {
+            &::before {
+                content: $fa-var-chevron-left;
+            }
+
+            > div {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .nextEventButton {
+        justify-content: flex-end;
+        text-align: right;
+
+        @include screen-md-up {
+            margin-left: 50%;
+            padding-left: 10px;
+        }
+
+        .eventNavigationEventImage {
+            order: 1;
+            margin-left: 15px;
+            margin-right: 0;
+        }
+
+        > a {
+            &::before {
+                content: $fa-var-chevron-right;
+                order: 1;
+            }
+
+            > div {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .previousEventButton + .nextEventButton {
+        @include screen-sm-down {
+            margin-top: 20px;
+        }
+
+        @include screen-md-up {
+            margin-left: 0;
+        }
+    }
+}
+
+.eventRaidContainer {
+    .contentItemMultiColumn {
+        /* The `flex` shorthand fails in IE11 if `calc()` is used. */
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(33% - 20px);
+    }
+}
+
+.rpEventHeader {
+    &.messageCanceled {
+        > .contentHeaderIcon {
+            &::before {
+                display: block;
+                font-family: FontAwesome;
+                font-size: 56px;
+                position: absolute;
+
+                color: rgb(180, 0, 0);
+                content: $fa-var-ban;
+                left: 8px;
+                top: -9px;
+            }
+
+            > img,
+            > .icon:first-child {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.eventLikeContent {
+    margin-top: 20px;
+
+    .eventLikeSection {
+        align-items: center;
+    }
+
+    .eventLikeButtons {
+        justify-content: flex-end;
+
+        .invisible {
+            display: inline;
+        }
+    }
+}
+
+.eventAppointment {
+    > li {
+        padding: 5px;
+    }
+}
+
+/* fix icons in rtl design */
+html[dir="rtl"] {
+    .eventNavigation {
+        .previousEventButton {
+            > a {
+                &::before {
+                    content: $fa-var-chevron-right;
+                }
+            }
+        }
+
+        .nextEventButton {
+            > a {
+                &::before {
+                    content: $fa-var-chevron-left;
+                }
+            }
+        }
+    }
+}

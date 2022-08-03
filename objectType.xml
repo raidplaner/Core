@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/objectType.xsd">
+    <import>
+        <!-- box controllers -->
+        <type>
+            <name>info.daries.rp.eventLegend</name>
+            <definitionname>com.woltlab.wcf.boxController</definitionname>
+            <classname>rp\system\box\EventLegendBoxController</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.eventList</name>
+            <definitionname>com.woltlab.wcf.boxController</definitionname>
+            <classname>rp\system\box\EventListBoxController</classname>
+        </type>
+        <!-- /box controllers -->
+        
+        <!-- character search conditions -->
+        <type>
+            <name>info.daries.rp.characterID</name>
+            <definitionname>info.daries.rp.condition.characterSearch</definitionname>
+            <classname>rp\system\condition\character\CharacterIDCondition</classname>
+            <conditiongroup>general</conditiongroup>
+        </type>
+        <type>
+            <name>info.daries.rp.characterName</name>
+            <definitionname>info.daries.rp.condition.characterSearch</definitionname>
+            <classname>rp\system\condition\character\CharacterNameCondition</classname>
+            <conditiongroup>general</conditiongroup>
+        </type>
+        <!-- /character search conditions -->
+        
+        <!-- clipboard items -->
+        <type>
+            <name>info.daries.rp.character</name>
+            <definitionname>com.woltlab.wcf.clipboardItem</definitionname>
+            <listclassname>rp\data\character\CharacterList</listclassname>
+        </type>
+        <type>
+            <name>info.daries.rp.raid.attendee</name>
+            <definitionname>com.woltlab.wcf.clipboardItem</definitionname>
+            <listclassname>rp\data\event\raid\attendee\EventRaidAttendeeList</listclassname>
+        </type>
+        <!-- /clipboard items -->
+        
+        <!-- comments -->
+		<type>
+			<name>info.daries.rp.eventComment</name>
+			<definitionname>com.woltlab.wcf.comment.commentableContent</definitionname>
+			<classname>rp\system\comment\manager\EventCommentManager</classname>
+		</type>
+        <!-- /comments -->
+        
+        <!-- discussion providers -->
+		<type>
+			<name>info.daries.rp.event.comment</name>
+			<definitionname>info.daries.rp.event.discussionProvider</definitionname>
+			<classname>rp\system\event\discussion\CommentEventDiscussionProvider</classname>
+		</type>
+        <!-- /discussion providers -->
+        
+        <!-- event controllers -->
+        <type>
+            <name>info.daries.rp.event.appointment</name>
+            <definitionname>info.daries.rp.eventController</definitionname>
+            <classname>rp\system\event\AppointmentEventController</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.event.default</name>
+            <definitionname>info.daries.rp.eventController</definitionname>
+            <classname>rp\system\event\DefaultEventController</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.event.raid</name>
+            <definitionname>info.daries.rp.eventController</definitionname>
+            <classname>rp\system\event\RaidEventController</classname>
+        </type>
+        <!-- /event controllers -->
+        
+        <!-- importers -->
+        <type>
+            <name>info.daries.rp.character</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\CharacterImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.character.avatar</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\CharacterAvatarImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.event</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\EventImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.event.comment</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\EventCommentImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.event.comment.response</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\EventCommentResponseImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.event.legend</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\EventLegendImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.point.account</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\PointAccountImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.raid</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\RaidImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.raid.event</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\RaidEventImporter</classname>
+        </type>
+        <type>
+            <name>info.daries.rp.rank</name>
+            <definitionname>com.woltlab.wcf.importer</definitionname>
+            <classname>rp\system\importer\RankImporter</classname>
+        </type>
+        <!-- /importers -->
+        
+        <!-- likes -->
+		<type>
+			<name>info.daries.rp.likeableEvent</name>
+			<definitionname>com.woltlab.wcf.like.likeableObject</definitionname>
+			<classname>rp\data\event\LikeableEventProvider</classname>
+		</type>
+        <!-- /likes -->
+        
+        <!-- message -->
+        <type>
+            <name>info.daries.rp.character.notes</name>
+            <definitionname>com.woltlab.wcf.message</definitionname>
+        </type>
+        <type>
+            <name>info.daries.rp.event.notes</name>
+            <definitionname>com.woltlab.wcf.message</definitionname>
+        </type>
+        <!-- /message -->
+                
+		<!-- moderation -->
+		<type>
+			<name>info.daries.rp.event</name>
+			<definitionname>com.woltlab.wcf.moderation.activation</definitionname>
+			<classname>rp\system\moderation\queue\activation\EventModerationQueueActivationHandler</classname>
+		</type>
+		<type>
+			<name>info.daries.rp.event</name>
+			<definitionname>com.woltlab.wcf.moderation.report</definitionname>
+			<classname>rp\system\moderation\queue\report\EventModerationQueueReportHandler</classname>
+		</type>
+		<type>
+			<name>info.daries.rp.event</name>
+			<definitionname>com.woltlab.wcf.deletedContent</definitionname>
+			<classname>rp\system\moderation\DeletedEventProvider</classname>
+		</type>
+        <!-- /moderation -->
+        
+		<!-- Modification Log -->
+		<type>
+			<name>info.daries.rp.event</name>
+			<definitionname>com.woltlab.wcf.modifiableContent</definitionname>
+			<classname>rp\system\log\modification\EventModificationLogHandler</classname>
+		</type>
+		<type>
+			<name>info.daries.rp.event</name>
+			<definitionname>com.woltlab.wcf.deletedContent</definitionname>
+			<classname>rp\system\moderation\DeletedEventProvider</classname>
+		</type>
+		<!-- /Modification Log -->
+        
+        <!-- notification -->
+		<type>
+			<name>info.daries.rp.eventComment.like.notification</name>
+			<definitionname>com.woltlab.wcf.notification.objectType</definitionname>
+			<classname>wcf\system\user\notification\object\type\LikeUserNotificationObjectType</classname>
+			<category>info.daries.rp.event</category>
+			<supportsReactions>1</supportsReactions>
+		</type>
+		<type>
+			<name>info.daries.rp.eventComment.response.like.notification</name>
+			<definitionname>com.woltlab.wcf.notification.objectType</definitionname>
+			<classname>wcf\system\user\notification\object\type\LikeUserNotificationObjectType</classname>
+			<category>info.daries.rp.event</category>
+			<supportsReactions>1</supportsReactions>
+		</type>
+		<type>
+			<name>info.daries.rp.eventComment.notification</name>
+			<definitionname>com.woltlab.wcf.notification.objectType</definitionname>
+			<classname>rp\system\user\notification\object\type\EventCommentUserNotificationObjectType</classname>
+			<category>info.daries.rp.event</category>
+		</type>
+		<type>
+			<name>info.daries.rp.eventComment.response.notification</name>
+			<definitionname>com.woltlab.wcf.notification.objectType</definitionname>
+			<classname>rp\system\user\notification\object\type\EventCommentResponseUserNotificationObjectType</classname>
+			<category>info.daries.rp.event</category>
+		</type>
+		<type>
+			<name>info.daries.rp.likeableEvent.notification</name>
+			<definitionname>com.woltlab.wcf.notification.objectType</definitionname>
+			<classname>wcf\system\user\notification\object\type\LikeUserNotificationObjectType</classname>
+			<category>info.daries.rp.event</category>
+		</type>
+        <type>
+            <name>info.daries.rp.raid.event.notification</name>
+            <definitionname>com.woltlab.wcf.notification.objectType</definitionname>
+            <classname>rp\system\user\notification\object\type\EventRaidUserNotificationObjectType</classname>
+            <category>info.daries.rp.event.raid</category>
+        </type>
+        <!-- /notification -->
+        
+        <!-- searchable object type -->
+		<type>
+			<name>info.daries.rp.event</name>
+			<definitionname>com.woltlab.wcf.searchableObjectType</definitionname>
+			<classname>rp\system\search\EventSearch</classname>
+			<searchindex>rp1_event_search_index</searchindex>
+		</type>
+        <!-- /searchable object type -->
+        
+		<!-- sitemap -->
+		<type>
+			<name>info.daries.rp.sitemap.object.character</name>
+			<definitionname>com.woltlab.wcf.sitemap.object</definitionname>
+			<classname>rp\system\sitemap\object\CharacteritemapObject</classname>
+			<priority>0.5</priority>
+			<changeFreq>monthly</changeFreq>
+			<rebuildTime>259200</rebuildTime>
+		</type>
+		<type>
+			<name>info.daries.rp.sitemap.object.event</name>
+			<definitionname>com.woltlab.wcf.sitemap.object</definitionname>
+			<classname>rp\system\sitemap\object\EventSitemapObject</classname>
+			<priority>0.5</priority>
+			<changeFreq>weekly</changeFreq>
+			<rebuildTime>86400</rebuildTime>
+		</type>
+		<!-- /sitemap -->
+
+		<!-- rebuild data workers -->
+		<type>
+			<name>info.daries.rp.character</name>
+			<definitionname>com.woltlab.wcf.rebuildData</definitionname>
+			<classname>rp\system\worker\CharacterRebuildDataWorker</classname>
+		</type>
+		<type>
+			<name>info.daries.rp.event</name>
+			<definitionname>com.woltlab.wcf.rebuildData</definitionname>
+			<classname>rp\system\worker\EventRebuildDataWorker</classname>
+		</type>
+		<!-- /rebuild data workers -->
+        
+        <!-- Visit Tracker -->
+        <type>
+            <name>info.daries.rp.event</name>
+            <definitionname>com.woltlab.wcf.visitTracker.objectType</definitionname>
+        </type>
+        <!-- /Visit Tracker -->
+    </import>
+</data>

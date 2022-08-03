@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/language.xsd" languagecode="de">
+    <import>
+        <category name="rp.acp.character">
+            <item name="rp.acp.character.condition.conditionGroup.general"><![CDATA[Allgemein]]></item>
+            <item name="rp.acp.character.disable"><![CDATA[Deaktivieren]]></item>
+            <item name="rp.acp.character.enable"><![CDATA[Aktivieren]]></item>
+            <item name="rp.acp.character.isDisabled"><![CDATA[Charakter ist deaktiviert]]></item>
+            <item name="rp.acp.character.list"><![CDATA[Charakter]]></item>
+            <item name="rp.acp.character.owner"><![CDATA[Besitzer]]></item>
+            <item name="rp.acp.character.quickSearch"><![CDATA[Schnellsuche]]></item>
+            <item name="rp.acp.character.quickSearch.disabled"><![CDATA[Nicht aktivierte Charakter]]></item>
+            <item name="rp.acp.character.search"><![CDATA[Charakter suchen]]></item>
+            <item name="rp.acp.character.search.error.noMatches"><![CDATA[Zu den angegebenen Kriterien wurde kein Charakter gefunden.]]></item>
+            <item name="rp.acp.character.user"><![CDATA[Benutzername]]></item>
+        </category>
+
+        <category name="rp.acp.event">
+            <item name="rp.acp.event.legend.add"><![CDATA[Legende hinzufügen]]></item>
+            <item name="rp.acp.event.legend.bgColor"><![CDATA[Hintergrundfarbe]]></item>
+            <item name="rp.acp.event.legend.edit"><![CDATA[Legende bearbeiten]]></item>
+            <item name="rp.acp.event.legend.list"><![CDATA[Legenden]]></item>
+        </category>
+
+        <category name="rp.acp.item">
+            <item name="rp.acp.item.databaseName"><![CDATA[Name der Datenbank]]></item>
+            <item name="rp.acp.item.databaseName.description"><![CDATA[Der Name darf nur Buchstaben enthalten und muss mit einem Kleinbuchstaben beginnen.]]></item>
+            <item name="rp.acp.item.databaseName.error.format"><![CDATA[Der angegebene Name ist ungültig.]]></item>
+            <item name="rp.acp.item.databaseName.error.notUnique"><![CDATA[Der angegebene Name wird bereits von einem anderen Paketinstallationsplugin verwendet.]]></item>
+        </category>
+        
+        <category name="rp.acp.menu">
+            <item name="rp.acp.menu.link.calendar"><![CDATA[Kalender]]></item>
+            <item name="rp.acp.menu.link.character"><![CDATA[Charakter]]></item>
+            <item name="rp.acp.menu.link.character.add"><![CDATA[Charakter hinzufügen]]></item>
+            <item name="rp.acp.menu.link.character.list"><![CDATA[Charaktere]]></item>
+            <item name="rp.acp.menu.link.character.search"><![CDATA[Charakter suchen]]></item>
+            <item name="rp.acp.menu.link.event.legend.add"><![CDATA[Legende hinzufügen]]></item>
+            <item name="rp.acp.menu.link.event.legend.list"><![CDATA[Legenden]]></item>
+            <item name="rp.acp.menu.link.point.account.add"><![CDATA[Punktekonto hinzufügen]]></item>
+            <item name="rp.acp.menu.link.point.account.list"><![CDATA[Punktekonten]]></item>
+            <item name="rp.acp.menu.link.raid"><![CDATA[Raid]]></item>
+            <item name="rp.acp.menu.link.raid.event.add"><![CDATA[Raid Event hinzufügen]]></item>
+            <item name="rp.acp.menu.link.raid.event.list"><![CDATA[Raid Events]]></item>
+            <item name="rp.acp.menu.link.rank.add"><![CDATA[Rank hinzufügen]]></item>
+            <item name="rp.acp.menu.link.rank.list"><![CDATA[Ränge]]></item>
+            <item name="rp.acp.menu.link.rp"><![CDATA[Raidplaner]]></item>
+        </category>
+    
+        <category name="rp.acp.point">
+            <item name="rp.acp.point.account.add"><![CDATA[Punktekonto hinzufügen]]></item>
+            <item name="rp.acp.point.account.edit"><![CDATA[Punktekonto bearbeiten]]></item>
+            <item name="rp.acp.point.account.list"><![CDATA[Punktekonten]]></item>
+            <item name="rp.acp.point.account.showOrder.description"><![CDATA[Legt die Reihenfolge fest, in der die Punktekonten angezeigt werden.]]></item>
+        </category>
+        
+        <category name="rp.acp.raid">
+            <item name="rp.acp.raid.event.add"><![CDATA[Raid Termin hinzufügen]]></item>
+            <item name="rp.acp.raid.event.defaultPoints"><![CDATA[Wert]]></item>
+            <item name="rp.acp.raid.event.defaultPoints.description"><![CDATA[Standard-Wert des Event. Dient als Hilfe und ist nicht bindend.]]></item>
+            <item name="rp.acp.raid.event.edit"><![CDATA[Raid Event bearbeiten]]></item>
+            <item name="rp.acp.raid.event.image"><![CDATA[Icon]]></item>
+            <item name="rp.acp.raid.event.image.mode"><![CDATA[Auswahl]]></item>
+            <item name="rp.acp.raid.event.image.mode.select"><![CDATA[Icon auswählen]]></item>
+            <item name="rp.acp.raid.event.image.mode.upload"><![CDATA[Icon hochladen]]></item>
+            <item name="rp.acp.raid.event.list"><![CDATA[Raid Termine]]></item>
+            <item name="rp.acp.raid.event.point.account"><![CDATA[Punktekonto]]></item>
+            <item name="rp.acp.raid.event.showProfile"><![CDATA[Im Charakter-Profil anzeigen]]></item>
+        </category>
+
+        <category name="rp.acp.rank">
+            <item name="rp.acp.rank.add"><![CDATA[Rang hinzufügen]]></item>
+            <item name="rp.acp.rank.edit"><![CDATA[Rang bearbeiten]]></item>
+            <item name="rp.acp.rank.list"><![CDATA[Ränge]]></item>
+            <item name="rp.acp.rank.prefix"><![CDATA[Prefix]]></item>
+            <item name="rp.acp.rank.setAsDefault"><![CDATA[Zum Standard-Rang machen]]></item>
+            <item name="rp.acp.rank.showOrder.description"><![CDATA[Legt die Reihenfolge fest, in der die Ränge angezeigt werden.]]></item>
+            <item name="rp.acp.rank.suffix"><![CDATA[Suffix]]></item>
+        </category>
+        
+        <category name="rp.calendar">
+            <item name="rp.calendar.list"><![CDATA[Kalender]]></item>
+            <item name="rp.calendar.today"><![CDATA[Heute]]></item>
+        </category>
+        
+        <category name="rp.character">
+            <item name="rp.character.add"><![CDATA[Charakter hinzufügen]]></item>
+            <item name="rp.character.avatar"><![CDATA[Avatar]]></item>
+            <item name="rp.character.avatar.description"><![CDATA[Avatare dürfen die Dateiendungen {"\n"|str_replace:', ':$__wcf->session->getPermission('user.rp.characterAvatarAllowedFileExtensions')} und maximal eine Dateigröße von {@$__wcf->session->getPermission('user.rp.characterAvatarMaxSize')|filesize} besitzen. Die Mindestgröße für Avatare liegt bei 128×128 Pixel.]]></item>
+            <item name="rp.character.category.character"><![CDATA[Charakter]]></item>
+            <item name="rp.character.characterID"><![CDATA[Charakter-ID]]></item>
+            <item name="rp.character.characterName"><![CDATA[Charaktername]]></item>
+            <item name="rp.character.characterName.error.exists"><![CDATA[Dieser Charakter existiert für dieses Spiel <span class="confirmationObject">{$character->getGame()->getTitle()}</span> schon.]]></item>
+            <item name="rp.character.characters"><![CDATA[Charaktere]]></item>
+            <item name="rp.character.characters.filter"><![CDATA[Charaktere filtern]]></item>
+            <item name="rp.character.characters.noCharacters"><![CDATA[Es wurden keine Charaktere gefunden. <a href="{link controller='CharactersList' application='rp'}{/link}">Die aktiven Filter zurücksetzen.</a>]]></item>
+            <item name="rp.character.characters.sort.letters"><![CDATA[Anfangsbuchstabe]]></item>
+            <item name="rp.character.characters.sort.letters.all"><![CDATA[Alle]]></item>
+            <item name="rp.character.characters.sort.ownCharacters"><![CDATA[Eigene Charaktere anzeigen]]></item>
+            <item name="rp.character.charactersList.created"><![CDATA[Hinzugefügt am {@$character->created|date}]]></item>
+            <item name="rp.character.created"><![CDATA[Erstellt]]></item>
+            <item name="rp.character.edit"><![CDATA[Charakter bearbeiten]]></item>
+            <item name="rp.character.guildName"><![CDATA[Gilde]]></item>
+            <item name="rp.character.level"><![CDATA[Stufe]]></item>
+            <item name="rp.character.list"><![CDATA[Charaktere]]></item>
+            <item name="rp.character.notes"><![CDATA[Notizen]]></item>
+            <item name="rp.character.notes.description"><![CDATA[Beliebige Notizen zu diesem Charakter.]]></item>
+            <item name="rp.character.otherCharacters"><![CDATA[Andere Charaktere]]></item>
+            <item name="rp.character.point.account.adjustments"><![CDATA[Anpassungen]]></item>
+            <item name="rp.character.point.account.current"><![CDATA[Aktuell]]></item>
+            <item name="rp.character.point.account.issued"><![CDATA[Ausgegeben]]></item>
+            <item name="rp.character.point.account.raid30"><![CDATA[Raids (30 Tage)]]></item>
+            <item name="rp.character.point.account.raid60"><![CDATA[Raids (60 Tage)]]></item>
+            <item name="rp.character.point.account.raid90"><![CDATA[Raids (90 Tage)]]></item>
+            <item name="rp.character.point.account.raidAll"><![CDATA[Raids (Lebenszeit)]]></item>
+            <item name="rp.character.point.account.received"><![CDATA[Erhalten]]></item>
+            <item name="rp.character.point.account.title"><![CDATA[Kontoname]]></item>
+            <item name="rp.character.primary"><![CDATA[Main]]></item>
+            <item name="rp.character.profileHits"><![CDATA[Aufrufe]]></item>
+            <item name="rp.character.raid.more"><![CDATA[Weitere Raids]]></item>
+            <item name="rp.character.raid.noMoreEntries"><![CDATA[Keine weiteren Raids]]></item>
+            <item name="rp.character.rank"><![CDATA[Rang]]></item>
+            <item name="rp.character.search"><![CDATA[Charaktersuche]]></item>
+            <item name="rp.character.search.results"><![CDATA[Suchergebnisse]]></item>
+            <item name="rp.character.sortField.characterName"><![CDATA[Charctername]]></item>
+            <item name="rp.character.sortField.created"><![CDATA[Erstellt]]></item>
+            <item name="rp.character.title"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Deine{else}Ihre{/if} Charaktere]]></item>
+            <item name="rp.character.unknownCharacter"><![CDATA[Dieser Charakter existiert nicht oder wurde gelöscht.]]></item>
+        </category>
+        
+        <category name="rp.character.profile">
+            <item name="rp.character.profile.content.about.noData"><![CDATA[{if $userID == $__wcf->getUser()->userID}{if LANGUAGE_USE_INFORMAL_VARIANT}Du hast{else}Sie haben{/if} noch keine Informationen hinterlegt.{else}Der Charakter hat noch keine Informationen hinterlegt.{/if}]]></item>
+            <item name="rp.character.profile.menu.about"><![CDATA[Über Charakter]]></item>
+            <item name="rp.character.profile.menu.item"><![CDATA[Gegenstände]]></item>
+            <item name="rp.character.profile.menu.points"><![CDATA[Punkte]]></item>
+            <item name="rp.character.profile.menu.raid"><![CDATA[Raids]]></item>
+            <item name="rp.character.profile.menu.raid.attendance"><![CDATA[Raidteilnahme]]></item>
+        </category>
+        
+        <category name="rp.classification">
+            <item name="rp.classification.title"><![CDATA[Klasse]]></item>
+        </category>
+    
+        <category name="rp.event">
+            <item name="rp.event.accepted"><![CDATA[Zugesagt]]></item>
+            <item name="rp.event.add"><![CDATA[Termin hinzufügen]]></item>
+            <item name="rp.event.backEvent"><![CDATA[Zurück zum Termin]]></item>
+            <item name="rp.event.canceled"><![CDATA[Abgesagt]]></item>
+            <item name="rp.event.comment"><![CDATA[Termin-Kommentar]]></item>
+            <item name="rp.event.commentResponse"><![CDATA[Antwort auf Termin-Kommentar]]></item>
+            <item name="rp.event.date"><![CDATA[Zeitpunkt]]></item>
+            <item name="rp.event.dateFormat"><![CDATA[l, j. F Y]]></item>
+            <item name="rp.event.delete"><![CDATA[Endgültig löschen]]></item>
+            <item name="rp.event.delete.confirmMessage"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} diesen Termin wirklich endgültig löschen?]]></item>
+            <item name="rp.event.deleted"><![CDATA[Dieser Termin wurde {if $event->userID == $event->getLogEntry()->userID}vom Benutzer{else}von {if $event->getLogEntry()->userID}<a href="{link controller='User' id=$event->getLogEntry()->userID title=$event->getLogEntry()->username}{/link}" class="userLink" data-object-id="{@$event->getLogEntry()->userID}">{$event->getLogEntry()->username}</a>{else}{$event->getLogEntry()->username}{/if}{/if} {if $event->getLogEntry()->reason}aus folgendem Grund gelöscht: {$event->getLogEntry()->reason}{else}gelöscht{/if} ({@$event->getLogEntry()->time|time}).]]></item>
+            <item name="rp.event.disable"><![CDATA[Deaktivieren]]></item>
+            <item name="rp.event.edit"><![CDATA[Termin bearbeiten]]></item>
+            <item name="rp.event.enable"><![CDATA[Freischalten]]></item>
+            <item name="rp.event.enableComments"><![CDATA[Kommentare aktivieren]]></item>
+            <item name="rp.event.endTime"><![CDATA[Endzeit]]></item>
+            <item name="rp.event.endTime.error.invalid"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Du hast{else}Sie haben{/if} ein ungültiges Datum für das Ende des Termins angegeben. Das Ende des Termins darf nicht vor dem Start liegen.]]></item>
+            <item name="rp.event.endTime.error.tooLong"><![CDATA[Die Dauer des Termins ist zu groß. Die maximal zulässige Dauer beträgt {#RP_CALENDAR_MAX_EVENT_LENGTH} Tage.]]></item>
+            <item name="rp.event.eventComments"><![CDATA[{plural value=$event->comments one='# Kommentar' other='# Kommentare'}]]></item>
+            <item name="rp.event.events"><![CDATA[Termine]]></item>
+            <item name="rp.event.eventViews"><![CDATA[{#$event->views}x angeschaut]]></item>
+            <item name="rp.event.expired"><![CDATA[Die Anmeldefrist für diesen Termin ist bereits überschritten.]]></item>
+            <item name="rp.event.isFullDay"><![CDATA[Ganztägiges Ereignis]]></item>
+            <item name="rp.event.legend"><![CDATA[Individuelle Termin-Farbeinstellung]]></item>
+            <item name="rp.event.legend.description"><![CDATA[Individuelle Termin-Farbeinstellung für diesen Termin im Kalender. [Optional]]]></item>
+            <item name="rp.event.legendType.individual"><![CDATA[Individuell]]></item>
+            <item name="rp.event.legendType.select"><![CDATA[Auswahl]]></item>
+            <item name="rp.event.like.notification.message"><![CDATA[<strong>{$author}</strong> hat auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Termin <strong>{$event->getTitle()}</strong> reagiert ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
+            <item name="rp.event.like.notification.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} haben auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Termin <strong>{$event->getTitle()}</strong> reagiert ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
+            <item name="rp.event.like.notification.title"><![CDATA[Reaktion auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Termin]]></item>
+            <item name="rp.event.like.notification.title.stacked"><![CDATA[{#$count} Benutzer haben auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Termin reagiert]]></item>
+            <item name="rp.event.login"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Du bist{else}Sie sind{/if} für das Event an-/abgemeldet.]]></item>
+            <item name="rp.event.maybe"><![CDATA[Vielleicht]]></item>
+            <item name="rp.event.moderation.info"><![CDATA[Von {if LANGUAGE_USE_INFORMAL_VARIANT}dir{else}Ihnen{/if} erstellte Termine unterliegen der Moderation. D.h. {if LANGUAGE_USE_INFORMAL_VARIANT}dein{else}Ihr{/if} Termin wird nach dem Absenden zunächst durch einen Moderator geprüft und danach, sofern keine Beanstandung vorliegt, freigeschaltet.]]></item>
+            <item name="rp.event.moderation.redirect"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Dein{else}Ihr{/if} Termin wurde gespeichert. Er wird zunächst von einem Moderator geprüft und danach, sofern keine Beanstandung vorliegt, freigeschaltet.]]></item>
+            <item name="rp.event.nextEvent"><![CDATA[Nächster Termin]]></item>
+            <item name="rp.event.notes"><![CDATA[Notiz]]></item>
+            <item name="rp.event.participation"><![CDATA[Teilnahme]]></item>
+            <item name="rp.event.preset"><![CDATA[Der Termin <a href="{link controller='Event' application='rp' object=$presetEvent}{/link}">{$presetEvent->getTitle()}</a> wird als Vorlage verwendet, die unten stehenden Felder wurden bereits vorausgefüllt.]]></item>
+            <item name="rp.event.previousEvent"><![CDATA[Vorheriger Termin]]></item>
+            <item name="rp.event.raidLink"><![CDATA[Zum Raid]]></item>
+            <item name="rp.event.restore"><![CDATA[Wiederherstellen]]></item>
+            <item name="rp.event.settings"><![CDATA[Einstellungen]]></item>
+            <item name="rp.event.sortField.startTime"><![CDATA[Datum]]></item>
+            <item name="rp.event.sortField.comments"><![CDATA[Kommentare]]></item>
+            <item name="rp.event.sortField.views"><![CDATA[Zugriffe]]></item>
+            <item name="rp.event.startTime"><![CDATA[Startzeit]]></item>
+            <item name="rp.event.startTime.error.invalid"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Du hast{else}Sie haben{/if} ein ungültiges Datum für den Start des Termins angegeben.]]></item>
+            <item name="rp.event.startTime.error.tooLong"><![CDATA[Die Dauer des Termins ist zu groß. Die maximal zulässige Dauer beträgt {#RP_CALENDAR_MAX_EVENT_LENGTH} Tage.]]></item>
+            <item name="rp.event.title"><![CDATA[Löschen]]></item>
+            <item name="rp.event.trash"><![CDATA[Löschen]]></item>
+            <item name="rp.event.trash.confirmMessage"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} diesen Termin wirklich löschen?]]></item>
+            <item name="rp.event.trash.reason"><![CDATA[Grund (optional)]]></item>
+            <item name="rp.event.type"><![CDATA[Termin Type]]></item>
+            <item name="rp.event.useAsPreset"><![CDATA[Als Vorlage verwenden]]></item>
+        </category>
+
+        <category name="rp.event.controller">
+            <item name="rp.event.controller.info.daries.rp.event.appointment"><![CDATA[Termin mit Anmeldung]]></item>
+            <item name="rp.event.controller.info.daries.rp.event.default"><![CDATA[Standard]]></item>
+            <item name="rp.event.controller.info.daries.rp.event.raid"><![CDATA[Raid]]></item>
+        </category>
+        
+        <category name="rp.event.log">
+            <item name="rp.event.log.delete"><![CDATA[Hat einen Termin gelöscht.]]></item>
+            <item name="rp.event.log.disable"><![CDATA[Hat den <a href="{$event->getLink()}" class="rpEventLink" data-object-id="{@$event->eventID}">Termin{if $event->getTitle()} „{$event->getTitle()}“{/if}</a> von <a href="{link controller='User' id=$event->userID title=$event->username}{/link}" class="userLink" data-object-id="{@$event->userID}">{$event->username}</a> deaktiviert.]]></item>
+            <item name="rp.event.log.edit"><![CDATA[Hat den <a href="{$event->getLink()}" class="rpEventLink" data-object-id="{@$event->eventID}">Termin{if $event->getTitle()} „{$event->getTitle()}“{/if}</a> von <a href="{link controller='User' id=$event->userID title=$event->username}{/link}" class="userLink" data-object-id="{@$event->userID}">{$event->username}</a> bearbeitet.]]></item>
+            <item name="rp.event.log.enable"><![CDATA[Hat den <a href="{$event->getLink()}" class="rpEventLink" data-object-id="{@$event->eventID}">Termin{if $event->getTitle()} „{$event->getTitle()}“{/if}</a> von <a href="{link controller='User' id=$event->userID title=$event->username}{/link}" class="userLink" data-object-id="{@$event->userID}">{$event->username}</a> freigeschaltet.]]></item>
+            <item name="rp.event.log.restore"><![CDATA[Hat den <a href="{$event->getLink()}" class="rpEventLink" data-object-id="{@$event->eventID}">Termin{if $event->getTitle()} „{$event->getTitle()}“{/if}</a> von <a href="{link controller='User' id=$event->userID title=$event->username}{/link}" class="userLink" data-object-id="{@$event->userID}">{$event->username}</a> wiederhergestellt.]]></item>
+            <item name="rp.event.log.trash"><![CDATA[Hat den <a href="{$event->getLink()}" class="rpEventLink" data-object-id="{@$event->eventID}">Termin{if $event->getTitle()} „{$event->getTitle()}“{/if}</a> von <a href="{link controller='User' id=$event->userID title=$event->username}{/link}" class="userLink" data-object-id="{@$event->userID}">{$event->username}</a> {if $additionalData[reason]}mit der Begründung „{$additionalData[reason]}“ {/if}in den Papierkorb verschoben.]]></item>
+        </category>
+        
+        <category name="rp.event.raid">
+            <item name="rp.event.raid.attendee.add"><![CDATA[Anmeldung]]></item>
+            <item name="rp.event.raid.attendee.addByLeader"><![CDATA[Angemeldet von einem Raidleiter]]></item>
+            <item name="rp.event.raid.attendee.character"><![CDATA[Charakter]]></item>
+            <item name="rp.event.raid.attendee.email"><![CDATA[E-Mail-Addresse]]></item>
+            <item name="rp.event.raid.attendee.guest"><![CDATA[Gast]]></item>
+            <item name="rp.event.raid.attendee.guest.button"><![CDATA[Als Gastteilnehmer bewerben]]></item>
+            <item name="rp.event.raid.attendee.noCharacters"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Du hast{else}Sie haben{/if} bisher keine Charaktere erstellt oder keiner der Charaktere besitzt die benötigten Voraussetzung(en) für dieses Termin.]]></item>
+            <item name="rp.event.raid.attendee.notes"><![CDATA[Notiz]]></item>
+            <item name="rp.event.raid.attendee.registration"><![CDATA[Raid Anmeldung]]></item>
+            <item name="rp.event.raid.attendee.remove"><![CDATA[Teilnahme löschen]]></item>
+            <item name="rp.event.raid.attendee.remove.confirmMessage"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} wirklich die Teilnahme absagen?]]></item>
+            <item name="rp.event.raid.attendee.select"><![CDATA[Auswahl]]></item>
+            <item name="rp.event.raid.cancel"><![CDATA[Raid absagen]]></item>
+            <item name="rp.event.raid.cancel.confirmMessage"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} diesen Raid wirklich absagen?]]></item>
+            <item name="rp.event.raid.canceled"><![CDATA[Der Raid wurde von einem Raidleiter abgesagt.]]></item>
+            <item name="rp.event.raid.condition"><![CDATA[Voraussetzung]]></item>
+            <item name="rp.event.raid.condition.description"><![CDATA[Hier {if LANGUAGE_USE_INFORMAL_VARIANT}kannst Du{else}können Sie{/if} angeben, welche Voraussetzungen für dieses Termin mindestens besteht.]]></item>
+            <item name="rp.event.raid.container.confirmed"><![CDATA[Bestätigt]]></item>
+            <item name="rp.event.raid.container.login"><![CDATA[Angemeldet]]></item>
+            <item name="rp.event.raid.container.logout"><![CDATA[Abgemeldet]]></item>
+            <item name="rp.event.raid.container.reserve"><![CDATA[Ersatzbank]]></item>
+            <item name="rp.event.raid.deadline"><![CDATA[Anmeldeschluss]]></item>
+            <item name="rp.event.raid.deadline.description"><![CDATA[Anzahl an Stunde(n), für Anmeldeschluss vor Raidbeginn.]]></item>
+            <item name="rp.event.raid.distribution"><![CDATA[Modus]]></item>
+            <item name="rp.event.raid.distribution.class"><![CDATA[Klassenverteilung]]></item>
+            <item name="rp.event.raid.distribution.none"><![CDATA[keine Verteilung]]></item>
+            <item name="rp.event.raid.distribution.role"><![CDATA[Rollenverteilung]]></item>
+            <item name="rp.event.raid.leader"><![CDATA[Raidleiter]]></item>
+            <item name="rp.event.raid.leaders"><![CDATA[Raidleiters]]></item>
+            <item name="rp.event.raid.message.status.canceled"><![CDATA[Abgesagt]]></item>
+            <item name="rp.event.raid.noRaidEvents"><![CDATA[Für das Spiel „{$game->getTitle()}“ sind keine Raid Termine vorhanden.]]></item>
+            <item name="rp.event.raid.open"><![CDATA[Raid öffnen]]></item>
+            <item name="rp.event.raid.open.confirmMessage"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} diesen Raid wirklich öffnen?]]></item>
+            <item name="rp.event.raid.participate"><![CDATA[Teilnehmen]]></item>
+            <item name="rp.event.raid.participate.add"><![CDATA[Teilnehmer hinzufügen]]></item>
+            <item name="rp.event.raid.participate.remove"><![CDATA[Nicht mehr Teilnehmen]]></item>
+            <item name="rp.event.raid.participants"><![CDATA[Teilnehmer]]></item>
+            <item name="rp.event.raid.points"><![CDATA[Punkte]]></item>
+            <item name="rp.event.raid.points.description"><![CDATA[Punkte für diesen Termin]]></item>
+            <item name="rp.event.raid.required"><![CDATA[Benötigt]]></item>
+            <item name="rp.event.raid.status"><![CDATA[Status]]></item>
+            <item name="rp.event.raid.title"><![CDATA[Raid]]></item>
+            <item name="rp.event.raid.transform"><![CDATA[Raid abschließen]]></item>
+            <item name="rp.event.raid.updateStatus"><![CDATA[Status aktualisieren]]></item>
+        </category>
+    
+        <category name="rp.faction">
+            <item name="rp.faction.title"><![CDATA[Fraktion]]></item>
+        </category>
+    
+        <category name="rp.game">
+            <item name="rp.game.default"><![CDATA[Standard]]></item>
+            <item name="rp.game.title"><![CDATA[Spiel]]></item>
+        </category>
+    
+        <category name="rp.point.account">
+            <item name="rp.point.account.noDatas"><![CDATA[Es wurden keine Punktestände gefunden. <a href="{link controller='PointList' application='rp'}{/link}">Den aktiven Filter zurücksetzen.</a>]]></item>
+        </category>
+    
+        <category name="rp.race">
+            <item name="rp.race.title"><![CDATA[Rasse]]></item>
+        </category>
+        
+        <category name="rp.raid">
+            <item name="rp.raid.add"><![CDATA[Raid hinzufügen]]></item>
+            <item name="rp.raid.attendees"><![CDATA[Teilnehmers]]></item>
+            <item name="rp.raid.created"><![CDATA[Erstellt von]]></item>
+            <item name="rp.raid.date"><![CDATA[Datum]]></item>
+            <item name="rp.raid.items"><![CDATA[Gegenstände]]></item>
+            <item name="rp.raid.items.delete.confirmMessages"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} den Gegenstand wirklich löschen?]]></item>
+            <item name="rp.raid.notes"><![CDATA[Notiz]]></item>
+            <item name="rp.raid.points"><![CDATA[Punkte]]></item>
+            <item name="rp.raid.raids"><![CDATA[Raids]]></item>
+        </category>
+
+        <category name="rp.raid.event">
+            <item name="rp.raid.event.pointAccount"><![CDATA[Punktekonto]]></item>
+            <item name="rp.raid.event.points"><![CDATA[Punkte]]></item>
+            <item name="rp.raid.event.title"><![CDATA[Ereignis]]></item>
+        </category>
+    
+        <category name="rp.raid.item">
+            <item name="rp.raid.item.buyer"><![CDATA[Käufer]]></item>
+            <item name="rp.raid.item.character"><![CDATA[Charakter]]></item>
+            <item name="rp.raid.item.form.field"><![CDATA[
+<dl class="plain inlineDataList" style="display: inline;">
+    <dt>Item</dt>
+    <dd style="font-weight: 600;">{$itemName}</dd>
+    <dt>Charakter</dt>
+    <dd style="font-weight: 600;">{$characterName}</dd>
+    <dt>Punktekonto</dt>
+    <dd style="font-weight: 600;">{$pointAccountName}</dd>
+    <dt>Punkte</dt>
+    <dd style="font-weight: 600;">{$points}</dd>
+</dl>]]></item>
+            <item name="rp.raid.item.itemName"><![CDATA[Item Name]]></item>
+            <item name="rp.raid.item.pointAccount"><![CDATA[Punktekonto]]></item>
+            <item name="rp.raid.item.points"><![CDATA[Punkte]]></item>
+            <item name="rp.raid.item.points.error.forma"><![CDATA[Die angegebene Punkte sind ungültig.]]></item>
+        </category>
+    
+        <category name="rp.rank">
+            <item name="rp.rank.title"><![CDATA[Rang]]></item>
+        </category>
+    
+        <category name="rp.role">
+            <item name="rp.role.title"><![CDATA[Rolle]]></item>
+        </category>
+    
+        <category name="rp.server">
+            <item name="rp.server.title"><![CDATA[Server]]></item>
+        </category>
+    
+        <category name="rp.user.notification">
+            <item name="rp.user.notification.eventComment.like.message"><![CDATA[<strong>{$author}</strong> hat auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Kommentar zum Termin <strong>{$event->getTitle()}</strong> reagiert ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
+            <item name="rp.user.notification.eventComment.like.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} haben auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Kommentar zum Termin <strong>{$event->getTitle()}</strong> reagiert ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
+            <item name="rp.user.notification.eventComment.like.title"><![CDATA[Reaktion auf einen Kommentar (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.like.title.stacked"><![CDATA[{#$count} Benutzer haben auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Kommentar reagiert (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.mail.html"><![CDATA[<p>{@$authorList} {if $count == 1 && $guestTimesTriggered < 2 && (!$event->getAuthor()->userID || $guestTimesTriggered == 0)}hat einen Kommentar{else}haben Kommentare{/if} zu dem Termin <a href="{$eventObj->getLink()}#comment{@$commentID}">{$eventObj->getTitle()}</a> verfasst:</p>]]></item>
+            <item name="rp.user.notification.eventComment.mail.plaintext"><![CDATA[{@$authorList} {if $count == 1 && $guestTimesTriggered < 2 && (!$event->getAuthor()->userID || $guestTimesTriggered == 0)}hat einen Kommentar{else}haben Kommentare{/if} zu dem Termin „{@$eventObj->getTitle()}“ [URL:{@$eventObj->getLink()}#comment{@$commentID}] verfasst{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}]]></item>
+            <item name="rp.user.notification.eventComment.message"><![CDATA[{if $author->userID}<strong>{$author}</strong>{else}Ein Gast{/if} hat einen Kommentar zu dem Termin <strong>{$event->getTitle()}</strong> verfasst.]]></item>
+            <item name="rp.user.notification.eventComment.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} haben Kommentare zu dem Termin <strong>{$event->getTitle()}</strong> verfasst.]]></item>
+            <item name="rp.user.notification.eventComment.response.like.message"><![CDATA[<strong>{$author}</strong> hat auf {if LANGUAGE_USE_INFORMAL_VARIANT}deine{else}Ihre{/if} Antwort auf einen Kommentar zum Termin <strong>{$event->getTitle()}</strong> reagiert ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
+            <item name="rp.user.notification.eventComment.response.like.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} haben auf {if LANGUAGE_USE_INFORMAL_VARIANT}deine{else}Ihre{/if} Antwort auf einen Kommentar zum Termin <strong>{$event->getTitle()}</strong> reagiert ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
+            <item name="rp.user.notification.eventComment.response.like.title"><![CDATA[Reaktion auf eine Antwort eines Kommentars (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.response.like.title.stacked"><![CDATA[{#$count} Benutzer haben auf {if LANGUAGE_USE_INFORMAL_VARIANT}deine{else}Ihre{/if} Antwort auf einen Kommentar reagiert (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.response.mail.html"><![CDATA[<p>{@$authorList} {if $count == 1 && $guestTimesTriggered < 2 && (!$event->getAuthor()->userID || $guestTimesTriggered == 0)}hat eine Antwort{else}haben Antworten{/if} zu einem Kommentar in dem Termin <a href="{$eventObj->getLink()}#comments/comment{@$commentID}/response{@$responseID}">{$eventObj->getTitle()}</a> verfasst{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}</p>]]></item>
+            <item name="rp.user.notification.eventComment.response.mail.plaintext"><![CDATA[{@$authorList} {if $count == 1 && $guestTimesTriggered < 2 && (!$event->getAuthor()->userID || $guestTimesTriggered == 0)}hat eine Antwort{else}haben Antworten{/if} zu einem Kommentar in dem Termin „{@$eventObj->getTitle()}“ [URL:{@$eventObj->getLink()}#comments/comment{@$commentID}/response{@$responseID}] verfasst{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}]]></item>
+            <item name="rp.user.notification.eventComment.response.message"><![CDATA[{if $author->userID}<strong>{$author}</strong>{else}Ein Gast{/if} hat eine Antwort zu einem Kommentar in dem Termin <strong>{$event->getTitle()}</strong> verfasst.]]></item>
+            <item name="rp.user.notification.eventComment.response.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} haben Antworten zu einem Kommentar in dem Termin <strong>{$event->getTitle()}</strong> verfasst.]]></item>
+            <item name="rp.user.notification.eventComment.response.title"><![CDATA[Neue Antwort (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.response.title.stacked"><![CDATA[{#$timesTriggered} neue Antworten (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.responseOwner.mail.html"><![CDATA[<p>{@$authorList} {if $count == 1 && $guestTimesTriggered < 2 && (!$event->getAuthor()->userID || $guestTimesTriggered == 0)}hat eine Antwort{else}haben Antworten{/if} zum Kommentar von <strong>{@$commentAuthor}</strong> zu {if LANGUAGE_USE_INFORMAL_VARIANT}deinem{else}Ihrem{/if} Termin <a href="{$eventObj->getLink()}#comments/comment{@$commentID}/response{@$responseID}">{$eventObj->getTitle()}</a> verfasst{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}</p>]]></item>
+            <item name="rp.user.notification.eventComment.responseOwner.mail.plaintext"><![CDATA[{@$authorList} {if $count == 1 && $guestTimesTriggered < 2 && (!$event->getAuthor()->userID || $guestTimesTriggered == 0)}hat eine Antwort{else}haben Antworten{/if} zum Kommentar von {@$commentAuthor} zu {if LANGUAGE_USE_INFORMAL_VARIANT}deinem{else}Ihrem{/if} Termin „{@$eventObj->getTitle()}“ [URL:{@$eventObj->getLink()}#comments/comment{@$commentID}/response{@$responseID}] verfasst{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}]]></item>
+            <item name="rp.user.notification.eventComment.responseOwner.message"><![CDATA[{if $author->userID}<strong>{$author}</strong>{else}Ein Gast{/if} hat eine Antwort zum Kommentar von <strong>{$commentAuthor}</strong> zu {if LANGUAGE_USE_INFORMAL_VARIANT}deinem{else}Ihrem{/if} Termin <strong>{$event->getTitle()}</strong> verfasst.]]></item>
+            <item name="rp.user.notification.eventComment.responseOwner.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} haben Antworten zum Kommentar von <strong>{$commentAuthor}</strong> zu {if LANGUAGE_USE_INFORMAL_VARIANT}deinem{else}Ihrem{/if} Termin <strong>{$event->getTitle()}</strong> verfasst.]]></item>
+            <item name="rp.user.notification.eventComment.responseOwner.title"><![CDATA[Neue Antwort (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.responseOwner.title.stacked"><![CDATA[{#$timesTriggered} neue Antworten (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.title"><![CDATA[Neuer Kommentar (Termin)]]></item>
+            <item name="rp.user.notification.eventComment.title.stacked"><![CDATA[{#$timesTriggered} neue Kommentare (Termin)]]></item>
+            <item name="rp.user.notification.raid.event.status.message"><![CDATA[Dein Status im Raid <a href="{$event->getLink()}">{$event->getTitle()}</a> wurde geändert.]]></item>
+            <item name="rp.user.notification.raid.event.status.title"><![CDATA[Statusänderung]]></item>
+        </category>
+        
+        <category name="wcf.acp.box">
+            <item name="wcf.acp.box.boxController.info.daries.rp.eventLegend"><![CDATA[Termin Legende (Raidplaner)]]></item>
+            <item name="wcf.acp.box.boxController.info.daries.rp.eventList"><![CDATA[Kalender-Termine (Raidplaner)]]></item>
+        </category>
+    
+        <category name="wcf.acp.dataImport">
+            <item name="wcf.acp.dataImport.data.info.daries.rp.character"><![CDATA[Charakter]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.character.avatar"><![CDATA[Avatare]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.event"><![CDATA[Events]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.event.comment"><![CDATA[Event-Kommentare]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.event.comment.response"><![CDATA[Event-Antwort-Kommentare]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.event.legend"><![CDATA[Event-Legenden]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.point.account"><![CDATA[Punktekontos (DKP)]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.raid"><![CDATA[Raids]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.raid.event"><![CDATA[Raid Events]]></item>
+            <item name="wcf.acp.dataImport.data.info.daries.rp.rank"><![CDATA[Ränge]]></item>
+        </category>
+        
+        <category name="wcf.acp.group">
+            <item name="wcf.acp.group.option.admin.rp.canAddCharacter"><![CDATA[Kann Charaktere erstellen]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canDeleteCharacter"><![CDATA[Kann Charaktere löschen]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canEditCharacter"><![CDATA[Kann Charaktere bearbeiten]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canManageEventLegend"><![CDATA[Kann Legenden verwalten]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canManageGame"><![CDATA[Kann Spiele verwalten]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canManagePointAccount"><![CDATA[Kann Punktekonten verwalten]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canManageRank"><![CDATA[Kann Ränge verwalten]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canManageRaidEvent"><![CDATA[Kann Raid-Events verwalten]]></item>
+            <item name="wcf.acp.group.option.admin.rp.canSearchCharacter"><![CDATA[Kann Charaktere suchen]]></item>
+            <item name="wcf.acp.group.option.category.admin.rp"><![CDATA[Raidplaner]]></item>
+            <item name="wcf.acp.group.option.category.admin.rp.calendar"><![CDATA[Kalender]]></item>
+            <item name="wcf.acp.group.option.category.admin.rp.character"><![CDATA[Charakter]]></item>
+            <item name="wcf.acp.group.option.category.admin.rp.raid"><![CDATA[Raid]]></item>
+            <item name="wcf.acp.group.option.category.mod.rp"><![CDATA[Raidplaner]]></item>
+            <item name="wcf.acp.group.option.category.mod.rp.calendar"><![CDATA[Kalender]]></item>
+            <item name="wcf.acp.group.option.category.mod.rp.raid"><![CDATA[Raids]]></item>
+            <item name="wcf.acp.group.option.category.user.rp"><![CDATA[Raidplaner]]></item>
+            <item name="wcf.acp.group.option.category.user.rp.calendar"><![CDATA[Kalender]]></item>
+            <item name="wcf.acp.group.option.category.user.rp.character"><![CDATA[Charakter]]></item>
+            <item name="wcf.acp.group.option.category.user.rp.raid"><![CDATA[Raids]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canAddRaid"><![CDATA[Kann Raids hinzufügen]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canDeleteComment"><![CDATA[Kann Kommentare löschen]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canDeleteEvent"><![CDATA[Kann Termine löschen]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canDeleteEventCompletely"><![CDATA[Kann Termine endgültig löschen]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canDeleteRaid"><![CDATA[Kann Raids löschen]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canEditComment"><![CDATA[Kann Kommentare bearbeiten]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canEditEvent"><![CDATA[Kann Termine bearbeiten]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canModerateComment"><![CDATA[Kann Kommentare moderieren]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canModerateEvent"><![CDATA[Kann Termine moderieren]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canRestoreEvent"><![CDATA[Kann Termine wiederherstellen]]></item>
+            <item name="wcf.acp.group.option.mod.rp.canViewDeletedEvent"><![CDATA[Kann gelöschte Termine sehen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canAddCharacter"><![CDATA[Kann Charaktere hinzufügen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canAddComment"><![CDATA[Kann Kommentare erstellen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canAddCommentWithoutModeration"><![CDATA[Kann Kommentare ohne Moderation erstellen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canCreateEvent"><![CDATA[Kann Termine erstellen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canCreateEventWithoutModeration"><![CDATA[Kann Termine ohne Moderation erstellen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canDeleteComment"><![CDATA[Kann eigene Kommentare löschen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canDeleteEvent"><![CDATA[Kann eigene Termine löschen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canDeleteOwnCharacter"><![CDATA[Kann eigende Charaktere löschen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canDisableCommentFunction"><![CDATA[Kann für eigene Termine die Kommentar-Funktion abschalten]]></item>
+            <item name="wcf.acp.group.option.user.rp.canEditComment"><![CDATA[Kann eigene Kommentare bearbeiten]]></item>
+            <item name="wcf.acp.group.option.user.rp.canEditEvent"><![CDATA[Kann eigene Termine bearbeiten]]></item>
+            <item name="wcf.acp.group.option.user.rp.canEditOwnCharacter"><![CDATA[Kann eigene Charaktere bearbeiten]]></item>
+            <item name="wcf.acp.group.option.user.rp.canParticipate"><![CDATA[Kann an Raids teilnehmen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canReadEvent"><![CDATA[Kann Termine sehen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canUploadCharacterAvatar"><![CDATA[Kann eigenen Avatar hochladen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canViewCharactersList"><![CDATA[Kann Charakter-Liste sehen]]></item>
+            <item name="wcf.acp.group.option.user.rp.canViewCharacterProfile"><![CDATA[Kann Charakter Profile sehen]]></item>
+            <item name="wcf.acp.group.option.user.rp.characterAvatarAllowedFileExtensions"><![CDATA[Erlaubte Dateiendungen]]></item>
+            <item name="wcf.acp.group.option.user.rp.characterAvatarMaxSize"><![CDATA[Maximale Dateigröße]]></item>
+            <item name="wcf.acp.group.option.user.rp.maxEventMessageLength"><![CDATA[Maximale Länge der Terminbeschreibung]]></item>
+        </category>
+        
+        <category name="wcf.acp.modificationLog">
+            <item name="wcf.acp.modificationLog.info.daries.rp.event.close"><![CDATA[Termin (Raid) geschlossen]]></item>
+            <item name="wcf.acp.modificationLog.info.daries.rp.event.delete"><![CDATA[Termin gelöscht]]></item>
+            <item name="wcf.acp.modificationLog.info.daries.rp.event.disable"><![CDATA[Termin deaktiviert]]></item>
+            <item name="wcf.acp.modificationLog.info.daries.rp.event.edit"><![CDATA[Termin bearbeitet]]></item>
+            <item name="wcf.acp.modificationLog.info.daries.rp.event.enable"><![CDATA[Termin freigeschaltet]]></item>
+            <item name="wcf.acp.modificationLog.info.daries.rp.event.restore"><![CDATA[Termin wiederhergestellt]]></item>
+            <item name="wcf.acp.modificationLog.info.daries.rp.event.trash"><![CDATA[Termin in den Papierkorb verschoben]]></item>
+        </category>
+        
+        <category name="wcf.acp.option">
+            <item name="wcf.acp.option.category.rp"><![CDATA[Raidplaner]]></item>
+            <item name="wcf.acp.option.category.rp.calendar"><![CDATA[Kalender]]></item>
+            <item name="wcf.acp.option.category.rp.calendar.event"><![CDATA[Termine]]></item>
+            <item name="wcf.acp.option.category.rp.character"><![CDATA[Charakter]]></item>
+            <item name="wcf.acp.option.category.rp.character.list"><![CDATA[Charakterliste]]></item>
+            <item name="wcf.acp.option.category.rp.item"><![CDATA[ItemTooltip]]></item>
+            <item name="wcf.acp.option.category.rp.points"><![CDATA[Punkte]]></item>
+            <item name="wcf.acp.option.category.rp.settings"><![CDATA[Einstellungen]]></item>
+            <item name="wcf.acp.option.rp_calendar_max_event_length"><![CDATA[Maximale Termin-Dauer]]></item>
+            <item name="wcf.acp.option.rp_calendar_max_event_length.description"><![CDATA[Maximaler Zeitraum zwischen Start und Ende eines Termins.]]></item>
+            <item name="wcf.acp.option.rp_characters_list_default_sort_field"><![CDATA[Standard-Sortierung]]></item>
+            <item name="wcf.acp.option.rp_characters_list_default_sort_field.description"><![CDATA[]]></item>
+            <item name="wcf.acp.option.rp_characters_list_default_sort_order"><![CDATA[Standard-Reihenfolge]]></item>
+            <item name="wcf.acp.option.rp_characters_list_default_sort_order.description"><![CDATA[]]></item>
+            <item name="wcf.acp.option.rp_characters_list_per_page"><![CDATA[Charaktere pro Seite]]></item>
+            <item name="wcf.acp.option.rp_default_event_type_selected"><![CDATA[Termin Type [Standard]]]></item>
+            <item name="wcf.acp.option.rp_default_game_id"><![CDATA[Standard Spiel]]></item>
+            <item name="wcf.acp.option.rp_default_game_id.description"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Gebe{else}Geben Sie{/if} das Standard Spiel für den Raidplaner an.]]></item>
+            <item name="wcf.acp.option.rp_enable_item"><![CDATA[Item aktivieren]]></item>
+            <item name="wcf.acp.option.rp_enable_rank"><![CDATA[Ranks aktivieren]]></item>
+            <item name="wcf.acp.option.rp_event_empty_recycle_bin_cycle"><![CDATA[Papierkorb automatisch entleeren]]></item>
+            <item name="wcf.acp.option.rp_event_empty_recycle_bin_cycle.description"><![CDATA[Zeitraum nach dem Termine aus dem Papierkorb automatisch gelöscht werden. [0, um die Löschung gänzlich zu deaktivieren]]]></item>
+            <item name="wcf.acp.option.rp_event_enable_like"><![CDATA[Reaktionen aktivieren]]></item>
+            <item name="wcf.acp.option.rp_item_account_easymode_disabled"><![CDATA[Einfacher Modus für Punktekonten deaktivieren]]></item>
+            <item name="wcf.acp.option.rp_item_account_easymode_disabled.description"><![CDATA[Im einfachen Modus können keine Itemkonten angelegt werden, und Termine immer nur einem Punktekonto zugeordnet sein.]]></item>
+            <item name="wcf.acp.option.rp_item_databases"><![CDATA[Item Datenbanken]]></item>
+            <item name="wcf.acp.option.rp_points_enabled"><![CDATA[Punkte aktivieren]]></item>
+            <item name="wcf.acp.option.rp_points_enabled.desciption"><![CDATA[Raids könnten Punkte vergeben werden.]]></item>
+            <item name="wcf.acp.option.rp_points_name"><![CDATA[Punktename]]></item>
+            <item name="wcf.acp.option.rp_round_points"><![CDATA[Runde Punkte]]></item>
+            <item name="wcf.acp.option.rp_round_points_precision"><![CDATA[Nachkommastelle]]></item>
+            <item name="wcf.acp.option.rp_show_twinks"><![CDATA[Twinks anzeigen]]></item>
+            <item name="wcf.acp.option.rp_show_twinks.description"><![CDATA[Wenn Twinks angezeigt werden sollen, erhält jeder Charakter nur seine eigenen Punkte. Um die Punkte von Twinks und Mains zusammen rechnen zulassen, musst du die Anzeige von Twinks hier deaktivieren werden.]]></item>
+        </category>
+
+        <category name="wcf.acp.rebuildData">
+            <item name="wcf.acp.rebuildData.info.daries.rp.character"><![CDATA[Charakter aktualisieren]]></item>
+            <item name="wcf.acp.rebuildData.info.daries.rp.character.description"><![CDATA[Aktualisiert Zähler des Charakter]]></item>
+            <item name="wcf.acp.rebuildData.info.daries.rp.event"><![CDATA[Termine aktualisieren]]></item>
+            <item name="wcf.acp.rebuildData.info.daries.rp.event.description"><![CDATA[Aktualisiert den Suchindex für Termine]]></item>
+        </category>
+        
+        <category name="wcf.acp.sitemap">
+            <item name="wcf.acp.sitemap.objectType.info.daries.rp.sitemap.object.character"><![CDATA[Charaktere]]></item>
+            <item name="wcf.acp.sitemap.objectType.info.daries.rp.sitemap.object.event"><![CDATA[Termine]]></item>
+        </category>
+        
+        <category name="wcf.clipboard">
+            <item name="wcf.clipboard.label.info.daries.rp.character.marked"><![CDATA[{if $count == 1}Ein{else}{#$count}{/if} Charakter{if $count != 1}e{/if}]]></item>
+            <item name="wcf.clipboard.label.info.daries.rp.raid.attendee.marked"><![CDATA[{if $count == 1}Ein{else}{#$count}{/if} Teilnehmer]]></item>
+            <item name="wcf.clipboard.item.info.daries.rp.character.delete"><![CDATA[Löschen ({#$count})]]></item>
+            <item name="wcf.clipboard.item.info.daries.rp.character.delete.confirmMessage"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} wirklich {if $count == 1}einen{else}{#$count}{/if} Charakter{if $count != 1}e{/if} löschen?]]></item>
+            <item name="wcf.clipboard.item.info.daries.rp.character.disable"><![CDATA[Deaktivieren ({#$count})]]></item>
+            <item name="wcf.clipboard.item.info.daries.rp.character.enable"><![CDATA[Aktivieren ({#$count})]]></item>
+            <item name="wcf.clipboard.item.info.daries.rp.raid.attendee.delete"><![CDATA[Entfernen ({#$count})]]></item>
+            <item name="wcf.clipboard.item.info.daries.rp.raid.attendee.delete.confirmMessage"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Willst du{else}Wollen Sie{/if} wirklich {if $count == 1}einen{else}{#$count}{/if} Teilnehmer entfernen?]]></item>
+            <item name="wcf.clipboard.item.info.daries.rp.raid.attendee.updateStatus"><![CDATA[Status ändern ({#$count})]]></item>
+        </category>
+        
+        <category name="wcf.like">
+            <item name="wcf.like.title.info.daries.rp.eventComment"><![CDATA[Hat mit {@$reaction->render()} auf den Kommentar {if $commentAuthor}von <a href="{link controller='User' object=$commentAuthor}{/link}">{$commentAuthor->username}</a>{else}eines Gasts{/if} zum Termin <a href="{$comment->getLink()}">{$event->getTitle()}</a> reagiert.]]></item>
+            <item name="wcf.like.title.info.daries.rp.eventComment.response"><![CDATA[Hat mit {@$reaction->render()} auf die Antwort {if $responseAuthor}von <a href="{link controller='User' object=$responseAuthor}{/link}">{$responseAuthor->username}</a>{else}eines Gasts{/if} zum Kommentar {if $commentAuthor}von <a href="{link controller='User' object=$commentAuthor}{/link}">{$commentAuthor->username}</a>{else}eines Gasts{/if} zum Termin <a href="{$response->getLink()}">{$event->getTitle()}</a> reagiert.]]></item>
+            <item name="wcf.like.title.info.daries.rp.likeableEvent"><![CDATA[Hat mit {@$reaction->render()} auf den Termin <a href="{$event->getLink()}">{$event->getTitle()}</a> reagiert.]]></item>
+        </category>
+        
+        <category name="wcf.moderation">
+            <item name="wcf.moderation.type.info.daries.rp.event"><![CDATA[Termin]]></item>
+            <item name="wcf.moderation.deletedContent.info.daries.rp.event"><![CDATA[Gelöschte Termine]]></item>
+            <item name="wcf.moderation.deletedContent.objectType.info.daries.rp.event"><![CDATA[Termine]]></item>
+        </category>
+        
+        <category name="wcf.page">
+            <item name="wcf.page.daries.rp.copyright"><![CDATA[<a href="https://daries.info/" rel="nofollow"{if EXTERNAL_LINK_TARGET_BLANK} target="_blank"{/if}>Software: <strong>Raidplaner{if SHOW_VERSION_NUMBER} {$__rp->getPackage()->packageVersion}{/if}</strong>, entwickelt von <strong>Daries.info Team</strong></a>]]></item>
+            <item name="wcf.page.onlineLocation.info.daries.rp.Character"><![CDATA[Charakterprofil von <a href="{link controller='Character' object=$character}{/link}" class="rpCharacterLink" data-character-id="{@$character->characterID}">{$character->getTitle()}</a>]]></item>
+        </category>
+
+        <category name="wcf.search">
+            <item name="wcf.search.type.info.daries.rp.event"><![CDATA[Termine (Raidplaner)]]></item>
+            <item name="wcf.search.object.info.daries.rp.event"><![CDATA[Termin (Raidplaner)]]></item>
+        </category>
+    
+        <category name="wcf.user.notification">
+            <item name="wcf.user.notification.info.daries.rp.event"><![CDATA[Termine (Raidplaner)]]></item>
+            <item name="wcf.user.notification.info.daries.rp.event.raid"><![CDATA[Raids (Raidplaner)]]></item>
+            <item name="wcf.user.notification.info.daries.rp.eventComment.like.notification.like"><![CDATA[Reaktion auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Termin-Kommentar]]></item>
+            <item name="wcf.user.notification.info.daries.rp.eventComment.notification.comment"><![CDATA[Neuer Kommentar zu {if LANGUAGE_USE_INFORMAL_VARIANT}deinem{else}Ihrem{/if} Termin]]></item>
+            <item name="wcf.user.notification.info.daries.rp.eventComment.response.like.notification.like"><![CDATA[Reaktion auf {if LANGUAGE_USE_INFORMAL_VARIANT}deine{else}Ihre{/if} Antwort auf einen Termin-Kommentar]]></item>
+            <item name="wcf.user.notification.info.daries.rp.eventComment.response.notification.commentResponse"><![CDATA[Neue Antwort auf einen Kommentar von {if LANGUAGE_USE_INFORMAL_VARIANT}dir{else}Ihnen{/if}]]></item>
+            <item name="wcf.user.notification.info.daries.rp.eventComment.response.notification.commentResponseOwner"><![CDATA[Neue Antwort auf einen Kommentar zu {if LANGUAGE_USE_INFORMAL_VARIANT}deinem{else}Ihrem{/if} Termin]]></item>
+            <item name="wcf.user.notification.info.daries.rp.likeableEvent.notification.like"><![CDATA[Reaktion auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Termin]]></item>
+            <item name="wcf.user.notification.info.daries.rp.raid.event.notification.status"><![CDATA[Ihr Status hat sich geändert]]></item>
+        </category>
+    </import>
+</language>
