@@ -62,6 +62,16 @@ class Server extends DatabaseObject implements ITitledObject
     }
 
     /**
+     * Returns the image folder of the game.
+     * 
+     * @since 2.0
+     */
+    public function getImagePath(): string
+    {
+        return WCF::getPath('rp') . 'images/' . $this->getGame()->identifier . '/';
+    }
+
+    /**
      * @inheritDoc
      */
     public function getTitle(): string

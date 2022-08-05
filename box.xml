@@ -19,6 +19,20 @@
                 <title>Legend</title>
             </content>
         </box>
+        <box identifier="info.daries.rp.ServerStatus">
+            <name language="de">Server Status (Raidplaner)</name>
+            <name language="en">Server Status (Raidplaner)</name>
+            <boxType>system</boxType>
+            <position>sidebarRight</position>
+            <objectType>info.daries.rp.serverStatus</objectType>
+            <showHeader>1</showHeader>
+            <content language="de">
+                <title>Server Status</title>
+            </content>
+            <content language="en">
+                <title>Server Status</title>
+            </content>
+        </box>
         <box identifier="info.daries.rp.UpcomingEvents">
             <name language="de">Anstehende Termine (Raidplaner)</name>
             <name language="en">Upcoming Events (Raidplaner)</name>
