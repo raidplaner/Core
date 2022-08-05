@@ -32,12 +32,6 @@ use wcf\system\WCF;
  */
 class EventLegendBoxController extends AbstractDatabaseObjectListBoxController
 {
-    /**
-     * @inheritDoc
-     */
-    protected static $supportedPositions = [
-        'contentBottom'
-    ];
 
     /**
      * @inheritDoc
