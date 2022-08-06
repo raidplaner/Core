@@ -51,7 +51,7 @@ class ServerStatusCacheBuilder extends AbstractCacheBuilder
             throw new \InvalidArgumentException('Given URL "' . $parameters['url'] . '" is not a valid URL.');
         }
 
-        $client = HttpFactory::makeClientWithTimeout(1);
+        $client = HttpFactory::makeClientWithTimeout(5);
         $request = new Request('GET', $parameters['url']);
 
         try {
