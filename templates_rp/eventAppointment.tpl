@@ -4,7 +4,7 @@
     </header>
 
     {hascontent}
-        <ol class="contentItemList eventAppointment">
+        <ol class="contentItemList containerList eventAppointment">
             {content}
                 {foreach from=$accepted item=user}
                     {include file='userListItem' application='rp'}
@@ -22,7 +22,7 @@
     </header>
 
     {hascontent}
-        <ol class="contentItemList eventAppointment">
+        <ol class="contentItemList containerList eventAppointment">
             {content}
                 {foreach from=$maybe item=user}
                     {include file='userListItem' application='rp'}
@@ -40,7 +40,7 @@
     </header>
 
     {hascontent}
-        <ol class="contentItemList eventAppointment">
+        <ol class="contentItemList containerList eventAppointment">
             {content}
                 {foreach from=$canceled item=user}
                     {include file='userListItem' application='rp'}
