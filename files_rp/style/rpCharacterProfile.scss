@@ -77,6 +77,8 @@
 
 .raidList {
     > li {
+        padding: 5px;
+
         &.showMore {
             flex-basis: 100%;
             text-align: center;
@@ -103,7 +105,7 @@
     .raidEventIcon {
         padding: 5px;
     }
-    
+
     .containerHeadline {
         > h3 {
             @include wcfFontDefault;

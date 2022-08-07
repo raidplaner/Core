@@ -27,7 +27,7 @@
  */
  
 import * as ControllerPopover from "WoltLabSuite/Core/Controller/Popover";
- 
+
 /**
  * Initializes character profile popover.
  */
