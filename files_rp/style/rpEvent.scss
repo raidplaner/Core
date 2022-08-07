@@ -241,10 +241,22 @@
     }
 }
 
+.containerList {
+    &.eventAppointment {
+        > li {
+            &:not(:last-child) {
+                border-bottom: unset !important;
+            }
+        }
+    }
+}
+
 .eventAppointment {
     > li {
         padding: 5px;
     }
+
+
 }
 
 /* fix icons in rtl design */
