@@ -131,7 +131,7 @@ class CharacterSearchForm extends AbstractFormBuilderForm
                 'searchData' => $data,
                 'searchTime' => TIME_NOW,
                 'searchType' => 'characters',
-                'userID' => WCF::getUser()->userID,
+                'userID' => WCF::getUser()->userID ?? null,
         ]);
 
         //get new search id
