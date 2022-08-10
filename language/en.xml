@@ -365,6 +365,7 @@
         <category name="wcf.acp.box">
             <item name="wcf.acp.box.boxController.info.daries.rp.eventLegend"><![CDATA[Event Legend (Raidplaner)]]></item>
             <item name="wcf.acp.box.boxController.info.daries.rp.eventList"><![CDATA[Calendar Events (Raidplaner)]]></item>
+            <item name="wcf.acp.box.boxController.info.daries.rp.myCharacterList"><![CDATA[My Characters (Raidplaner)]]></item>
             <item name="wcf.acp.box.boxController.info.daries.rp.serverStatus"><![CDATA[Server Status (Raidplaner)]]></item>
         </category>
 

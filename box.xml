@@ -19,6 +19,24 @@
                 <title>Legend</title>
             </content>
         </box>
+		<box identifier="info.daries.rp.MyCharacterList">
+			<name language="de">Meine Charaktere (Raidplaner)</name>
+			<name language="en">My Characters (Raidplaner)</name>
+			<boxType>system</boxType>
+			<position>sidebarRight</position>
+			<objectType>info.daries.rp.myCharacterList</objectType>
+			<showHeader>1</showHeader>
+			<visibleEverywhere>0</visibleEverywhere>
+			<visibilityExceptions>
+				<page>info.daries.rp.CharactersList</page>
+			</visibilityExceptions>
+			<content language="de">
+				<title>Meine Charaktere</title>
+			</content>
+			<content language="en">
+				<title>My Characters</title>
+			</content>
+		</box>
         <box identifier="info.daries.rp.ServerStatus">
             <name language="de">Server Status (Raidplaner)</name>
             <name language="en">Server Status (Raidplaner)</name>
