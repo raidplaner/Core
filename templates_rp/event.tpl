@@ -18,6 +18,20 @@
                 </div>
             </section>
         {/hascontent}
+        
+        {hascontent}
+            <section class="box" data-static-box-identifier="info.daries.rp.event.raid.conditions">
+                <h2 class="boxTitle">{lang}rp.event.raid.condition{/lang}</h2>
+
+                <div class="boxContent">
+                    <dl class="plain dataList">
+                        {content}
+                            {event name='eventRaidConditions'}
+                        {/content}
+                    </dl>
+                </div>
+            </section>
+        {/hascontent}
 
         {if $event->leaders}
             <section class="box" data-static-box-identifier="info.daries.rp.event.raid.leaders">
