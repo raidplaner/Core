@@ -74,7 +74,7 @@ class PointAccountAddForm extends AbstractFormBuilderForm
             ->required()
             ->maximumLength(255)
             ->i18n()
-            ->languageItemPattern('rp.acp.point.account.account\d+'),,
+            ->languageItemPattern('rp.acp.point.account.account\d+'),
             TextFormField::create('description')
             ->label('wcf.global.description')
             ->autoFocus()

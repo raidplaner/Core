@@ -431,7 +431,7 @@ class RaidEventController extends AbstractEventController
         switch ($this->getEvent()->distributionMode) {
             case 'class':
                 foreach (ClassificationCache::getInstance()->getClassifications() as $classification) {
-                    if (!$this->getEvent()->{$classification->identifier}) continue;
+                    if (!$this->getEvent()->{$classification->identifier}) break;
 
                     $key = 'rp.classification.' . $game->identifier . '.' . $classification->identifier;
                     $value = $this->getEvent()->{$classification->identifier};
@@ -439,12 +439,12 @@ class RaidEventController extends AbstractEventController
                 }
                 break;
             case 'none':
-                if (!$this->getEvent()->participants) continue;
+                if (!$this->getEvent()->participants) break;
                 $requireds['rp.event.raid.participants'] = $this->getEvent()->participants;
                 break;
             case 'role':
                 foreach (RoleCache::getInstance()->getRoles() as $role) {
-                    if (!$this->getEvent()->{$role->identifier}) continue;
+                    if (!$this->getEvent()->{$role->identifier}) break;
 
                     $key = 'rp.role.' . $game->identifier . '.' . $role->identifier;
                     $value = $this->getEvent()->{$role->identifier};
