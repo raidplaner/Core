@@ -18,46 +18,52 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-define(["require", "exports", "tslib", "WoltLabSuite/Core/Ajax", "WoltLabSuite/Core/Core", "WoltLabSuite/Core/Dom/Util", "WoltLabSuite/Core/Ui/TabMenu/Simple"], function (require, exports, tslib_1, Ajax, Core, Util_1, Simple_1) {
+define(["require", "exports", "tslib", "WoltLabSuite/Core/Ajax", "WoltLabSuite/Core/Core", "WoltLabSuite/Core/Dom/Util", "WoltLabSuite/Core/Event/Handler"], function (require, exports, tslib_1, Ajax, Core, Util_1, EventHandler) {
     "use strict";
     Ajax = tslib_1.__importStar(Ajax);
     Core = tslib_1.__importStar(Core);
     Util_1 = tslib_1.__importDefault(Util_1);
-    Simple_1 = tslib_1.__importDefault(Simple_1);
-    class TabMenu extends Simple_1.default {
-        constructor(container, characterID) {
-            super(container);
-            this.contents = new Map();
-            this.characterID = characterID;
-            this.rebuild();
-            const activeMenuItem = container.dataset.active;
-            this.getContainers().forEach((container) => {
+    EventHandler = tslib_1.__importStar(EventHandler);
+    class ChracterProfileTabMenu {
+        constructor(profileContent, characterID) {
+            this._contents = new Map();
+            this._profileContent = profileContent;
+            this._characterID = characterID;
+            const activeMenuItem = this._profileContent.dataset.active;
+            let hasNotContent = false;
+            this._profileContent.querySelectorAll("div.tabMenuContent").forEach((container) => {
                 const containerID = container.dataset.name;
                 if (activeMenuItem === containerID) {
-                    this.contents.set(containerID, true);
+                    this._contents.set(containerID, true);
                 }
                 else {
-                    this.contents.set(containerID, false);
+                    this._contents.set(containerID, false);
+                    hasNotContent = true;
                 }
             });
-            const activeTab = this.getActiveTab();
-            const activeTabName = activeTab.dataset.name;
-            if (activeMenuItem !== activeTabName) {
-                this.select(null, activeTab);
+            if (hasNotContent) {
+                this._profileContent.querySelectorAll("nav.tabMenu > ul > li").forEach((listItem) => {
+                    if (listItem.classList.contains("ui-state-active")) {
+                        this._loadContent(document.getElementById(listItem.dataset.name));
+                        return false;
+                    }
+                });
             }
+            EventHandler.add("com.woltlab.wcf.simpleTabMenu_" + this._profileContent.id, "select", (data) => this._loadContent(data.active));
         }
-        select(name, tab, disableEvent) {
-            super.select(name, tab, disableEvent);
-            const container = this.getContainers().get(tab.dataset.name);
-            const containerID = container === null || container === void 0 ? void 0 : container.dataset.name;
-            const hasContent = this.contents.get(containerID);
+        _loadContent(panel) {
+            if (panel.tagName === "LI") {
+                panel = document.getElementById(panel.dataset.name);
+            }
+            const containerID = Util_1.default.identify(panel);
+            const hasContent = this._contents.get(containerID);
             if (!hasContent) {
                 Ajax.api(this, {
                     actionName: "getContent",
                     parameters: {
-                        characterID: this.characterID,
+                        characterID: this._characterID,
                         containerID: containerID,
-                        menuItem: container === null || container === void 0 ? void 0 : container.dataset.menuItem
+                        menuItem: panel.dataset.menuItem
                     }
                 });
             }
@@ -71,10 +77,10 @@ define(["require", "exports", "tslib", "WoltLabSuite/Core/Ajax", "WoltLabSuite/C
         }
         _ajaxSuccess(data) {
             const containerID = data.returnValues.containerID;
-            this.contents.set(containerID, true);
-            Util_1.default.insertHtml(data.returnValues.template, document.getElementById(containerID), 'append');
+            this._contents.set(containerID, true);
+            Util_1.default.insertHtml(data.returnValues.template, document.getElementById(containerID), "append");
         }
     }
-    Core.enableLegacyInheritance(TabMenu);
-    return TabMenu;
+    Core.enableLegacyInheritance(ChracterProfileTabMenu);
+    return ChracterProfileTabMenu;
 });
