@@ -23,6 +23,7 @@
             <item name="rp.acp.event.legend.add"><![CDATA[Add Legend]]></item>
             <item name="rp.acp.event.legend.bgColor"><![CDATA[Background Color]]></item>
             <item name="rp.acp.event.legend.edit"><![CDATA[Edit Legend]]></item>
+            <item name="rp.acp.event.legend.frontColor"><![CDATA[Font Color]]></item>
             <item name="rp.acp.event.legend.list"><![CDATA[Legends]]></item>
         </category>
 
@@ -173,6 +174,7 @@
             <item name="rp.event.isFullDay"><![CDATA[Full day event]]></item>
             <item name="rp.event.legend"><![CDATA[Individual event color setting]]></item>
             <item name="rp.event.legend.description"><![CDATA[Individual event color setting for this event in the calendar. [Optional]]]></item>
+            <item name="rp.event.legendType.default"><![CDATA[Default]]></item>
             <item name="rp.event.legendType.individual"><![CDATA[Individual]]></item>
             <item name="rp.event.legendType.select"><![CDATA[Select]]></item>
             <item name="rp.event.like.notification.message"><![CDATA[<strong>{$author}</strong> reacted to your event <strong>{$event->getTitle()}</strong> ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>

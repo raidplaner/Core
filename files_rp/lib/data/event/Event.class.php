@@ -273,24 +273,26 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
 
     public function getCustomCSS(): string
     {
-        $custom = '';
+        $bgColor = $frontColor = '';
 
         switch ($this->legendType) {
             case EventLegend::TYPE_INDIVIDUAL:
-                if ($this->customBGColor || $this->customFrontColor) {
-                    $color = StringUtil::trim($this->customBGColor);
-                    $custom = " style='background-color: {$color};'";
-                }
+                $bgColor = 'background-color: ' . StringUtil::trim($this->customBGColor) . ';';
+                $frontColor = 'color: ' . StringUtil::trim($this->customFrontColor) . ';';
                 break;
             case EventLegend::TYPE_SELECT:
                 if ($this->legendID) {
                     $legend = EventLegendCache::getInstance()->getLegendByID($this->legendID);
 
-                    $color = StringUtil::trim($legend->bgColor);
-                    $custom = " style='background-color: {$color};'";
+                    if ($legend) {
+                        $bgColor = 'background-color: ' . StringUtil::trim($legend->bgColor) . ';';
+                        $frontColor = 'color: ' . StringUtil::trim($legend->frontColor) . ';';
+                    }
                 }
                 break;
         }
+
+        $custom = " style='" . $frontColor . $bgColor . "'";
 
         return $custom;
     }

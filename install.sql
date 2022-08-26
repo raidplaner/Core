@@ -60,6 +60,7 @@ DROP TABLE IF EXISTS rp1_event_legend;
 CREATE TABLE rp1_event_legend (
     legendID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL DEFAULT '',
+    frontColor VARCHAR(255) NOT NULL DEFAULT '',
     bgColor VARCHAR(255) NOT NULL DEFAULT '',
 );
 

@@ -23,6 +23,7 @@
             <item name="rp.acp.event.legend.add"><![CDATA[Legende hinzufügen]]></item>
             <item name="rp.acp.event.legend.bgColor"><![CDATA[Hintergrundfarbe]]></item>
             <item name="rp.acp.event.legend.edit"><![CDATA[Legende bearbeiten]]></item>
+            <item name="rp.acp.event.legend.frontColor"><![CDATA[Schriftfarbe]]></item>
             <item name="rp.acp.event.legend.list"><![CDATA[Legenden]]></item>
         </category>
 
@@ -173,6 +174,7 @@
             <item name="rp.event.isFullDay"><![CDATA[Ganztägiges Ereignis]]></item>
             <item name="rp.event.legend"><![CDATA[Individuelle Termin-Farbeinstellung]]></item>
             <item name="rp.event.legend.description"><![CDATA[Individuelle Termin-Farbeinstellung für diesen Termin im Kalender. [Optional]]]></item>
+            <item name="rp.event.legendType.default"><![CDATA[Standard]]></item>
             <item name="rp.event.legendType.individual"><![CDATA[Individuell]]></item>
             <item name="rp.event.legendType.select"><![CDATA[Auswahl]]></item>
             <item name="rp.event.like.notification.message"><![CDATA[<strong>{$author}</strong> hat auf {if LANGUAGE_USE_INFORMAL_VARIANT}deinen{else}Ihren{/if} Termin <strong>{$event->getTitle()}</strong> reagiert ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>

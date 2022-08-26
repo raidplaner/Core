@@ -1,9 +1,7 @@
 <?php
 
-namespace rp\data\event\legend;
-
-use wcf\data\DatabaseObject;
-use wcf\data\ITitledObject;
+use wcf\system\database\table\column\NotNullVarchar255DatabaseTableColumn;
+use wcf\system\database\table\PartialDatabaseTable;
 
 /**
  *  Project:    Raidplaner: Core
@@ -25,31 +23,14 @@ use wcf\data\ITitledObject;
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 /**
- * Represents a event legend.
- * 
  * @author      Marco Daries
- * @package     Daries\RP\Data\Event\Legend
- * 
- * @property-read   int     $legendID       unique id of the event legend
- * @property-read   string  $name           name of the event legend
- * @property-read   string  $frontColor     front color of the event legend
- * @property-read   string  $bgColor        background color of the event legend
+ * @package     Daries\RP
  */
-class EventLegend extends DatabaseObject implements ITitledObject
-{
-    CONST TYPE_DEFAULT = -1;
-
-    CONST TYPE_INDIVIDUAL = 0;
-
-    CONST TYPE_SELECT = 2;
-
-    /**
-     * @inheritDoc
-     */
-    public function getTitle(): string
-    {
-        return $this->name;
-    }
-}
+return [
+        PartialDatabaseTable::create('rp1_event_legend')
+        ->columns([
+            NotNullVarchar255DatabaseTableColumn::create('frontColor')
+            ->defaultValue('')
+        ])
+];

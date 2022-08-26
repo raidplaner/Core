@@ -105,11 +105,12 @@ abstract class AbstractEventController implements IEventController
         $legendType = RadioButtonFormField::create('legendType')
             ->options(function () {
                 return [
+                EventLegend::TYPE_DEFAULT => WCF::getLanguage()->get('rp.event.legendType.default'),
                 EventLegend::TYPE_INDIVIDUAL => WCF::getLanguage()->get('rp.event.legendType.individual'),
                 EventLegend::TYPE_SELECT => WCF::getLanguage()->get('rp.event.legendType.select')
                 ];
             }, false, false)
-            ->value(EventLegend::TYPE_INDIVIDUAL)
+            ->value(EventLegend::TYPE_DEFAULT)
             ->addClass('floated');
 
         $legendContainer = FormContainer::create('legend')
@@ -117,6 +118,13 @@ abstract class AbstractEventController implements IEventController
             ->description('rp.event.legend.description')
             ->appendChildren([
             $legendType,
+            ColorFormField::create('customFrontColor')
+            ->label('rp.acp.event.legend.frontColor')
+            ->addDependency(
+                ValueFormFieldDependency::create('legendType')
+                ->field($legendType)
+                ->values([0])
+            ),
             ColorFormField::create('customBGColor')
             ->label('rp.acp.event.legend.bgColor')
             ->addDependency(

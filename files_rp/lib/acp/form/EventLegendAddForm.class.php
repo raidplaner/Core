@@ -66,6 +66,8 @@ class EventLegendAddForm extends AbstractFormBuilderForm
                 ->autoFocus()
                 ->required()
                 ->maximumLength(255),
+                ColorFormField::create('frontColor')
+                ->label('rp.acp.event.legend.frontColor'),
                 ColorFormField::create('bgColor')
                 ->label('rp.acp.event.legend.bgColor'),
             ]
