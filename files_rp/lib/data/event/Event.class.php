@@ -292,7 +292,10 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
                 break;
         }
 
-        $custom = " style='" . $frontColor . $bgColor . "'";
+        $custom = '';
+        if (!empty($bgColor) || !empty($frontColor)) {
+            $custom = " style='" . $frontColor . $bgColor . "'";
+        }
 
         return $custom;
     }
