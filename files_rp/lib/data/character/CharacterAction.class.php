@@ -268,6 +268,41 @@ class CharacterAction extends AbstractDatabaseObjectAction implements IClipboard
     }
 
     /**
+     * Sets the current character to Main.
+     */
+    public function setAsMain(): void
+    {
+        $updateSQL = "  UPDATE  rp" . WCF_N . "_member
+                        SET     isPrimary = ?
+                        WHERE   characterID = ?";
+        $updateStatement = WCF::getDB()->prepare($updateSQL);
+
+        $sql = "SELECT  characterID, isPrimary
+                FROM    rp" . WCF_N . "_member
+                WHERE   userID = ?";
+        $selectStatement = WCF::getDB()->prepare($sql);
+
+        $userIDs = [];
+        foreach ($this->getObjects() as $object) {
+            $selectStatement->execute([$object->userID]);
+
+            while ($row = $selectStatement->fetchArray()) {
+                if ($row['isPrimary']) {
+                    $updateStatement->execute([0, $row['characterID']]);
+                } elseif ($row['characterID'] === $object->characterID) {
+                    $updateStatement->execute([1, $row['characterID']]);
+                }
+            }
+
+            $userIDs[] = $object->userID;
+        }
+
+        if (!empty($userIDs)) {
+            UserStorageHandler::getInstance()->reset($userIDs, 'characterPrimaryIDs');
+        }
+    }
+
+    /**
      * @inheritDoc
      */
     public function unmarkAll(): void
@@ -425,7 +460,7 @@ class CharacterAction extends AbstractDatabaseObjectAction implements IClipboard
     }
 
     /**
-     * Validates the enable action.
+     * Validates the `enable` action.
      */
     public function validateEnable(): void
     {
@@ -449,6 +484,30 @@ class CharacterAction extends AbstractDatabaseObjectAction implements IClipboard
 
         if (isset($this->parameters['data']['excludedSearchValues']) && !\is_array($this->parameters['data']['excludedSearchValues'])) {
             throw new UserInputException('excludedSearchValues');
+        }
+    }
+
+    /**
+     * Validates the `setAsMain` action.
+     */
+    public function validateSetAsMain(): void
+    {
+        if (empty($this->objects)) {
+            $this->readObjects();
+        }
+
+        foreach ($this->getObjects() as $object) {
+            if (!$object->userID) {
+                throw new UserInputException('objectIDs');
+            }
+
+            if (!$object->canEdit()) {
+                throw new UserInputException('objectIDs');
+            }
+
+            if ($object->isDisabled) {
+                throw new UserInputException('objectIDs');
+            }
         }
     }
 

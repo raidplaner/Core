@@ -126,6 +126,8 @@
             <item name="rp.character.rank"><![CDATA[Rank]]></item>
             <item name="rp.character.search"><![CDATA[Search Characters]]></item>
             <item name="rp.character.search.results"><![CDATA[Search Results]]></item>
+            <item name="rp.character.setAsMain"><![CDATA[Set as Main Character]]></item>
+            <item name="rp.character.setAsMain.success"><![CDATA[The character `{$character->getTitle()}` was successfully set as main.]]></item>
             <item name="rp.character.sortField.characterName"><![CDATA[Charctername]]></item>
             <item name="rp.character.sortField.created"><![CDATA[Created]]></item>
             <item name="rp.character.title"><![CDATA[Your Characters]]></item>

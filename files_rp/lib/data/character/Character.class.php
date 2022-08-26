@@ -109,11 +109,7 @@ class Character extends DatabaseObject implements IPopoverObject, IRouteControll
         }
 
         if ($this->userID == WCF::getUser()->userID && WCF::getSession()->getPermission('user.rp.canEditOwnCharacter')) {
-            $characters = self::getAllCharactersByUserID($this->userID);
-            if (\count($characters) == 1) return true;
-            elseif (!$this->isPrimary) return true;
-
-            return false;
+            return true;
         }
 
         return false;

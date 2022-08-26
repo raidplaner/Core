@@ -3,7 +3,6 @@
 namespace rp\form;
 
 use wcf\system\exception\PermissionDeniedException;
-use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
@@ -34,10 +33,6 @@ use wcf\system\WCF;
  */
 class CharacterEditForm extends \rp\acp\form\CharacterEditForm
 {
-    /**
-     * @inheritDoc
-     */
-    public $neededPermissions = ['user.rp.canEditOwnCharacter'];
 
     /**
      * @inheritDoc
@@ -46,7 +41,7 @@ class CharacterEditForm extends \rp\acp\form\CharacterEditForm
     {
         parent::readParameters();
 
-        if ($this->formObject->userID !== WCF::getUser()->userID) {
+        if (!$this->formObject->canEdit()) {
             throw new PermissionDeniedException();
         }
     }
