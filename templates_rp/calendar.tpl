@@ -51,18 +51,18 @@
                                         {if $event->isDisabled} rpEventDisabled{/if}
                                         {if $event->isClosed} rpEventClosed{/if}
                                         {if $event->isDeleted} rpEventDeleted{/if}"
-                                    {@$event->getCustomCSS()}>
+                                    {@$event->getBackgroundColor()}>
                                     {if !$event->cssMultipleEvent || ($event->cssMultipleEvent != 'rpEventStart' && $day->isFirstDayOfWeek()) || $event->cssMultipleEvent == 'rpEventStart'}
                                         {if $event->getController()->isExpired()}
-                                            <span class="icon icon16 fa-lock rpEventExpired jsTooltip" title="{lang}rp.event.expired{/lang}"></span>
+                                            <span class="icon icon16 fa-lock rpEventExpired jsTooltip" title="{lang}rp.event.expired{/lang}"{@$event->getFrontColor()}></span>
                                         {elseif $event->getController()->hasLogin()}
-                                            <span class="icon icon16 fa-clock-o rpEventLogin jsTooltip" title="{lang}rp.event.login{/lang}"></span>
+                                            <span class="icon icon16 fa-clock-o rpEventLogin jsTooltip" title="{lang}rp.event.login{/lang}"{@$event->getFrontColor()}></span>
                                         {elseif $event->getController()->getIcon(16)}
                                             {@$event->getController()->getIcon(16)}
                                         {/if}
                                     {/if}
                                     
-                                    <a href="{$event->getLink()}" class="rpEventLink" data-object-id="{@$event->eventID}">
+                                    <a href="{$event->getLink()}" class="rpEventLink" data-object-id="{@$event->eventID}"{@$event->getFrontColor()}>
                                         {if $event->cssMultipleEvent}
                                             {if ($event->cssMultipleEvent != 'rpEventStart' && $day->isFirstDayOfWeek()) || $event->cssMultipleEvent == 'rpEventStart'}
                                                 {$event->getTitle()}

@@ -6,8 +6,8 @@
         <packagedescription language="de">Das Gamer DKP-System.</packagedescription>
         <isapplication>1</isapplication>
         <applicationdirectory>rp</applicationdirectory>
-        <version>2.0.3</version>
-        <date>2022-08-10</date>
+        <version>2.0.4</version>
+        <date>2022-09-05</date>
     </packageinformation>
 
     <authorinformation>
@@ -56,7 +56,12 @@
         <instruction type="script">acp/install_info.daries.rp.php</instruction>
     </instructions>
     
-    <instructions type="update" fromversion="2.0.2">
+    <instructions type="update" fromversion="2.0.3">
+        <instruction type="file" application="rp">files_rp.tar</instruction>
         <instruction type="template" application="rp">templates_rp.tar</instruction>
+        
+        <instruction type="database" run="standalone" application="rp">acp/database/update_2.0.4.php</instruction>
+        
+        <instruction type="language" />
     </instructions>
 </package>

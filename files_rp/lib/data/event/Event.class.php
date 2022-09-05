@@ -257,6 +257,32 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
     }
 
     /**
+     * Returns an HTML style CSS for an event background.
+     */
+    public function getBackgroundColor(): string
+    {
+        $bgColor = '';
+
+        switch ($this->legendType) {
+            case EventLegend::TYPE_INDIVIDUAL:
+                $bgColor = 'background-color: ' . StringUtil::trim($this->customBGColor) . ';';
+                break;
+            case EventLegend::TYPE_SELECT:
+                if ($this->legendID) {
+                    $legend = EventLegendCache::getInstance()->getLegendByID($this->legendID);
+
+                    if ($legend) {
+                        $bgColor = 'background-color: ' . StringUtil::trim($legend->bgColor) . ';';
+                    }
+                }
+                break;
+        }
+
+        if (empty($bgColor)) return '';
+        return " style='" . $bgColor . "'";
+    }
+
+    /**
      * Returns the event controller.
      */
     public function getController(): IEventController
@@ -269,35 +295,6 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
         }
 
         return $this->controller;
-    }
-
-    public function getCustomCSS(): string
-    {
-        $bgColor = $frontColor = '';
-
-        switch ($this->legendType) {
-            case EventLegend::TYPE_INDIVIDUAL:
-                $bgColor = 'background-color: ' . StringUtil::trim($this->customBGColor) . ';';
-                $frontColor = 'color: ' . StringUtil::trim($this->customFrontColor) . ';';
-                break;
-            case EventLegend::TYPE_SELECT:
-                if ($this->legendID) {
-                    $legend = EventLegendCache::getInstance()->getLegendByID($this->legendID);
-
-                    if ($legend) {
-                        $bgColor = 'background-color: ' . StringUtil::trim($legend->bgColor) . ';';
-                        $frontColor = 'color: ' . StringUtil::trim($legend->frontColor) . ';';
-                    }
-                }
-                break;
-        }
-
-        $custom = '';
-        if (!empty($bgColor) || !empty($frontColor)) {
-            $custom = " style='" . $frontColor . $bgColor . "'";
-        }
-
-        return $custom;
     }
 
     /**
@@ -386,6 +383,32 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
         $processor->process($this->notes, 'info.daries.rp.event.notes', $this->eventID, false);
 
         return StringUtil::encodeHTML(StringUtil::truncate($processor->getHtml(), 255));
+    }
+
+    /**
+     * Returns an HTML style CSS for an event text color.
+     */
+    public function getFrontColor(): string
+    {
+        $frontColor = '';
+
+        switch ($this->legendType) {
+            case EventLegend::TYPE_INDIVIDUAL:
+                $frontColor = 'color: ' . StringUtil::trim($this->customFrontColor) . ';';
+                break;
+            case EventLegend::TYPE_SELECT:
+                if ($this->legendID) {
+                    $legend = EventLegendCache::getInstance()->getLegendByID($this->legendID);
+
+                    if ($legend) {
+                        $frontColor = 'color: ' . StringUtil::trim($legend->frontColor) . ';';
+                    }
+                }
+                break;
+        }
+
+        if (empty($frontColor)) return '';
+        return " style='" . $frontColor . "' !important";
     }
 
     /**

@@ -451,6 +451,7 @@ abstract class AbstractEventController implements IEventController
         $fields = \array_merge(
             [
                 'customBGColor',
+                'customFrontColor',
                 'fEndTime' => 'endTime',
                 'fStartTime' => 'startTime',
                 'legendType',
