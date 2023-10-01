@@ -4,13 +4,14 @@
         "ts/**/*"
     ],
     "compilerOptions": {
-        "target": "es2019",
+        "target": "ES2022",
         "module": "amd",
         "rootDir": "ts/",
         "outDir": "files_rp/js/",
         "lib": [
-            "dom",
-            "es2019"
+            "DOM",
+            "DOM.Iterable",
+            "ES2022"
         ],
         "strictNullChecks": true,
         "moduleResolution": "node",
@@ -20,11 +21,11 @@
         "baseUrl": ".",
         "paths": {
             "*": [
-                "node_modules/@woltlab/wcf/ts/*"
+                "node_modules/@woltlab/d.ts/*"
             ]
         },
         "importHelpers": true,
-        "newLine": "lf",
-        "experimentalDecorators": true
-    }
+        "newLine": "lf"
+    },
+    "compileOnSave": true
 }
