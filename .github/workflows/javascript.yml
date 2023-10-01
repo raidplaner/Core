@@ -6,6 +6,9 @@ on:
     - master
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   syntax:
     name: "Check Syntax"
@@ -13,17 +16,17 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: "18"
-    - run: echo "::add-matcher::.github/javascript-syntax.json"
-    - name: Remove files to be ignored
-      run: |
-        true
-    - run: |
-        ! find files_rp/ -type f -name '*.js' -exec node -c '{}' \; 2>&1 \
-          |awk 'BEGIN {m=0} /(.js):[0-9]+$/ {m=1; printf "%s - ",$0} m==1 && /^SyntaxError/ { m=0; print }' \
-          |sed "s@$(pwd)@.@" \
-          |grep '^'
+      - name: Set up node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - uses: actions/checkout@v4
+      - run: echo "::add-matcher::.github/javascript-syntax.json"
+      - name: Remove files to be ignored
+        run: |
+          true
+      - run: |
+          ! find files_rp/ -type f -name '*.js' -exec node -c '{}' \; 2>&1 \
+            |awk 'BEGIN {m=0} /(.js):[0-9]+$/ {m=1; printf "%s - ",$0} m==1 && /^SyntaxError/ { m=0; print }' \
+            |sed "s@$(pwd)@.@" \
+            |grep '^'

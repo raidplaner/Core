@@ -6,6 +6,9 @@ on:
     - master
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   tsc:
     name: "TSC"
@@ -13,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up node.js
       uses: actions/setup-node@v3
       with:
@@ -27,7 +30,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up node.js
       uses: actions/setup-node@v3
       with:
@@ -42,7 +45,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up node.js
       uses: actions/setup-node@v3
       with:
