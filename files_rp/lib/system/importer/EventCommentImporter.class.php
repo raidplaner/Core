@@ -8,10 +8,10 @@ use wcf\system\importer\ImportHandler;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -38,7 +38,7 @@ class EventCommentImporter extends AbstractCommentImporter
     /**
      * @inheritDoc
      */
-    protected $objectTypeName = 'info.daries.rp.event.comment';
+    protected $objectTypeName = 'dev.daries.rp.event.comment';
 
     /**
      * Creates a new EventCommentImporter object.
@@ -46,7 +46,7 @@ class EventCommentImporter extends AbstractCommentImporter
     public function __construct()
     {
         $objectType = ObjectTypeCache::getInstance()
-            ->getObjectTypeByName('com.woltlab.wcf.comment.commentableContent', 'info.daries.rp.eventComment');
+            ->getObjectTypeByName('com.woltlab.wcf.comment.commentableContent', 'dev.daries.rp.eventComment');
         $this->objectTypeID = $objectType->objectTypeID;
     }
 
@@ -55,7 +55,7 @@ class EventCommentImporter extends AbstractCommentImporter
      */
     public function import($oldID, array $data, array $additionalData = []): mixed
     {
-        $eventID = ImportHandler::getInstance()->getNewID('info.daries.rp.event', $data['objectID'] ?? $additionalData['eventID']);
+        $eventID = ImportHandler::getInstance()->getNewID('dev.daries.rp.event', $data['objectID'] ?? $additionalData['eventID']);
         if (!$eventID) return 0;
         $data['objectID'] = $eventID;
 

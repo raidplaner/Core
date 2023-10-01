@@ -32,10 +32,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -131,7 +131,7 @@ class EventRaidAttendeeAction extends AbstractDatabaseObjectAction implements IP
             if ($attendee->getCharacter()->userID) {
                 UserNotificationHandler::getInstance()->markAsConfirmed(
                     'status',
-                    'info.daries.rp.raid.event.notification',
+                    'dev.daries.rp.raid.event.notification',
                     [$attendee->getCharacter()->userID],
                     [$attendee->getEvent()->eventID]
                 );
@@ -614,7 +614,7 @@ class EventRaidAttendeeAction extends AbstractDatabaseObjectAction implements IP
         }
 
         if (!empty($attendeeIDs)) {
-            ClipboardHandler::getInstance()->unmark($attendeeIDs, ClipboardHandler::getInstance()->getObjectTypeID('info.daries.rp.raid.attendee'));
+            ClipboardHandler::getInstance()->unmark($attendeeIDs, ClipboardHandler::getInstance()->getObjectTypeID('dev.daries.rp.raid.attendee'));
         }
     }
 
@@ -638,7 +638,7 @@ class EventRaidAttendeeAction extends AbstractDatabaseObjectAction implements IP
             if ($editor->getCharacter()->userID) {
                 UserNotificationHandler::getInstance()->fireEvent(
                     'status',
-                    'info.daries.rp.raid.event.notification',
+                    'dev.daries.rp.raid.event.notification',
                     new EventRaidUserNotificationObject($editor->getEvent()),
                     [$editor->getCharacter()->userID],
                     ['objectID' => $editor->getEvent()->eventID]

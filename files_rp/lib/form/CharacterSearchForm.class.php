@@ -22,10 +22,10 @@ use wcf\util\HeaderUtil;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -77,7 +77,7 @@ class CharacterSearchForm extends AbstractFormBuilderForm
      */
     public function createForm(): void
     {
-        $objectTypes = ObjectTypeCache::getInstance()->getObjectTypes('info.daries.rp.condition.characterSearch');
+        $objectTypes = ObjectTypeCache::getInstance()->getObjectTypes('dev.daries.rp.condition.characterSearch');
         foreach ($objectTypes as $objectType) {
             if (!$objectType->conditiongroup) continue;
             if (!isset($this->conditions[$objectType->conditiongroup])) $this->conditions[$objectType->conditiongroup] = [];
@@ -112,7 +112,7 @@ class CharacterSearchForm extends AbstractFormBuilderForm
     {
         parent::readData();
 
-        PageLocationManager::getInstance()->addParentLocation('info.daries.rp.CharactersList');
+        PageLocationManager::getInstance()->addParentLocation('dev.daries.rp.CharactersList');
     }
 
     /**

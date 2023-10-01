@@ -12,10 +12,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -101,7 +101,7 @@ class EventParticipationListPage extends MultipleLinkPage
 
             $isParticipat = false;
             switch ($objectType->objectType) {
-                case 'info.daries.rp.event.appointment':
+                case 'dev.daries.rp.event.appointment':
                     if ($event->appointments) {
                         foreach ($event->appointments as $status => $userIDs) {
                             foreach ($userIDs as $userID) {
@@ -113,7 +113,7 @@ class EventParticipationListPage extends MultipleLinkPage
                         }
                     }
                     break;
-                case 'info.daries.rp.event.raid':
+                case 'dev.daries.rp.event.raid':
                     $attendeeList = new EventRaidAttendeeList();
                     $attendeeList->getConditionBuilder()->add('event_raid_attendee.eventID = ?', [$event->eventID]);
                     $attendeeList->getConditionBuilder()->add('event_raid_attendee.characterID IS NOT NULL');

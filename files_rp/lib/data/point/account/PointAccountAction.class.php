@@ -13,10 +13,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -108,7 +108,7 @@ class PointAccountAction extends AbstractDatabaseObjectAction implements ISortab
                 $this->parameters['pointAccountName_i18n'],
                 'rp.acp.pointAccount.name' . $pointAccountEditor->pointAccountID,
                 'rp.acp.pointAccount',
-                PackageCache::getInstance()->getPackageID('info.daries.rp')
+                PackageCache::getInstance()->getPackageID('dev.daries.rp')
             );
 
             $updateData['pointAccountName'] = 'rp.acp.pointAccount.name' . $pointAccountEditor->pointAccountID;
@@ -118,7 +118,7 @@ class PointAccountAction extends AbstractDatabaseObjectAction implements ISortab
                 $this->parameters['description_i18n'],
                 'rp.acp.pointAccount.description' . $pointAccountEditor->pointAccountID,
                 'rp.acp.pointAccount',
-                PackageCache::getInstance()->getPackageID('info.daries.rp')
+                PackageCache::getInstance()->getPackageID('dev.daries.rp')
             );
 
             $updateData['description'] = 'rp.acp.pointAccount.description' . $pointAccountEditor->pointAccountID;
@@ -197,7 +197,7 @@ class PointAccountAction extends AbstractDatabaseObjectAction implements ISortab
                     $this->parameters['pointAccountName_i18n'],
                     'rp.acp.pointAccount.name' . $object->pointAccountID,
                     'rp.acp.pointAccount',
-                    PackageCache::getInstance()->getPackageID('info.daries.rp')
+                    PackageCache::getInstance()->getPackageID('dev.daries.rp')
                 );
 
                 $updateData['pointAccountName'] = 'rp.acp.pointAccount.name' . $object->pointAccountID;
@@ -208,7 +208,7 @@ class PointAccountAction extends AbstractDatabaseObjectAction implements ISortab
                     $this->parameters['description_i18n'],
                     'rp.acp.pointAccount.description' . $object->pointAccountID,
                     'rp.acp.pointAccount',
-                    PackageCache::getInstance()->getPackageID('info.daries.rp')
+                    PackageCache::getInstance()->getPackageID('dev.daries.rp')
                 );
 
                 $updateData['description'] = 'rp.acp.pointAccount.description' . $object->pointAccountID;

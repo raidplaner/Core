@@ -20,10 +20,10 @@ use wcf\util\HeaderUtil;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -119,7 +119,7 @@ class EventAddForm extends AbstractFormBuilderForm
     {
         if (!empty($_REQUEST['objectTypeID'])) $this->objectTypeID = \intval($_REQUEST['objectTypeID']);
 
-        $availableEventControllers = ObjectTypeCache::getInstance()->getObjectTypes('info.daries.rp.eventController');
+        $availableEventControllers = ObjectTypeCache::getInstance()->getObjectTypes('dev.daries.rp.eventController');
         // work-around to force adding event via dialog overlay
         if (empty($_POST) && !isset($_REQUEST['objectTypeID'])) {
             HeaderUtil::redirect(LinkHandler::getInstance()->getLink('Calendar', ['application' => 'rp', 'showEventAddDialog' => 1]));
@@ -164,7 +164,7 @@ class EventAddForm extends AbstractFormBuilderForm
 
         $this->readEventControllerSetting();
 
-        if ($this->eventController->objectType === 'info.daries.rp.event.raid') {
+        if ($this->eventController->objectType === 'dev.daries.rp.event.raid') {
             $raidEvents = RaidEventCache::getInstance()->getRaidEvents();
             if (!\count($raidEvents)) {
                 HeaderUtil::delayedRedirect(

@@ -8,10 +8,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -76,7 +76,7 @@ class CommentEventDiscussionProvider extends AbstractEventDiscussionProvider
     public function renderDiscussions(): string
     {
         $commentCanAdd = WCF::getSession()->getPermission('user.rp.canAddComment');
-        $commentObjectTypeID = CommentHandler::getInstance()->getObjectTypeID('info.daries.rp.eventComment');
+        $commentObjectTypeID = CommentHandler::getInstance()->getObjectTypeID('dev.daries.rp.eventComment');
         $commentManager = CommentHandler::getInstance()->getObjectType($commentObjectTypeID)->getProcessor();
         $commentList = CommentHandler::getInstance()->getCommentList(
             $commentManager,

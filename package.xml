@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package name="info.daries.rp" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/package.xsd">
+<package name="dev.daries.rp" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/package.xsd">
     <packageinformation>
         <packagename>Raidplaner: Core</packagename>
         <packagedescription>The Gamer DKP System.</packagedescription>
         <packagedescription language="de">Das Gamer DKP-System.</packagedescription>
         <isapplication>1</isapplication>
         <applicationdirectory>rp</applicationdirectory>
-        <version>2.0.4</version>
-        <date>2022-09-05</date>
+        <version>3.0.0 Alpha 1</version>
+        <date>2023-10-01</date>
     </packageinformation>
 
     <authorinformation>
         <author>Marco Daries</author>
-        <authorurl>https://daries.info</authorurl>
+        <authorurl>https://daries.dev/raidplaner</authorurl>
     </authorinformation>
 
     <requiredpackages>
-        <requiredpackage minversion="5.5.0 RC 1">com.woltlab.wcf</requiredpackage>
+        <requiredpackage minversion="6.0.0 RC 1">com.woltlab.wcf</requiredpackage>
     </requiredpackages>
 
     <excludedpackages>
-        <excludedpackage version="5.6.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+        <excludedpackage version="6.1.0 Alpha 1">com.woltlab.wcf</excludedpackage>
     </excludedpackages>
 
     <instructions type="install">
 		<instruction type="file" application="wcf">files_wcf.tar</instruction>
-        
 		<instruction type="packageInstallationPlugin" />
-        
 		<instruction type="sql" />
         
         <instruction type="acpTemplate" application="rp">acptemplates_rp.tar</instruction>
@@ -53,15 +51,6 @@
         
         <instruction type="language" />
         
-        <instruction type="script">acp/install_info.daries.rp.php</instruction>
-    </instructions>
-    
-    <instructions type="update" fromversion="2.0.3">
-        <instruction type="file" application="rp">files_rp.tar</instruction>
-        <instruction type="template" application="rp">templates_rp.tar</instruction>
-        
-        <instruction type="database" run="standalone" application="rp">acp/database/update_2.0.4.php</instruction>
-        
-        <instruction type="language" />
+        <instruction type="script">acp/install_dev.daries.rp.php</instruction>
     </instructions>
 </package>

@@ -3,7 +3,7 @@
 {if $event->isRaidEvent()}
     {capture append='sidebarRight'}
         {hascontent}
-            <section class="box" data-static-box-identifier="info.daries.rp.event.raid.required">
+            <section class="box" data-static-box-identifier="dev.daries.rp.event.raid.required">
                 <h2 class="boxTitle">{lang}rp.event.raid.required{/lang}</h2>
 
                 <div class="boxContent">
@@ -20,7 +20,7 @@
         {/hascontent}
         
         {hascontent}
-            <section class="box" data-static-box-identifier="info.daries.rp.event.raid.conditions">
+            <section class="box" data-static-box-identifier="dev.daries.rp.event.raid.conditions">
                 <h2 class="boxTitle">{lang}rp.event.raid.condition{/lang}</h2>
 
                 <div class="boxContent">
@@ -34,7 +34,7 @@
         {/hascontent}
 
         {if $event->leaders}
-            <section class="box" data-static-box-identifier="info.daries.rp.event.raid.leaders">
+            <section class="box" data-static-box-identifier="dev.daries.rp.event.raid.leaders">
                 <h2 class="boxTitle">{lang}rp.event.raid.leader{if $event->getController()->getLeaders()|count > 1}s{/if}{/lang}</h2>
 
                 <div class="boxContent">
@@ -58,7 +58,7 @@
 {if $event->getController()->showEventNodes('right')}
     {hascontent}
         {capture append='sidebarRight'}
-            <section class="box" data-static-box-identifier="info.daries.rp.notes">
+            <section class="box" data-static-box-identifier="dev.daries.rp.notes">
                 <h2 class="boxTitle">{lang}rp.event.notes{/lang}</h2>
 
                 <div class="boxContent htmlContent">
@@ -155,7 +155,7 @@
             <nav class="contentHeaderNavigation">
                 <ul>
                     {content}
-                        {if $event->getController()->getObjectTypeName() == 'info.daries.rp.event.appointment'}
+                        {if $event->getController()->getObjectTypeName() == 'dev.daries.rp.event.appointment'}
                             {if !$event->getController()->isExpired()}
                                 <li class="dropdown">
                                     <a class="button dropdownToggle"><span class="icon icon16 fa-cog"></span> <span>{lang}rp.event.participation{/lang}</span></a>
@@ -279,12 +279,12 @@
 
 {@$event->getController()->getContent()}
 
-<div class="eventLikeContent" {@$__wcf->getReactionHandler()->getDataAttributes('info.daries.rp.likeableEvent', $event->eventID)}>
+<div class="eventLikeContent" {@$__wcf->getReactionHandler()->getDataAttributes('dev.daries.rp.likeableEvent', $event->eventID)}>
     <div class="row eventLikeSection">
         {if MODULE_LIKE && RP_EVENT_ENABLE_LIKE && $__wcf->session->getPermission('user.like.canViewLike')}
             <div class="col-xs-12 col-md-6">
                 <div class="eventLikesSummery">
-                    {include file="reactionSummaryList" reactionData=$eventLikeData objectType="info.daries.rp.likeableEvent" objectID=$event->eventID}
+                    {include file="reactionSummaryList" reactionData=$eventLikeData objectType="dev.daries.rp.likeableEvent" objectID=$event->eventID}
                 </div>
             </div>
         {/if}
@@ -390,7 +390,7 @@
 {if MODULE_LIKE && RP_EVENT_ENABLE_LIKE}
 	<script data-relocate="true">
 		require(['WoltLabSuite/Core/Ui/Reaction/Handler'], function(UiReactionHandler) {
-			new UiReactionHandler('info.daries.rp.likeableEvent', {
+			new UiReactionHandler('dev.daries.rp.likeableEvent', {
 				// permissions
 				canReact: {if $__wcf->getUser()->userID}true{else}false{/if},
 				canReactToOwnContent: false,

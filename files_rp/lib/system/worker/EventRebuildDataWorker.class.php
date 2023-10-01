@@ -15,10 +15,10 @@ use wcf\system\worker\AbstractRebuildDataWorker;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -65,7 +65,7 @@ class EventRebuildDataWorker extends AbstractRebuildDataWorker
         parent::execute();
 
         if (!$this->loopCount) {
-            SearchIndexManager::getInstance()->reset('info.daries.rp.event');
+            SearchIndexManager::getInstance()->reset('dev.daries.rp.event');
         }
 
         if (!\count($this->objectList)) {
@@ -74,7 +74,7 @@ class EventRebuildDataWorker extends AbstractRebuildDataWorker
 
         // fetch cumulative likes
         $conditions = new PreparedStatementConditionBuilder();
-        $conditions->add("objectTypeID = ?", [ObjectTypeCache::getInstance()->getObjectTypeIDByName('com.woltlab.wcf.like.likeableObject', 'info.daries.rp.likeableEvent')]);
+        $conditions->add("objectTypeID = ?", [ObjectTypeCache::getInstance()->getObjectTypeIDByName('com.woltlab.wcf.like.likeableObject', 'dev.daries.rp.likeableEvent')]);
         $conditions->add("objectID IN (?)", [$this->objectList->getObjectIDs()]);
 
         $sql = "SELECT	objectID, cumulativeLikes
@@ -92,7 +92,7 @@ class EventRebuildDataWorker extends AbstractRebuildDataWorker
         $userPermissions = $this->getBulkUserPermissions($userIDs, ['user.message.disallowedBBCodes']);
 
         $commentObjectType = ObjectTypeCache::getInstance()
-            ->getObjectTypeByName('com.woltlab.wcf.comment.commentableContent', 'info.daries.rp.eventComment');
+            ->getObjectTypeByName('com.woltlab.wcf.comment.commentableContent', 'dev.daries.rp.eventComment');
         $sql = "SELECT  COUNT(*) AS comments, SUM(responses) AS responses
                 FROM    wcf" . WCF_N . "_comment
                 WHERE   objectTypeID = ?
@@ -122,7 +122,7 @@ class EventRebuildDataWorker extends AbstractRebuildDataWorker
 
             $this->getHtmlInputProcessor()->reprocess(
                 $event->notes,
-                'info.daries.rp.event.notes',
+                'dev.daries.rp.event.notes',
                 $event->eventID
             );
             $data['notes'] = $this->getHtmlInputProcessor()->getHtml();
@@ -138,7 +138,7 @@ class EventRebuildDataWorker extends AbstractRebuildDataWorker
 
             // update search index
             SearchIndexManager::getInstance()->set(
-                'info.daries.rp.event',
+                'dev.daries.rp.event',
                 $event->eventID,
                 $event->notes,
                 $event->getTitle(),

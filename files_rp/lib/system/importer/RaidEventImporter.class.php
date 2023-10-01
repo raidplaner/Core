@@ -9,10 +9,10 @@ use wcf\system\importer\ImportHandler;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -46,7 +46,7 @@ class RaidEventImporter extends AbstractImporter
      */
     public function import($oldID, array $data, array $additionalData = []): mixed
     {
-        $data['pointAccountID'] = ImportHandler::getInstance()->getNewID('info.daries.rp.point.account', $data['pointAccountID']);
+        $data['pointAccountID'] = ImportHandler::getInstance()->getNewID('dev.daries.rp.point.account', $data['pointAccountID']);
         $data['gameID'] ??= RP_DEFAULT_GAME_ID;
 
         if (isset($additionalData['iconLocation'])) {
@@ -85,13 +85,13 @@ class RaidEventImporter extends AbstractImporter
                     }
                 }
 
-                $this->importI18nValues($items, 'rp.raid.event', 'info.daries.rp');
+                $this->importI18nValues($items, 'rp.raid.event', 'dev.daries.rp');
 
                 (new RaidEventEditor($event))->update($updateData);
             }
         }
 
-        ImportHandler::getInstance()->saveNewID('info.daries.rp.raid.event', $oldID, $newID);
+        ImportHandler::getInstance()->saveNewID('dev.daries.rp.raid.event', $oldID, $newID);
         
         return $newID;
     }

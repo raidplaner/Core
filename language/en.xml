@@ -207,9 +207,9 @@
         </category>
         
         <category name="rp.event.controller">
-            <item name="rp.event.controller.info.daries.rp.event.appointment"><![CDATA[Appointment with registration]]></item>
-            <item name="rp.event.controller.info.daries.rp.event.default"><![CDATA[Default]]></item>
-            <item name="rp.event.controller.info.daries.rp.event.raid"><![CDATA[Raid]]></item>
+            <item name="rp.event.controller.dev.daries.rp.event.appointment"><![CDATA[Appointment with registration]]></item>
+            <item name="rp.event.controller.dev.daries.rp.event.default"><![CDATA[Default]]></item>
+            <item name="rp.event.controller.dev.daries.rp.event.raid"><![CDATA[Raid]]></item>
         </category>
         
         <category name="rp.event.log">
@@ -367,23 +367,23 @@
         </category>
         
         <category name="wcf.acp.box">
-            <item name="wcf.acp.box.boxController.info.daries.rp.eventLegend"><![CDATA[Event Legend (Raidplaner)]]></item>
-            <item name="wcf.acp.box.boxController.info.daries.rp.eventList"><![CDATA[Calendar Events (Raidplaner)]]></item>
-            <item name="wcf.acp.box.boxController.info.daries.rp.myCharacterList"><![CDATA[My Characters (Raidplaner)]]></item>
-            <item name="wcf.acp.box.boxController.info.daries.rp.serverStatus"><![CDATA[Server Status (Raidplaner)]]></item>
+            <item name="wcf.acp.box.boxController.dev.daries.rp.eventLegend"><![CDATA[Event Legend (Raidplaner)]]></item>
+            <item name="wcf.acp.box.boxController.dev.daries.rp.eventList"><![CDATA[Calendar Events (Raidplaner)]]></item>
+            <item name="wcf.acp.box.boxController.dev.daries.rp.myCharacterList"><![CDATA[My Characters (Raidplaner)]]></item>
+            <item name="wcf.acp.box.boxController.dev.daries.rp.serverStatus"><![CDATA[Server Status (Raidplaner)]]></item>
         </category>
 
         <category name="wcf.acp.dataImport">
-            <item name="wcf.acp.dataImport.data.info.daries.rp.character"><![CDATA[Character]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.character.avatar"><![CDATA[Avatars]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.event"><![CDATA[Events]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.event.comment"><![CDATA[Event comments]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.event.comment.response"><![CDATA[Event reply comments]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.event.legend"><![CDATA[Event legends]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.point.account"><![CDATA[Points account (DKP)]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.raid"><![CDATA[Raids]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.raid.event"><![CDATA[Raid Events]]></item>
-            <item name="wcf.acp.dataImport.data.info.daries.rp.rank"><![CDATA[Ranks]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.character"><![CDATA[Character]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.character.avatar"><![CDATA[Avatars]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.event"><![CDATA[Events]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.event.comment"><![CDATA[Event comments]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.event.comment.response"><![CDATA[Event reply comments]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.event.legend"><![CDATA[Event legends]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.point.account"><![CDATA[Points account (DKP)]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.raid"><![CDATA[Raids]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.raid.event"><![CDATA[Raid Events]]></item>
+            <item name="wcf.acp.dataImport.data.dev.daries.rp.rank"><![CDATA[Ranks]]></item>
         </category>
         
         <category name="wcf.acp.group">
@@ -441,13 +441,13 @@
         </category>
 
         <category name="wcf.acp.modificationLog">
-            <item name="wcf.acp.modificationLog.info.daries.rp.event.close"><![CDATA[Event (Raid) closed]]></item>
-            <item name="wcf.acp.modificationLog.info.daries.rp.event.delete"><![CDATA[Event deleted]]></item>
-            <item name="wcf.acp.modificationLog.info.daries.rp.event.disable"><![CDATA[Event disabled]]></item>
-            <item name="wcf.acp.modificationLog.info.daries.rp.event.edit"><![CDATA[Event edited]]></item>
-            <item name="wcf.acp.modificationLog.info.daries.rp.event.enable"><![CDATA[Event approved]]></item>
-            <item name="wcf.acp.modificationLog.info.daries.rp.event.restore"><![CDATA[Event restored]]></item>
-            <item name="wcf.acp.modificationLog.info.daries.rp.event.trash"><![CDATA[Event moved to the trash bin]]></item>
+            <item name="wcf.acp.modificationLog.dev.daries.rp.event.close"><![CDATA[Event (Raid) closed]]></item>
+            <item name="wcf.acp.modificationLog.dev.daries.rp.event.delete"><![CDATA[Event deleted]]></item>
+            <item name="wcf.acp.modificationLog.dev.daries.rp.event.disable"><![CDATA[Event disabled]]></item>
+            <item name="wcf.acp.modificationLog.dev.daries.rp.event.edit"><![CDATA[Event edited]]></item>
+            <item name="wcf.acp.modificationLog.dev.daries.rp.event.enable"><![CDATA[Event approved]]></item>
+            <item name="wcf.acp.modificationLog.dev.daries.rp.event.restore"><![CDATA[Event restored]]></item>
+            <item name="wcf.acp.modificationLog.dev.daries.rp.event.trash"><![CDATA[Event moved to the trash bin]]></item>
         </category>
         
         <category name="wcf.acp.option">
@@ -487,61 +487,61 @@
         </category>
         
         <category name="wcf.acp.rebuildData">
-            <item name="wcf.acp.rebuildData.info.daries.rp.character"><![CDATA[Rebuild Characters]]></item>
-            <item name="wcf.acp.rebuildData.info.daries.rp.character.description"><![CDATA[Rebuilds the character counters.]]></item>
-            <item name="wcf.acp.rebuildData.info.daries.rp.event"><![CDATA[Rebuild Events]]></item>
-            <item name="wcf.acp.rebuildData.info.daries.rp.event.description"><![CDATA[Rebuilds the search index for the events.]]></item>
+            <item name="wcf.acp.rebuildData.dev.daries.rp.character"><![CDATA[Rebuild Characters]]></item>
+            <item name="wcf.acp.rebuildData.dev.daries.rp.character.description"><![CDATA[Rebuilds the character counters.]]></item>
+            <item name="wcf.acp.rebuildData.dev.daries.rp.event"><![CDATA[Rebuild Events]]></item>
+            <item name="wcf.acp.rebuildData.dev.daries.rp.event.description"><![CDATA[Rebuilds the search index for the events.]]></item>
         </category>
         
         <category name="wcf.acp.sitemap">
-            <item name="wcf.acp.sitemap.objectType.info.daries.rp.sitemap.object.character"><![CDATA[Characters]]></item>
-            <item name="wcf.acp.sitemap.objectType.info.daries.rp.sitemap.object.event"><![CDATA[Events]]></item>
+            <item name="wcf.acp.sitemap.objectType.dev.daries.rp.sitemap.object.character"><![CDATA[Characters]]></item>
+            <item name="wcf.acp.sitemap.objectType.dev.daries.rp.sitemap.object.event"><![CDATA[Events]]></item>
         </category>
         
         <category name="wcf.clipboard">
-            <item name="wcf.clipboard.label.info.daries.rp.character.marked"><![CDATA[{if $count == 1}One{else}{#$count}{/if} character{if $count != 1}s{/if}]]></item>
-            <item name="wcf.clipboard.label.info.daries.rp.raid.attendee.marked"><![CDATA[{if $count == 1}One{else}{#$count}{/if} attendee{if $count != 1}s{/if}]]></item>
-            <item name="wcf.clipboard.item.info.daries.rp.character.delete"><![CDATA[Delete ({#$count})]]></item>
-            <item name="wcf.clipboard.item.info.daries.rp.character.delete.confirmMessage"><![CDATA[Do you really want to delete {if $count == 1}an{else}{#$count}{/if} character{if $count != 1}s{/if}?]]></item>
-            <item name="wcf.clipboard.item.info.daries.rp.character.disable"><![CDATA[Disable ({#$count})]]></item>
-            <item name="wcf.clipboard.item.info.daries.rp.character.enable"><![CDATA[Enable ({#$count})]]></item>
-            <item name="wcf.clipboard.item.info.daries.rp.raid.attendee.delete"><![CDATA[Remove ({#$count})]]></item>
-            <item name="wcf.clipboard.item.info.daries.rp.raid.attendee.delete.confirmMessage"><![CDATA[Do you really want to remove {if $count == 1}a{else}{#$count}{/if} attendee{if $count != 1}s{/if}?]]></item>
-            <item name="wcf.clipboard.item.info.daries.rp.raid.attendee.updateStatus"><![CDATA[Change Status ({#$count})]]></item>
+            <item name="wcf.clipboard.label.dev.daries.rp.character.marked"><![CDATA[{if $count == 1}One{else}{#$count}{/if} character{if $count != 1}s{/if}]]></item>
+            <item name="wcf.clipboard.label.dev.daries.rp.raid.attendee.marked"><![CDATA[{if $count == 1}One{else}{#$count}{/if} attendee{if $count != 1}s{/if}]]></item>
+            <item name="wcf.clipboard.item.dev.daries.rp.character.delete"><![CDATA[Delete ({#$count})]]></item>
+            <item name="wcf.clipboard.item.dev.daries.rp.character.delete.confirmMessage"><![CDATA[Do you really want to delete {if $count == 1}an{else}{#$count}{/if} character{if $count != 1}s{/if}?]]></item>
+            <item name="wcf.clipboard.item.dev.daries.rp.character.disable"><![CDATA[Disable ({#$count})]]></item>
+            <item name="wcf.clipboard.item.dev.daries.rp.character.enable"><![CDATA[Enable ({#$count})]]></item>
+            <item name="wcf.clipboard.item.dev.daries.rp.raid.attendee.delete"><![CDATA[Remove ({#$count})]]></item>
+            <item name="wcf.clipboard.item.dev.daries.rp.raid.attendee.delete.confirmMessage"><![CDATA[Do you really want to remove {if $count == 1}a{else}{#$count}{/if} attendee{if $count != 1}s{/if}?]]></item>
+            <item name="wcf.clipboard.item.dev.daries.rp.raid.attendee.updateStatus"><![CDATA[Change Status ({#$count})]]></item>
         </category>
         
         <category name="wcf.like">
-            <item name="wcf.like.title.info.daries.rp.eventComment"><![CDATA[Reacted with {@$reaction->render()} to the comment by {if $commentAuthor}<a href="{link controller='User' object=$commentAuthor}{/link}">{$commentAuthor->username}</a>{else}a guest{/if} on the event <a href="{$comment->getLink()}">{$event->getTitle()}</a>.]]></item>
-            <item name="wcf.like.title.info.daries.rp.eventComment.response"><![CDATA[Reacted with {@$reaction->render()} to the response by {if $responseAuthor}<a href="{link controller='User' object=$responseAuthor}{/link}">{$responseAuthor->username}</a>{else}a guest{/if} on the comment by {if $commentAuthor}<a href="{link controller='User' object=$commentAuthor}{/link}">{$commentAuthor->username}</a>{else}a guest{/if} on the event <a href="{$response->getLink()}">{$event->getTitle()}</a>.]]></item>
-            <item name="wcf.like.title.info.daries.rp.likeableEvent"><![CDATA[Reacted with {@$reaction->render()} to the event <a href="{$event->getLink()}">{$event->getTitle()}</a>.]]></item>
+            <item name="wcf.like.title.dev.daries.rp.eventComment"><![CDATA[Reacted with {@$reaction->render()} to the comment by {if $commentAuthor}<a href="{link controller='User' object=$commentAuthor}{/link}">{$commentAuthor->username}</a>{else}a guest{/if} on the event <a href="{$comment->getLink()}">{$event->getTitle()}</a>.]]></item>
+            <item name="wcf.like.title.dev.daries.rp.eventComment.response"><![CDATA[Reacted with {@$reaction->render()} to the response by {if $responseAuthor}<a href="{link controller='User' object=$responseAuthor}{/link}">{$responseAuthor->username}</a>{else}a guest{/if} on the comment by {if $commentAuthor}<a href="{link controller='User' object=$commentAuthor}{/link}">{$commentAuthor->username}</a>{else}a guest{/if} on the event <a href="{$response->getLink()}">{$event->getTitle()}</a>.]]></item>
+            <item name="wcf.like.title.dev.daries.rp.likeableEvent"><![CDATA[Reacted with {@$reaction->render()} to the event <a href="{$event->getLink()}">{$event->getTitle()}</a>.]]></item>
         </category>
         
         <category name="wcf.moderation">
-            <item name="wcf.moderation.type.info.daries.rp.event"><![CDATA[Event]]></item>
-            <item name="wcf.moderation.deletedContent.info.daries.rp.event"><![CDATA[Deleted Events]]></item>
-            <item name="wcf.moderation.deletedContent.objectType.info.daries.rp.event"><![CDATA[Events]]></item>
+            <item name="wcf.moderation.type.dev.daries.rp.event"><![CDATA[Event]]></item>
+            <item name="wcf.moderation.deletedContent.dev.daries.rp.event"><![CDATA[Deleted Events]]></item>
+            <item name="wcf.moderation.deletedContent.objectType.dev.daries.rp.event"><![CDATA[Events]]></item>
         </category>
         
         <category name="wcf.page">
             <item name="wcf.page.daries.rp.copyright"><![CDATA[<a href="https://daries.info/" rel="nofollow"{if EXTERNAL_LINK_TARGET_BLANK} target="_blank"{/if}>Software: <strong>Raidplaner{if SHOW_VERSION_NUMBER} {$__rp->getPackage()->packageVersion}{/if}</strong>, developed by <strong>Daries.info Team</strong></a>]]></item>
-            <item name="wcf.page.onlineLocation.info.daries.rp.Character"><![CDATA[Character profile of <a href="{link controller='Character' object=$character}{/link}" class="rpCharacterLink" data-character-id="{@$character->characterID}">{$character->getTitle()}</a>]]></item>
+            <item name="wcf.page.onlineLocation.dev.daries.rp.Character"><![CDATA[Character profile of <a href="{link controller='Character' object=$character}{/link}" class="rpCharacterLink" data-character-id="{@$character->characterID}">{$character->getTitle()}</a>]]></item>
         </category>
 
         <category name="wcf.search">
-            <item name="wcf.search.type.info.daries.rp.event"><![CDATA[Events (Raidplaner)]]></item>
-            <item name="wcf.search.object.info.daries.rp.event"><![CDATA[Event (Raidplaner)]]></item>
+            <item name="wcf.search.type.dev.daries.rp.event"><![CDATA[Events (Raidplaner)]]></item>
+            <item name="wcf.search.object.dev.daries.rp.event"><![CDATA[Event (Raidplaner)]]></item>
         </category>
         
         <category name="wcf.user.notification">
-            <item name="wcf.user.notification.info.daries.rp.event"><![CDATA[Events (Raidplaner)]]></item>
-            <item name="wcf.user.notification.info.daries.rp.event.raid"><![CDATA[Raids (Raidplaner)]]></item>
-            <item name="wcf.user.notification.info.daries.rp.eventComment.like.notification.like"><![CDATA[Notify me when someone reacted to my event comments]]></item>
-            <item name="wcf.user.notification.info.daries.rp.eventComment.notification.comment"><![CDATA[Notify me of new comments on my events]]></item>
-            <item name="wcf.user.notification.info.daries.rp.eventComment.response.like.notification.like"><![CDATA[Notify me when someone reacted to my replies to event comments]]></item>
-            <item name="wcf.user.notification.info.daries.rp.eventComment.response.notification.commentResponse"><![CDATA[Notify me of new replies to my comments]]></item>
-            <item name="wcf.user.notification.info.daries.rp.eventComment.response.notification.commentResponseOwner"><![CDATA[Notify me of new replies to comments on my events]]></item>
-            <item name="wcf.user.notification.info.daries.rp.likeableEvent.notification.like"><![CDATA[Notify me when someone reacted to my events]]></item>
-            <item name="wcf.user.notification.info.daries.rp.raid.event.notification.status"><![CDATA[Your status has changed]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.event"><![CDATA[Events (Raidplaner)]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.event.raid"><![CDATA[Raids (Raidplaner)]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.eventComment.like.notification.like"><![CDATA[Notify me when someone reacted to my event comments]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.eventComment.notification.comment"><![CDATA[Notify me of new comments on my events]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.eventComment.response.like.notification.like"><![CDATA[Notify me when someone reacted to my replies to event comments]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.eventComment.response.notification.commentResponse"><![CDATA[Notify me of new replies to my comments]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.eventComment.response.notification.commentResponseOwner"><![CDATA[Notify me of new replies to comments on my events]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.likeableEvent.notification.like"><![CDATA[Notify me when someone reacted to my events]]></item>
+            <item name="wcf.user.notification.dev.daries.rp.raid.event.notification.status"><![CDATA[Your status has changed]]></item>
         </category>
     </import>
 </language>

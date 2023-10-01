@@ -27,10 +27,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -427,7 +427,7 @@ abstract class AbstractEventController implements IEventController
             }
         }
 
-        $data['objectTypeID'] = (ObjectTypeCache::getInstance()->getObjectTypeByName('info.daries.rp.eventController', $this->objectTypeName))->objectTypeID;
+        $data['objectTypeID'] = (ObjectTypeCache::getInstance()->getObjectTypeByName('dev.daries.rp.eventController', $this->objectTypeName))->objectTypeID;
 
         $data['additionalData'] = \serialize($formData['data']);
         unset($formData['data']);

@@ -10,10 +10,10 @@ use wcf\system\form\builder\IFormDocument;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -44,7 +44,7 @@ class DefaultEventController extends AbstractEventController
     /**
      * @inheritDoc
      */
-    protected string $objectTypeName = 'info.daries.rp.event.default';
+    protected string $objectTypeName = 'dev.daries.rp.event.default';
 
     /**
      * @inheritDoc
@@ -79,7 +79,7 @@ class DefaultEventController extends AbstractEventController
         $dataContainer->appendChild(
             WysiwygFormField::create('notes')
                 ->label('rp.event.notes')
-                ->objectType('info.daries.rp.event.notes')
+                ->objectType('dev.daries.rp.event.notes')
         );
         
         $this->formComment($dataContainer);

@@ -14,10 +14,10 @@ use wcf\system\user\storage\UserStorageHandler;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -65,15 +65,15 @@ class EventImporter extends AbstractImporter
 
 
         if (isset($data['raidID']) && $data['raidID'] !== null) {
-            $data['raidID'] = ImportHandler::getInstance()->getNewID('info.daries.rp.raid', $data['raidID']);
+            $data['raidID'] = ImportHandler::getInstance()->getNewID('dev.daries.rp.raid', $data['raidID']);
         }
         if (isset($data['legendID']) && $data['legendID'] !== null) {
-            $data['legendID'] = ImportHandler::getInstance()->getNewID('info.daries.rp.event.legend', $data['legendID']);
+            $data['legendID'] = ImportHandler::getInstance()->getNewID('dev.daries.rp.event.legend', $data['legendID']);
         }
 
         switch ($additionalData['objectType']) {
-            case 'info.daries.rp.event.default':
-                $data['objectTypeID'] = ObjectTypeCache::getInstance()->getObjectTypeIDByName('info.daries.rp.eventController', 'info.daries.rp.event.appointment');
+            case 'dev.daries.rp.event.default':
+                $data['objectTypeID'] = ObjectTypeCache::getInstance()->getObjectTypeIDByName('dev.daries.rp.eventController', 'dev.daries.rp.event.appointment');
 
                 if (isset($data['additionalData']['participants'])) {
                     $appointments = [];
@@ -90,13 +90,13 @@ class EventImporter extends AbstractImporter
                     unset($data['additionalData']['participants']);
                 }
                 break;
-            case 'info.daries.rp.event.raid':
-                $data['objectTypeID'] = ObjectTypeCache::getInstance()->getObjectTypeIDByName('info.daries.rp.eventController', 'info.daries.rp.event.raid');
+            case 'dev.daries.rp.event.raid':
+                $data['objectTypeID'] = ObjectTypeCache::getInstance()->getObjectTypeIDByName('dev.daries.rp.eventController', 'dev.daries.rp.event.raid');
 
-                $data['additionalData']['raidEventID'] = ImportHandler::getInstance()->getNewID('info.daries.rp.raid.event', $data['additionalData']['raidEventID']);
+                $data['additionalData']['raidEventID'] = ImportHandler::getInstance()->getNewID('dev.daries.rp.raid.event', $data['additionalData']['raidEventID']);
 
                 foreach ($data['additionalData']['leaders'] as $key => $leaderID) {
-                    $data['additionalData']['leaders'][$key] = ImportHandler::getInstance()->getNewID('info.daries.rp.character', $leaderID);
+                    $data['additionalData']['leaders'][$key] = ImportHandler::getInstance()->getNewID('dev.daries.rp.character', $leaderID);
                 }
                 break;
         }
@@ -107,7 +107,7 @@ class EventImporter extends AbstractImporter
 
         if (isset($additionalData['attendees'])) {
             foreach ($additionalData['attendees'] as $attendee) {
-                if ($attendee['characterID']) $attendee['characterID'] = ImportHandler::getInstance()->getNewID('info.daries.rp.character', $attendee['characterID']);
+                if ($attendee['characterID']) $attendee['characterID'] = ImportHandler::getInstance()->getNewID('dev.daries.rp.character', $attendee['characterID']);
                 $attendee['eventID'] = $event->eventID;
                 $attendee['internID'] = $attendee['characterID'] ?? 0;
 
@@ -116,7 +116,7 @@ class EventImporter extends AbstractImporter
         }
 
         SearchIndexManager::getInstance()->set(
-            'info.daries.rp.event',
+            'dev.daries.rp.event',
             $event->eventID,
             $event->notes,
             $event->getTitle(),
@@ -125,7 +125,7 @@ class EventImporter extends AbstractImporter
             $event->username
         );
 
-        ImportHandler::getInstance()->saveNewID('info.daries.rp.event', $oldID, $event->eventID);
+        ImportHandler::getInstance()->saveNewID('dev.daries.rp.event', $oldID, $event->eventID);
 
         UserStorageHandler::getInstance()->resetAll('rpUnreadEvents');
         

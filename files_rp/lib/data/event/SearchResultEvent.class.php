@@ -9,10 +9,10 @@ use wcf\system\search\SearchResultTextParser;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -62,7 +62,7 @@ class SearchResultEvent extends ViewableEvent implements ISearchResultObject
         $processor->setOutputType('text/simplified-html');
         $processor->process(
             $this->notes,
-            'info.daries.rp.event.notes',
+            'dev.daries.rp.event.notes',
             $this->eventID,
             false
         );
@@ -94,7 +94,7 @@ class SearchResultEvent extends ViewableEvent implements ISearchResultObject
      */
     public function getObjectTypeName(): string
     {
-        return 'info.daries.rp.event';
+        return 'dev.daries.rp.event';
     }
 
     /**

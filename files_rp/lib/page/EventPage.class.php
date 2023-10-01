@@ -20,10 +20,10 @@ use wcf\util\StringUtil;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -139,7 +139,7 @@ class EventPage extends AbstractPage
 
         // get comments
         if ($this->event->enableComments) {
-            $this->commentObjectTypeID = CommentHandler::getInstance()->getObjectTypeID('info.daries.rp.eventComment');
+            $this->commentObjectTypeID = CommentHandler::getInstance()->getObjectTypeID('dev.daries.rp.eventComment');
             $this->commentManager = CommentHandler::getInstance()->getObjectType($this->commentObjectTypeID)->getProcessor();
             $this->commentList = CommentHandler::getInstance()->getCommentList(
                 $this->commentManager,
@@ -150,7 +150,7 @@ class EventPage extends AbstractPage
         
         // fetch likes
         if (MODULE_LIKE) {
-            $objectType = ReactionHandler::getInstance()->getObjectType('info.daries.rp.likeableEvent');
+            $objectType = ReactionHandler::getInstance()->getObjectType('dev.daries.rp.likeableEvent');
             ReactionHandler::getInstance()->loadLikeObjects($objectType, [$this->event->eventID]);
             $this->eventLikeData = ReactionHandler::getInstance()->getLikeObjects($objectType);
         }

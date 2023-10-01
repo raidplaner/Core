@@ -24,10 +24,10 @@ use wcf\util\ImageUtil;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -175,7 +175,7 @@ class CharacterAction extends AbstractDatabaseObjectAction implements IClipboard
 
         if (!empty($characterIDs)) {
             // delete embedded object references
-            MessageEmbeddedObjectManager::getInstance()->removeObjects('info.daries.rp.character.notes', $characterIDs);
+            MessageEmbeddedObjectManager::getInstance()->removeObjects('dev.daries.rp.character.notes', $characterIDs);
         }
 
         if (!empty($userIDs)) {
@@ -307,7 +307,7 @@ class CharacterAction extends AbstractDatabaseObjectAction implements IClipboard
      */
     public function unmarkAll(): void
     {
-        ClipboardHandler::getInstance()->removeItems(ClipboardHandler::getInstance()->getObjectTypeID('info.daries.rp.character'));
+        ClipboardHandler::getInstance()->removeItems(ClipboardHandler::getInstance()->getObjectTypeID('dev.daries.rp.character'));
     }
 
     /**
@@ -324,7 +324,7 @@ class CharacterAction extends AbstractDatabaseObjectAction implements IClipboard
         if (!empty($characterIDs)) {
             ClipboardHandler::getInstance()->unmark(
                 $characterIDs,
-                ClipboardHandler::getInstance()->getObjectTypeID('info.daries.rp.character')
+                ClipboardHandler::getInstance()->getObjectTypeID('dev.daries.rp.character')
             );
         }
     }

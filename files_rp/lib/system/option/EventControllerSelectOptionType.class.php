@@ -11,10 +11,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -45,7 +45,7 @@ class EventControllerSelectOptionType extends SelectOptionType
      */
     protected function getSelectOptions(Option $option): array
     {
-        $availableEventControllers = ObjectTypeCache::getInstance()->getObjectTypes('info.daries.rp.eventController');
+        $availableEventControllers = ObjectTypeCache::getInstance()->getObjectTypes('dev.daries.rp.eventController');
 
         \uasort($availableEventControllers, function (ObjectType $a, ObjectType $b) {
             return \strcmp(

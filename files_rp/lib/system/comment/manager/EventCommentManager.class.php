@@ -15,10 +15,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -195,7 +195,7 @@ class EventCommentManager extends AbstractCommentManager implements IViewableLik
 
                         // short output
                         $text = WCF::getLanguage()->getDynamicVariable(
-                            'wcf.like.title.info.daries.rp.eventComment',
+                            'wcf.like.title.dev.daries.rp.eventComment',
                             [
                                 'commentAuthor' => $comment->userID ? $users[$comment->userID] : null,
                                 'comment' => $comment,
@@ -224,7 +224,7 @@ class EventCommentManager extends AbstractCommentManager implements IViewableLik
 
                         // short output
                         $text = WCF::getLanguage()->getDynamicVariable(
-                            'wcf.like.title.info.daries.rp.eventComment.response',
+                            'wcf.like.title.dev.daries.rp.eventComment.response',
                             [
                                 'responseAuthor' => $comment->userID ? $users[$response->userID] : null,
                                 'commentAuthor' => $comment->userID ? $users[$comment->userID] : null,

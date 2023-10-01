@@ -10,10 +10,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -64,13 +64,13 @@ class CharacterImporter extends AbstractImporter
         // get user id
         $data['userID'] = ImportHandler::getInstance()->getNewID('com.woltlab.wcf.user', $data['userID']);
         // get rank id
-        $data['rankID'] = ImportHandler::getInstance()->getNewID('info.daries.rp.rank', $data['rankID']);
+        $data['rankID'] = ImportHandler::getInstance()->getNewID('dev.daries.rp.rank', $data['rankID']);
 
         // create character
         $character = CharacterEditor::create($data);
 
         // save mapping
-        ImportHandler::getInstance()->saveNewID('info.daries.rp.character', $oldID, $character->characterID);
+        ImportHandler::getInstance()->saveNewID('dev.daries.rp.character', $oldID, $character->characterID);
 
         return $character->characterID;
     }

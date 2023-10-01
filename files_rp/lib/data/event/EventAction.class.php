@@ -22,10 +22,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -141,7 +141,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
 
         // update search index
         SearchIndexManager::getInstance()->set(
-            'info.daries.rp.event',
+            'dev.daries.rp.event',
             $event->eventID,
             $event->notes,
             $event->getTitle(),
@@ -171,7 +171,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
 
         // mark event for moderated content
         if ($event->isDisabled) {
-            ModerationQueueActivationManager::getInstance()->addModeratedContent('info.daries.rp.event', $event->eventID);
+            ModerationQueueActivationManager::getInstance()->addModeratedContent('dev.daries.rp.event', $event->eventID);
         }
 
         return new Event($event->eventID);
@@ -195,16 +195,16 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
 
         if (!empty($eventIDs)) {
             // delete like data
-            ReactionHandler::getInstance()->removeReactions('info.daries.rp.likeableEvent', $eventIDs);
+            ReactionHandler::getInstance()->removeReactions('dev.daries.rp.likeableEvent', $eventIDs);
 
             // delete comments
-            CommentHandler::getInstance()->deleteObjects('info.daries.rp.eventComment', $eventIDs);
+            CommentHandler::getInstance()->deleteObjects('dev.daries.rp.eventComment', $eventIDs);
 
             // delete embedded object references
-            MessageEmbeddedObjectManager::getInstance()->removeObjects('info.daries.rp.event.notes', $eventIDs);
+            MessageEmbeddedObjectManager::getInstance()->removeObjects('dev.daries.rp.event.notes', $eventIDs);
 
             // delete event from search index
-            SearchIndexManager::getInstance()->delete('info.daries.rp.event', $eventIDs);
+            SearchIndexManager::getInstance()->delete('dev.daries.rp.event', $eventIDs);
 
             // delete modification log entries except for deleting the events
             EventModificationLogHandler::getInstance()->deleteLogs($eventIDs, ['delete']);
@@ -233,7 +233,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
             );
 
             // add moderated content
-            ModerationQueueActivationManager::getInstance()->addModeratedContent('info.daries.rp.event', $event->eventID);
+            ModerationQueueActivationManager::getInstance()->addModeratedContent('dev.daries.rp.event', $event->eventID);
         }
 
         // reset storage
@@ -298,7 +298,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
      */
     public function markAllAsRead(): void
     {
-        VisitTracker::getInstance()->trackTypeVisit('info.daries.rp.event');
+        VisitTracker::getInstance()->trackTypeVisit('dev.daries.rp.event');
 
         // reset storage
         if (WCF::getUser()->userID) {
@@ -321,7 +321,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
 
         foreach ($this->getObjects() as $event) {
             VisitTracker::getInstance()->trackObjectVisit(
-                'info.daries.rp.event',
+                'dev.daries.rp.event',
                 $event->eventID,
                 $this->parameters['visitTime']
             );
@@ -338,7 +338,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
      */
     protected function removeModeratedContent(array $eventIDs): void
     {
-        ModerationQueueActivationManager::getInstance()->removeModeratedContent('info.daries.rp.event', $eventIDs);
+        ModerationQueueActivationManager::getInstance()->removeModeratedContent('dev.daries.rp.event', $eventIDs);
     }
 
     /**
@@ -426,7 +426,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
 
             // update search index
             SearchIndexManager::getInstance()->set(
-                'info.daries.rp.event',
+                'dev.daries.rp.event',
                 $event->eventID,
                 $this->parameters['data']['notes'] ?? $event->notes,
                 $this->parameters['data']['title'] ?? $event->getTitle(),
@@ -451,7 +451,7 @@ class EventAction extends AbstractDatabaseObjectAction implements IPopoverAction
 
         $this->event = EventRuntimeCache::getInstance()->getObject($this->parameters['eventID']);
 
-        if ($this->event->objectTypeID !== ObjectTypeCache::getInstance()->getObjectTypeIDByName('info.daries.rp.eventController', 'info.daries.rp.event.appointment')) {
+        if ($this->event->objectTypeID !== ObjectTypeCache::getInstance()->getObjectTypeIDByName('dev.daries.rp.eventController', 'dev.daries.rp.event.appointment')) {
             throw new PermissionDeniedException();
         }
 

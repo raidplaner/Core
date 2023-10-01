@@ -7,10 +7,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -39,8 +39,8 @@ class UnreadEventList extends AccessibleEventList
     {
         parent::__construct();
 
-        $this->sqlConditionJoins .= " LEFT JOIN wcf" . WCF_N . "_tracked_visit tracked_visit ON (tracked_visit.objectTypeID = " . VisitTracker::getInstance()->getObjectTypeID('info.daries.rp.event') . " AND tracked_visit.objectID = event.eventID AND tracked_visit.userID = " . WCF::getUser()->userID . ")";
-        $this->getConditionBuilder()->add('event.created > ?', [VisitTracker::getInstance()->getVisitTime('info.daries.rp.event')]);
+        $this->sqlConditionJoins .= " LEFT JOIN wcf" . WCF_N . "_tracked_visit tracked_visit ON (tracked_visit.objectTypeID = " . VisitTracker::getInstance()->getObjectTypeID('dev.daries.rp.event') . " AND tracked_visit.objectID = event.eventID AND tracked_visit.userID = " . WCF::getUser()->userID . ")";
+        $this->getConditionBuilder()->add('event.created > ?', [VisitTracker::getInstance()->getVisitTime('dev.daries.rp.event')]);
         $this->getConditionBuilder()->add('(event.created > tracked_visit.visitTime OR tracked_visit.visitTime IS NULL)');
     }
 }

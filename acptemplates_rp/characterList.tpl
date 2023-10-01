@@ -61,7 +61,7 @@
 
 {if $objects|count}
     <div class="section tabularBox">
-        <table data-type="info.daries.rp.character" class="table jsClipboardContainer jsObjectActionContainer" data-object-action-class-name="rp\data\character\CharacterAction">
+        <table data-type="dev.daries.rp.character" class="table jsClipboardContainer jsObjectActionContainer" data-object-action-class-name="rp\data\character\CharacterAction">
             <thead>
                 <tr>
                     <th class="columnMark"><label><input type="checkbox" class="jsClipboardMarkAll"></label></th>

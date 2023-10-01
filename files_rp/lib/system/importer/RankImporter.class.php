@@ -9,10 +9,10 @@ use wcf\system\importer\ImportHandler;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -52,7 +52,7 @@ class RankImporter extends AbstractImporter
         $rank = RankEditor::create($data);
 
         // save mapping
-        ImportHandler::getInstance()->saveNewID('info.daries.rp.rank', $oldID, $rank->rankID);
+        ImportHandler::getInstance()->saveNewID('dev.daries.rp.rank', $oldID, $rank->rankID);
 
         return $rank->rankID;
     }

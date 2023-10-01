@@ -1,9 +1,9 @@
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -30,7 +30,7 @@ define(["require", "exports", "tslib", "WoltLabSuite/Core/Controller/Popover"], 
         ControllerPopover.init({
             className: "rpCharacterLink",
             dboAction: "rp\\data\\character\\CharacterProfileAction",
-            identifier: "info.daries.rp.character",
+            identifier: "dev.daries.rp.character",
         });
     }
     /**
@@ -40,7 +40,7 @@ define(["require", "exports", "tslib", "WoltLabSuite/Core/Controller/Popover"], 
         ControllerPopover.init({
             className: "rpEventLink",
             dboAction: "rp\\data\\event\\EventAction",
-            identifier: "info.daries.rp.event",
+            identifier: "dev.daries.rp.event",
         });
     }
     /**
@@ -50,7 +50,7 @@ define(["require", "exports", "tslib", "WoltLabSuite/Core/Controller/Popover"], 
         ControllerPopover.init({
             className: "rpEventRaidAttendeeLink",
             dboAction: "rp\\data\\event\\raid\\attendee\\EventRaidAttendeeAction",
-            identifier: "info.daries.rp.event.raid.attendee",
+            identifier: "dev.daries.rp.event.raid.attendee",
         });
     }
     /**
@@ -60,7 +60,7 @@ define(["require", "exports", "tslib", "WoltLabSuite/Core/Controller/Popover"], 
         ControllerPopover.init({
             className: "rpItemLink",
             dboAction: "rp\\data\\item\\ItemAction",
-            identifier: "info.daries.rp.item",
+            identifier: "dev.daries.rp.item",
         });
     }
     /**

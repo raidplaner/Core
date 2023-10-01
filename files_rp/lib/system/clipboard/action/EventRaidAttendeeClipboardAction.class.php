@@ -11,10 +11,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -79,7 +79,7 @@ class EventRaidAttendeeClipboardAction extends AbstractClipboardAction
                 break;
 
             case 'delete':
-                $item->addInternalData('confirmMessage', WCF::getLanguage()->getDynamicVariable('wcf.clipboard.item.info.daries.rp.raid.attendee.delete.confirmMessage', [
+                $item->addInternalData('confirmMessage', WCF::getLanguage()->getDynamicVariable('wcf.clipboard.item.dev.daries.rp.raid.attendee.delete.confirmMessage', [
                         'count' => $item->getCount()
                 ]));
                 break;
@@ -101,7 +101,7 @@ class EventRaidAttendeeClipboardAction extends AbstractClipboardAction
      */
     public function getTypeName(): string
     {
-        return 'info.daries.rp.raid.attendee';
+        return 'dev.daries.rp.raid.attendee';
     }
 
     /**

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/clipboardAction.xsd">
 	<import>
-        <!-- info.daries.rp.character -->
+        <!-- dev.daries.rp.character -->
         <action name="enable">
             <actionclassname>rp\system\clipboard\action\CharacterClipboardAction</actionclassname>
             <showorder>1</showorder>
@@ -23,9 +23,9 @@
 				<page>rp\acp\page\CharacterListPage</page>
 			</pages>
 		</action>
-        <!-- /info.daries.rp.character -->
+        <!-- /dev.daries.rp.character -->
         
-        <!-- info.daries.rp.raid.attendee -->
+        <!-- dev.daries.rp.raid.attendee -->
         <action name="updateStatus">
             <actionclassname>rp\system\clipboard\action\EventRaidAttendeeClipboardAction</actionclassname>
             <showorder>1</showorder>
@@ -40,6 +40,6 @@
                 <page>rp\page\EventPage</page>
             </pages>
         </action>
-        <!-- /info.daries.rp.raid.attendee -->
+        <!-- /dev.daries.rp.raid.attendee -->
     </import>
 </data>

@@ -10,10 +10,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -47,7 +47,7 @@ class RaidImporter extends AbstractImporter
      */
     public function import($oldID, array $data, array $additionalData = []): mixed
     {
-        $data['raidEventID'] = ImportHandler::getInstance()->getNewID('info.daries.rp.raid.event', $data['raidEventID']);
+        $data['raidEventID'] = ImportHandler::getInstance()->getNewID('dev.daries.rp.raid.event', $data['raidEventID']);
 
         // check old id
         if (\ctype_digit((string) $oldID)) {
@@ -67,7 +67,7 @@ class RaidImporter extends AbstractImporter
             foreach ($attendees as $attendee) {
                 $statement->execute([
                     $raid->raidID,
-                    ImportHandler::getInstance()->getNewID('info.daries.rp.character', $attendee['characterID']),
+                    ImportHandler::getInstance()->getNewID('dev.daries.rp.character', $attendee['characterID']),
                     $attendee['characterName'],
                     $attendee['classificationID'],
                     $attendee['roleID'],
@@ -76,7 +76,7 @@ class RaidImporter extends AbstractImporter
             WCF::getDB()->commitTransaction();
         }
         
-        ImportHandler::getInstance()->saveNewID('info.daries.rp.raid', $oldID, $raid->raidID);
+        ImportHandler::getInstance()->saveNewID('dev.daries.rp.raid', $oldID, $raid->raidID);
         
         return $raid->raidID;
     }

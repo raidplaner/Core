@@ -2,7 +2,7 @@
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/page.xsd">
     <import>
         <!-- dynamic -->
-        <page identifier="info.daries.rp.Calendar">
+        <page identifier="dev.daries.rp.Calendar">
             <pageType>system</pageType>
             <controller>rp\page\CalendarPage</controller>
             <name language="de">Kalender</name>
@@ -16,22 +16,22 @@
                 <title>Kalender</title>
             </content>
         </page>
-		<page identifier="info.daries.rp.Event">
+		<page identifier="dev.daries.rp.Event">
 			<pageType>system</pageType>
 			<controller>rp\page\EventPage</controller>
 			<name language="de">Termin</name>
 			<name language="en">Event</name>
 			<handler>rp\system\page\handler\EventPageHandler</handler>
-			<parent>info.daries.rp.Calendar</parent>
+			<parent>dev.daries.rp.Calendar</parent>
 			<allowSpidersToIndex>1</allowSpidersToIndex>
 			<requireObjectID>1</requireObjectID>
 		</page>
-		<page identifier="info.daries.rp.EventAdd">
+		<page identifier="dev.daries.rp.EventAdd">
 			<pageType>system</pageType>
 			<controller>rp\form\EventAddForm</controller>
 			<name language="de">Termin hinzufügen</name>
 			<name language="en">Add Event</name>
-			<parent>info.daries.rp.Calendar</parent>
+			<parent>dev.daries.rp.Calendar</parent>
 			<permissions>user.rp.canCreateEvent</permissions>
 			<content language="en">
 				<title>Add Event</title>
@@ -40,12 +40,12 @@
 				<title>Termin hinzufügen</title>
 			</content>
 		</page>
-		<page identifier="info.daries.rp.EventEdit">
+		<page identifier="dev.daries.rp.EventEdit">
 			<pageType>system</pageType>
 			<controller>rp\form\EventEditForm</controller>
 			<name language="de">Termin bearbeiten</name>
 			<name language="en">Edit Event</name>
-			<parent>info.daries.rp.Event</parent>
+			<parent>dev.daries.rp.Event</parent>
 			<hasFixedParent>1</hasFixedParent>
 			<permissions>user.rp.canCreateEvent</permissions>
 			<content language="en">
@@ -55,9 +55,9 @@
 				<title>Termin bearbeiten</title>
 			</content>
 		</page>
-		<page identifier="info.daries.rp.UnreadEventList">
+		<page identifier="dev.daries.rp.UnreadEventList">
 			<pageType>system</pageType>
-			<parent>info.daries.rp.Calendar</parent>
+			<parent>dev.daries.rp.Calendar</parent>
 			<controller>rp\page\UnreadEventListPage</controller>
 			<handler>rp\system\page\handler\UnreadEventListPageHandler</handler>
 			<name language="de">Ungelesene Termine</name>
@@ -71,9 +71,9 @@
 				<title>Ungelesene Termine</title>
 			</content>
 		</page>
-		<page identifier="info.daries.rp.EventParticipationList">
+		<page identifier="dev.daries.rp.EventParticipationList">
 			<pageType>system</pageType>
-			<parent>info.daries.rp.Calendar</parent>
+			<parent>dev.daries.rp.Calendar</parent>
 			<controller>rp\page\EventParticipationListPage</controller>
 			<name language="de">Termin-Teilnahme</name>
 			<name language="en">Event Participation</name>
@@ -87,7 +87,7 @@
 			</content>
 		</page>
         
-        <page identifier="info.daries.rp.CharactersList">
+        <page identifier="dev.daries.rp.CharactersList">
             <pageType>system</pageType>
             <controller>rp\page\CharactersListPage</controller>
             <name language="de">Charaktere</name>
@@ -100,13 +100,13 @@
                 <title>Charaktere</title>
             </content>
         </page>
-        <page identifier="info.daries.rp.AddCharacter">
+        <page identifier="dev.daries.rp.AddCharacter">
             <pageType>system</pageType>
             <controller>rp\form\CharacterAddForm</controller>
             <name language="de">Charakter erstellen</name>
             <name language="en">Add Character</name>
             <hasFixedParent>1</hasFixedParent>
-            <parent>info.daries.rp.CharactersList</parent>
+            <parent>dev.daries.rp.CharactersList</parent>
             <content language="en">
                 <title>Add Character</title>
             </content>
@@ -114,13 +114,13 @@
                 <title>Charakter erstellen</title>
             </content>
         </page>
-        <page identifier="info.daries.rp.CharacterEdit">
+        <page identifier="dev.daries.rp.CharacterEdit">
             <pageType>system</pageType>
             <controller>rp\form\CharacterEditForm</controller>
             <name language="de">Charakter bearbeiten</name>
             <name language="en">Edit Character</name>
             <hasFixedParent>1</hasFixedParent>
-            <parent>info.daries.rp.CharactersList</parent>
+            <parent>dev.daries.rp.CharactersList</parent>
             <content language="en">
                 <title>Edit Character</title>
             </content>
@@ -128,12 +128,12 @@
                 <title>Charakter bearbeiten</title>
             </content>
         </page>
-        <page identifier="info.daries.rp.CharacterSearch">
+        <page identifier="dev.daries.rp.CharacterSearch">
             <pageType>system</pageType>
             <controller>rp\form\CharacterSearchForm</controller>
             <name language="de">Charakter suchen</name>
             <name language="en">Search Characters</name>
-            <parent>info.daries.rp.CharactersList</parent>
+            <parent>dev.daries.rp.CharactersList</parent>
             <permissions>user.rp.canViewCharactersList</permissions>
             <content language="en">
                 <title>Search Characters</title>
@@ -142,17 +142,17 @@
                 <title>Charakter suchen</title>
             </content>
         </page>
-        <page identifier="info.daries.rp.Character">
+        <page identifier="dev.daries.rp.Character">
             <pageType>system</pageType>
             <controller>rp\page\CharacterPage</controller>
             <name language="de">Charakterprofil</name>
             <name language="en">Character Profile</name>
             <handler>rp\system\page\handler\CharacterPageHandler</handler>
-            <parent>info.daries.rp.CharactersList</parent>
+            <parent>dev.daries.rp.CharactersList</parent>
             <requireObjectID>1</requireObjectID>
         </page>
                 
-        <page identifier="info.daries.rp.PointList">
+        <page identifier="dev.daries.rp.PointList">
             <pageType>system</pageType>
             <controller>rp\page\PointListPage</controller>
             <name language="de">Punktestand</name>
@@ -166,7 +166,7 @@
             </content>
         </page>
         
-        <page identifier="info.daries.rp.RaidList">
+        <page identifier="dev.daries.rp.RaidList">
             <pageType>system</pageType>
             <controller>rp\page\RaidListPage</controller>
             <name language="de">Raid-Liste</name>
@@ -179,12 +179,12 @@
                 <title>Raids</title>
             </content>
         </page>
-        <page identifier="info.daries.rp.RaidAdd">
+        <page identifier="dev.daries.rp.RaidAdd">
             <pageType>system</pageType>
             <controller>rp\form\RaidAddForm</controller>
             <name language="de">Raid hinzufügen</name>
             <name language="en">Add Raid</name>
-            <parent>info.daries.rp.RaidList</parent>
+            <parent>dev.daries.rp.RaidList</parent>
             <hasFixedParent>1</hasFixedParent>
             <allowSpidersToIndex>0</allowSpidersToIndex>
             <content language="en">
@@ -194,18 +194,18 @@
                 <title>Raid hinzufügen</title>
             </content>
         </page>
-        <page identifier="info.daries.rp.Raid">
+        <page identifier="dev.daries.rp.Raid">
             <pageType>system</pageType>
             <controller>rp\page\RaidPage</controller>
             <name language="de">Raid</name>
             <name language="en">Raid</name>
-            <parent>info.daries.rp.RaidList</parent>
+            <parent>dev.daries.rp.RaidList</parent>
             <allowSpidersToIndex>1</allowSpidersToIndex>
 			<hasFixedParent>1</hasFixedParent>
             <requireObjectID>1</requireObjectID>
         </page>
         
-        <page identifier="info.daries.rp.RaidEventList">
+        <page identifier="dev.daries.rp.RaidEventList">
             <pageType>system</pageType>
             <controller>rp\page\RaidEventListPage</controller>
             <name language="de">Raid Event-Liste</name>

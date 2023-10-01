@@ -10,10 +10,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -53,7 +53,7 @@ trait TTestableEventUserNotificationEvent
                     'enableComments' => 1,
                     'endTime' => TIME_NOW + (60 * 60 * 2),
                     'notes' => 'Test Notes',
-                    'objectTypeID' => ObjectTypeCache::getInstance()->getObjectTypeIDByName('info.daries.rp.eventController', 'info.daries.rp.event.default'),
+                    'objectTypeID' => ObjectTypeCache::getInstance()->getObjectTypeIDByName('dev.daries.rp.eventController', 'dev.daries.rp.event.default'),
                     'startTime' => TIME_NOW,
                     'title' => 'Test Event',
                     'userID' => $author->userID,

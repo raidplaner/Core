@@ -7,10 +7,10 @@ use wcf\system\comment\CommentHandler;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -47,7 +47,7 @@ trait TTestableEventCommentUserNotificationEvent
         return [
             'objectID' => self::getTestEvent($author)
             ->eventID,
-            'objectTypeID' => CommentHandler::getInstance()->getObjectTypeID('info.daries.rp.eventComment'),
+            'objectTypeID' => CommentHandler::getInstance()->getObjectTypeID('dev.daries.rp.eventComment'),
         ];
     }
 }

@@ -10,10 +10,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -80,7 +80,7 @@ class ViewableEventList extends EventList
         if (!empty($this->embeddedObjectEventIDs)) {
             // load embedded objects
             MessageEmbeddedObjectManager::getInstance()
-                ->loadObjects('info.daries.rp.event.notes', $this->embeddedObjectEventIDs);
+                ->loadObjects('dev.daries.rp.event.notes', $this->embeddedObjectEventIDs);
         }
     }
 
@@ -150,7 +150,7 @@ class ViewableEventList extends EventList
             $this->sqlSelects .= 'tracked_visit.visitTime';
             $this->sqlJoins .= "
                 LEFT JOIN   wcf" . WCF_N . "_tracked_visit tracked_visit
-                ON          tracked_visit.objectTypeID = " . VisitTracker::getInstance()->getObjectTypeID('info.daries.rp.event') . "
+                ON          tracked_visit.objectTypeID = " . VisitTracker::getInstance()->getObjectTypeID('dev.daries.rp.event') . "
                         AND tracked_visit.objectID = event.eventID
                         AND tracked_visit.userID = " . WCF::getUser()->userID;
         }

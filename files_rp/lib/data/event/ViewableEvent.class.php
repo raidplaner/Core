@@ -13,10 +13,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -111,14 +111,14 @@ class ViewableEvent extends DatabaseObjectDecorator
                     $conditionBuilder = new PreparedStatementConditionBuilder();
                     $conditionBuilder->add(
                         'event.created > ?',
-                        [VisitTracker::getInstance()->getVisitTime('info.daries.rp.event')]
+                        [VisitTracker::getInstance()->getVisitTime('dev.daries.rp.event')]
                     );
                     $conditionBuilder->add('(event.created > tracked_visit.visitTime OR tracked_visit.visitTime IS NULL)');
 
                     $sql = "SELECT      COUNT(*)
                             FROM        rp" . WCF_N . "_event event
                             LEFT JOIN   wcf" . WCF_N . "_tracked_visit tracked_visit
-                            ON          tracked_visit.objectTypeID = " . VisitTracker::getInstance()->getObjectTypeID('info.daries.rp.event') . "
+                            ON          tracked_visit.objectTypeID = " . VisitTracker::getInstance()->getObjectTypeID('dev.daries.rp.event') . "
                                     AND tracked_visit.objectID = event.eventID
                                     AND tracked_visit.userID = " . WCF::getUser()->userID . "
                             " . $conditionBuilder;
@@ -166,15 +166,15 @@ class ViewableEvent extends DatabaseObjectDecorator
             if (WCF::getUser()->userID) {
                 $this->effectiveVisitTime = \max(
                     $this->visitTime,
-                    VisitTracker::getInstance()->getVisitTime('info.daries.rp.event')
+                    VisitTracker::getInstance()->getVisitTime('dev.daries.rp.event')
                 );
             } else {
                 $this->effectiveVisitTime = \max(
                     VisitTracker::getInstance()->getObjectVisitTime(
-                        'info.daries.rp.event',
+                        'dev.daries.rp.event',
                         $this->eventID
                     ),
-                    VisitTracker::getInstance()->getVisitTime('info.daries.rp.event')
+                    VisitTracker::getInstance()->getVisitTime('dev.daries.rp.event')
                 );
             }
             if ($this->effectiveVisitTime === null) {

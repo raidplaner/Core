@@ -16,10 +16,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -187,7 +187,7 @@ class Character extends DatabaseObject implements IPopoverObject, IRouteControll
         $processor->enableUgc = false;
         $processor->process(
             $this->notes,
-            'info.daries.rp.character.notes',
+            'dev.daries.rp.character.notes',
             $this->characterID,
             false
         );

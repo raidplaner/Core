@@ -17,10 +17,10 @@ use wcf\util\HeaderUtil;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -81,7 +81,7 @@ class CalendarPage extends AbstractPage
     {
         parent::assignVariables();
 
-        $availableEventControllers = ObjectTypeCache::getInstance()->getObjectTypes('info.daries.rp.eventController');
+        $availableEventControllers = ObjectTypeCache::getInstance()->getObjectTypes('dev.daries.rp.eventController');
         \uasort($availableEventControllers, function (ObjectType $a, ObjectType $b) {
             return \strcmp(
             WCF::getLanguage()->get('rp.event.controller.' . $a->objectType),

@@ -4,7 +4,7 @@
     <p class="error">{lang}rp.event.raid.attendee.noCharacters{/lang}</p>
 {/if}
 
-<div class="jsClipboardContainer eventRaidContainer" data-type="info.daries.rp.raid.attendee">
+<div class="jsClipboardContainer eventRaidContainer" data-type="dev.daries.rp.raid.attendee">
     {foreach from=$availableRaidStatus key=__status item=__statusName}
         <section class="section">
             <h2 class="sectionTitle">{$__statusName}</h2>

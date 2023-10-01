@@ -27,10 +27,10 @@ use wcf\util\StringUtil;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -237,7 +237,7 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
         if ($discussionProviders === null) {
             $discussionProviders = [];
 
-            $objectTypes = ObjectTypeCache::getInstance()->getObjectTypes('info.daries.rp.event.discussionProvider');
+            $objectTypes = ObjectTypeCache::getInstance()->getObjectTypes('dev.daries.rp.event.discussionProvider');
             $commentProvider = '';
             foreach ($objectTypes as $objectType) {
                 // the comment and the "void" provider should always be the last in the list
@@ -367,7 +367,7 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
     {
         $processor = new HtmlOutputProcessor();
         $processor->enableUgc = false;
-        $processor->process($this->notes, 'info.daries.rp.event.notes', $this->eventID, false);
+        $processor->process($this->notes, 'dev.daries.rp.event.notes', $this->eventID, false);
 
         return $processor->getHtml();
     }
@@ -380,7 +380,7 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
         $processor = new HtmlOutputProcessor();
         $processor->setOutputType('text/plain');
         $processor->enableUgc = false;
-        $processor->process($this->notes, 'info.daries.rp.event.notes', $this->eventID, false);
+        $processor->process($this->notes, 'dev.daries.rp.event.notes', $this->eventID, false);
 
         return StringUtil::encodeHTML(StringUtil::truncate($processor->getHtml(), 255));
     }
@@ -596,7 +596,7 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
      */
     public function isRaidEvent(): bool
     {
-        if ($this->getController()->getObjectTypeName() === 'info.daries.rp.event.raid') return true;
+        if ($this->getController()->getObjectTypeName() === 'dev.daries.rp.event.raid') return true;
         return false;
     }
 
@@ -615,7 +615,7 @@ class Event extends DatabaseObject implements IUserContent, IRouteController
     {
         $processor = new HtmlOutputProcessor();
         $processor->setOutputType('text/simplified-html');
-        $processor->process($this->notes, 'info.daries.rp.event.notes', $this->eventID);
+        $processor->process($this->notes, 'dev.daries.rp.event.notes', $this->eventID);
 
         return $processor->getHtml();
     }

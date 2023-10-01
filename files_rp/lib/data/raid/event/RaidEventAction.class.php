@@ -9,10 +9,10 @@ use wcf\system\upload\UploadFile;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -91,7 +91,7 @@ class RaidEventAction extends AbstractDatabaseObjectAction
                 $this->parameters['eventName_i18n'],
                 'rp.raid.event.name' . $raidEvent->eventID,
                 'rp.raid.event',
-                PackageCache::getInstance()->getPackageID('info.daries.rp')
+                PackageCache::getInstance()->getPackageID('dev.daries.rp')
             );
 
             $updateData['eventName'] = 'rp.raid.event.name' . $raidEvent->eventID;
@@ -140,7 +140,7 @@ class RaidEventAction extends AbstractDatabaseObjectAction
                     $this->parameters['eventName_i18n'],
                     'rp.raid.event.name' . $object->eventID,
                     'rp.raid.event',
-                    PackageCache::getInstance()->getPackageID('info.daries.rp')
+                    PackageCache::getInstance()->getPackageID('dev.daries.rp')
                 );
 
                 $updateData['eventName'] = 'rp.raid.event.name' . $object->eventID;

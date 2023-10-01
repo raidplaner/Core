@@ -2,15 +2,15 @@
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/objectTypeDefinition.xsd">
     <import>
         <definition>
-            <name>info.daries.rp.condition.characterSearch</name>
+            <name>dev.daries.rp.condition.characterSearch</name>
             <interfacename>rp\system\condition\ICondition</interfacename>
         </definition>
         <definition>
-            <name>info.daries.rp.eventController</name>
+            <name>dev.daries.rp.eventController</name>
             <interfacename>rp\system\event\IEventController</interfacename>
         </definition>
 		<definition>
-			<name>info.daries.rp.event.discussionProvider</name>
+			<name>dev.daries.rp.event.discussionProvider</name>
 			<interfacename>rp\system\event\discussion\IEventDiscussionProvider</interfacename>
 		</definition>
     </import>

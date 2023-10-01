@@ -1,9 +1,9 @@
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -61,7 +61,7 @@ class EventRaidInlineEditor {
             permissions,
         ) as InlineEditorPermissions;
         
-        EventHandler.add("com.woltlab.wcf.clipboard", "info.daries.rp.raid.attendee", (data) => this.clipboardAction(data));
+        EventHandler.add("com.woltlab.wcf.clipboard", "dev.daries.rp.raid.attendee", (data) => this.clipboardAction(data));
         
         DomChangeListener.add("Daries/RP/Ui/Event/Raid/InlineEditor", () => this.reloadAttendees());
     }
@@ -73,7 +73,7 @@ class EventRaidInlineEditor {
         // only consider events if the action has been executed
         if (actionData.responseData !== null) {
             const callbackFunction = new Map([
-                ["info.daries.rp.raid.attendee.delete", (eventId: number) => this.triggerDelete(eventId)],
+                ["dev.daries.rp.raid.attendee.delete", (eventId: number) => this.triggerDelete(eventId)],
             ]);
 
             const triggerFunction = callbackFunction.get(actionData.data.actionName);
@@ -82,7 +82,7 @@ class EventRaidInlineEditor {
 
                 UiNotification.show();
             }
-        } else if (actionData.data.actionName === "info.daries.rp.raid.attendee.updateStatus") {
+        } else if (actionData.data.actionName === "dev.daries.rp.raid.attendee.updateStatus") {
             const dialog = UiDialog.openStatic("attendeeUpdateStatusDialog", actionData.data.internalData.template, {
                 title: Language.get("rp.event.raid.updateStatus"),
             });

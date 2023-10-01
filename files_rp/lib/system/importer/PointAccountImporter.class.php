@@ -9,10 +9,10 @@ use wcf\system\importer\ImportHandler;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -81,14 +81,14 @@ class PointAccountImporter extends AbstractImporter
                     }
                 }
 
-                $this->importI18nValues($items, 'rp.acp.point', 'info.daries.rp');
+                $this->importI18nValues($items, 'rp.acp.point', 'dev.daries.rp');
 
                 (new PointAccountEditor($pointAccount))->update($updateData);
             }
         }
 
         // save mapping
-        ImportHandler::getInstance()->saveNewID('info.daries.rp.point.account', $oldID, $newID);
+        ImportHandler::getInstance()->saveNewID('dev.daries.rp.point.account', $oldID, $newID);
 
         return $newID;
     }

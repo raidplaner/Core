@@ -11,10 +11,10 @@ use wcf\system\WCF;
 
 /**
  *  Project:    Raidplaner: Core
- *  Package:    info.daries.rp
- *  Link:       http://daries.info
+ *  Package:    dev.daries.rp
+ *  Link:       http://daries.dev
  *
- *  Copyright (C) 2018-2022 Daries.info Developer Team
+ *  Copyright (C) 2018-2023 Daries.dev Developer Team
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -95,7 +95,7 @@ class LikeableEvent extends AbstractLikeObject implements IReactionObject
             $notificationObject = new LikeUserNotificationObject($like);
             UserNotificationHandler::getInstance()->fireEvent(
                 'like',
-                'info.daries.rp.likeableEvent.notification',
+                'dev.daries.rp.likeableEvent.notification',
                 $notificationObject,
                 [$this->getDecoratedObject()->userID],
                 ['objectID' => $this->getDecoratedObject()->entryID]
