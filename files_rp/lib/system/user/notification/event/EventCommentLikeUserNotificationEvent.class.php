@@ -14,7 +14,7 @@ use wcf\system\user\notification\object\LikeUserNotificationObject;
  * User notification event for event comment likes.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object\Type
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  *
  * @method      LikeUserNotificationObject  getUserNotificationObject()
  */

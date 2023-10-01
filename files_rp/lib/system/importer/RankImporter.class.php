@@ -12,7 +12,7 @@ use wcf\system\importer\ImportHandler;
  * Imports ranks.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class RankImporter extends AbstractImporter
 {

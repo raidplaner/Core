@@ -10,7 +10,7 @@ use rp\data\event\Event;
  * should derive from this class for forwards-compatibility.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event\Discussion
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 abstract class AbstractEventDiscussionProvider implements IEventDiscussionProvider
 {

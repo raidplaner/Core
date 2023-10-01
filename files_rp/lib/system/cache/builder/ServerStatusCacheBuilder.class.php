@@ -13,7 +13,7 @@ use wcf\util\Url;
  * Cache the server status from the URL for 30 minutes.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Builder
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class ServerStatusCacheBuilder extends AbstractCacheBuilder
 {

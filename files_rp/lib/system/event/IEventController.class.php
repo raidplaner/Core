@@ -10,7 +10,7 @@ use wcf\system\form\builder\IFormDocument;
  * Default interface for event controllers.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Event
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 interface IEventController
 {

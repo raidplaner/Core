@@ -17,7 +17,7 @@ use wcf\system\WCF;
  * Represents a comment notification object type for comments on events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object\Type
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventCommentUserNotificationObjectType extends AbstractUserNotificationObjectType implements
 ICommentUserNotificationObjectType, IMultiRecipientCommentUserNotificationObjectType

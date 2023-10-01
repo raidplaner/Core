@@ -11,7 +11,7 @@ use wcf\system\page\handler\IOnlineLocationPageHandler;
  * Menu page handler for the character profile page.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Page\Handler
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterPageHandler extends AbstractLookupPageHandler implements IOnlineLocationPageHandler
 {

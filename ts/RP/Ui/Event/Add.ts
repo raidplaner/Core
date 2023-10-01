@@ -2,7 +2,7 @@
  * Provides the dialog overlay to add a new event.
  * 
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Event/Add
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Language from "WoltLabSuite/Core/Language";

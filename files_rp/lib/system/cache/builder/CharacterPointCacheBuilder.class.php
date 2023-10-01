@@ -15,7 +15,7 @@ use wcf\system\WCF;
  * Cached the points of the primary character and its twinks.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Builder
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterPointCacheBuilder extends AbstractCacheBuilder
 {

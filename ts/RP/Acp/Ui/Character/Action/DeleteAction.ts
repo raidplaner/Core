@@ -2,7 +2,7 @@
  * Handles a character delete button.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Acp/Ui/Character/Action/DeleteAction
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
  
 import AbstractCharacterAction from "./Abstract";

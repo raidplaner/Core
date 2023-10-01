@@ -14,7 +14,7 @@ use wcf\system\WCF;
  * Handles character profile item content.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Menu\Character\Profile\Content
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class ItemCharacterProfileMenuContent extends SingletonFactory implements ICharacterProfileMenuContent
 {

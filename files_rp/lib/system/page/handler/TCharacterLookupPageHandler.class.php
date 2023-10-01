@@ -11,7 +11,7 @@ use wcf\system\page\handler\ILookupPageHandler;
  * Provides the `isValid` and `lookup` methods for looking up characters.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Page\Handler
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 trait TCharacterLookupPageHandler
 {

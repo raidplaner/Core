@@ -10,7 +10,7 @@ use wcf\system\form\builder\IFormDocument;
  * Abstract implementation of a condition.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Condition
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 abstract class AbstractCondition extends AbstractObjectTypeProcessor implements ICondition
 {

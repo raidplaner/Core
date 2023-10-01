@@ -15,7 +15,7 @@ use wcf\system\form\builder\IFormDocument;
  * Condition implementation for the character id of a character.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Condition\Character
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterIDCondition extends AbstractCondition
 {

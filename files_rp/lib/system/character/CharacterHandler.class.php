@@ -12,7 +12,7 @@ use wcf\system\WCF;
  * Handles characters for current users.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Character
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterHandler extends SingletonFactory
 {

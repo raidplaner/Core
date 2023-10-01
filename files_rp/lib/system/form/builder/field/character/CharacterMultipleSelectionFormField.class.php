@@ -14,7 +14,7 @@ use wcf\util\ClassUtil;
  * Extended the Implementation of a form field for selecting multiple values for characters.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Form\Builder\Field\Character
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterMultipleSelectionFormField extends MultipleSelectionFormField
 {

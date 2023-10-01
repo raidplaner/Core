@@ -9,7 +9,7 @@ use wcf\system\cache\runtime\AbstractRuntimeCache;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Runtime
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  * 
  * @method      Raid[]      getCachedObjects()
  * @method      Raid        getObject($objectID)

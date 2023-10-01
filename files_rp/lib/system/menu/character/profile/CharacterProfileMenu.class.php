@@ -12,7 +12,7 @@ use wcf\system\SingletonFactory;
  * Builds the character profile menu.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Menu\Character\Profile
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterProfileMenu extends SingletonFactory
 {

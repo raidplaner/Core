@@ -9,7 +9,7 @@ use wcf\system\event\listener\AbstractUserMergeListener;
  * Updates events and members during user merging.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Event\Listener
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class UserMergeListener extends AbstractUserMergeListener
 {

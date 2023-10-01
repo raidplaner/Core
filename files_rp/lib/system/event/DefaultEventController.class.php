@@ -13,7 +13,7 @@ use wcf\system\form\builder\IFormDocument;
  * Default event implementation for event controllers.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class DefaultEventController extends AbstractEventController
 {

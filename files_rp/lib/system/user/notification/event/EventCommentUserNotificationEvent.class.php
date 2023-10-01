@@ -13,7 +13,7 @@ use wcf\system\user\notification\object\CommentUserNotificationObject;
  * User notification event for event comments.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object\Type
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  *
  * @method      CommentUserNotificationObject   getUserNotificationObject()
  */

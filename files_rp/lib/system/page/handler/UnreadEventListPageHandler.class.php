@@ -10,7 +10,7 @@ use wcf\system\page\handler\AbstractMenuPageHandler;
  * Page menu handler for the page listing all unread events.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Page\Handler
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class UnreadEventListPageHandler extends AbstractMenuPageHandler
 {

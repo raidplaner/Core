@@ -2,7 +2,7 @@
  * Character editing capabilities for the character list.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Acp/Ui/Character/Editor
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Core from "WoltLabSuite/Core/Core";

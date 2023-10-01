@@ -10,7 +10,7 @@ use wcf\system\WCF;
  * Caches the number of events and the events per day.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Builder
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class StatsCacheBuilder extends AbstractCacheBuilder
 {

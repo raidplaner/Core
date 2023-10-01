@@ -10,7 +10,7 @@ use wcf\system\cache\builder\AbstractCacheBuilder;
  * Caches the event legends.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Builder
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventLegendCacheBuilder extends AbstractCacheBuilder
 {

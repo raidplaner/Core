@@ -15,7 +15,7 @@ use wcf\system\worker\AbstractRebuildDataWorker;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP\System\Worker
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  * 
  * @method      EventList       getObjectList()
  */

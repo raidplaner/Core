@@ -10,7 +10,7 @@ use wcf\system\WCF;
  * Caches raid stats.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Raid\Stats
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class RaidStatsCache extends SingletonFactory
 {

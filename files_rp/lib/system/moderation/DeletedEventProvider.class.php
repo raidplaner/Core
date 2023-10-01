@@ -10,7 +10,7 @@ use wcf\system\moderation\AbstractDeletedContentProvider;
  * Implementation of IDeletedContentProvider for deleted events.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Moderation
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class DeletedEventProvider extends AbstractDeletedContentProvider
 {

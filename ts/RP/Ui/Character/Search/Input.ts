@@ -2,7 +2,7 @@
  * Provides suggestions for characters.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Character/Search/Input
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  * @see         module:WoltLabSuite/Core/Ui/Search/Input
  */
 

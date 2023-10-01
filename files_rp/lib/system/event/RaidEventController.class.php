@@ -35,7 +35,7 @@ use wcf\util\StringUtil;
  * Raid event implementation for event controllers.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class RaidEventController extends AbstractEventController
 {

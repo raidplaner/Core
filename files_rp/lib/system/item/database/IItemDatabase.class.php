@@ -9,7 +9,7 @@ use wcf\data\language\Language;
  * Default interface for item database.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Item\Database
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 interface IItemDatabase
 {

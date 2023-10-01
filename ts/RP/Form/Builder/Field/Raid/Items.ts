@@ -2,7 +2,7 @@
  * Manages the raid items entered form field.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Form/Builder/Field/Raid/Items
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Ajax from "WoltLabSuite/Core/Ajax";

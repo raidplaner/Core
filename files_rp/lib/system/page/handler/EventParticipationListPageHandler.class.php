@@ -10,7 +10,7 @@ use wcf\system\WCF;
  * Menu page handler for the list of participations.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Page\Handler
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventParticipationListPageHandler extends AbstractMenuPageHandler
 {

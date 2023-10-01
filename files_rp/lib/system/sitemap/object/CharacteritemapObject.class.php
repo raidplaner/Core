@@ -12,7 +12,7 @@ use wcf\system\WCF;
  * Character sitemap implementation.
  *
  * @author  Marco Daries
- * @package     Daries\RP\Sitemap\Object
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacteritemapObject extends AbstractSitemapObjectObjectType
 {

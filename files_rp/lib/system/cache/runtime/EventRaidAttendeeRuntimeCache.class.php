@@ -11,7 +11,7 @@ use wcf\system\cache\runtime\AbstractRuntimeCache;
  * Runtime cache implementation for event raid attendees.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Runtime
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  * 
  * @method      EventRaidAttendee[]     getCachedObjects()
  * @method      EventRaidAttendee       getObject($objectID)

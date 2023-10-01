@@ -14,7 +14,7 @@ use wcf\system\WCF;
  * An implementation of ISearchProvider for searching in events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Search
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventSearch extends AbstractSearchProvider
 {

@@ -12,7 +12,7 @@ use wcf\system\WCF;
  * Caches the point accounts.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Builder
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class PointAccountCacheBuilder extends AbstractCacheBuilder
 {

@@ -11,7 +11,7 @@ use wcf\system\moderation\queue\report\IModerationQueueReportHandler;
  * An implementation of IModerationQueueReportHandler for events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Moderation\Queue\Report
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventModerationQueueReportHandler extends AbstractEventModerationQueueHandler implements IModerationQueueReportHandler
 {

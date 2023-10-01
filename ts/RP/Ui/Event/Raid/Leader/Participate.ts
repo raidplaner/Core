@@ -3,7 +3,7 @@
  * Manages the leader participate button in the raid event.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Event/Raid/Leader/Participate
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Core from "WoltLabSuite/Core/Core";

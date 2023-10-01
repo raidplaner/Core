@@ -2,7 +2,7 @@
  * Manages the participate button in the raid event.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Event/Raid/Participate
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Ajax from "WoltLabSuite/Core/Ajax";

@@ -12,7 +12,7 @@ use wcf\system\WCF;
  * Box controller for a list of my characters.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Box
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class MyCharacterListBoxController extends AbstractDatabaseObjectListBoxController
 {

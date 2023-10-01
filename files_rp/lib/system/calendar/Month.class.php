@@ -9,7 +9,7 @@ use wcf\system\request\LinkHandler;
  * Displays a specific month.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Calendar
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 final class Month
 {

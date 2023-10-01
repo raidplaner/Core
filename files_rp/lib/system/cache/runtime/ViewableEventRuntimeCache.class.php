@@ -11,7 +11,7 @@ use wcf\system\cache\runtime\AbstractRuntimeCache;
  * Runtime cache implementation for viewable events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Runtime
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  * 
  * @method      ViewableEvent[]     getCachedObjects()
  * @method      ViewableEvent       getObject($objectID)

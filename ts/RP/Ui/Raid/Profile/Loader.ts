@@ -3,7 +3,7 @@
  * Handles the raid list in the character profile.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Raid/Profile/Loader
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Ajax from "WoltLabSuite/Core/Ajax";

@@ -17,7 +17,7 @@ use wcf\system\user\storage\UserStorageHandler;
  * Imports events.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventImporter extends AbstractImporter
 {

@@ -7,7 +7,7 @@ namespace rp\system\menu\character\profile\content;
  * Default interface for character profile menu content.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Menu\Character\Profile\Content
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 interface ICharacterProfileMenuContent
 {

@@ -9,7 +9,7 @@ use wcf\util\DateUtil;
  * Displays a specific day in the month.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Calendar
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 final class Day
 {

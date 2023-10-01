@@ -15,7 +15,7 @@ use wcf\system\WCF;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP\System\Page\Handler
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventPageHandler extends AbstractLookupPageHandler implements IOnlineLocationPageHandler
 {

@@ -14,7 +14,7 @@ use wcf\system\WCF;
  * Prepares clipboard editor items for character objects.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Clipboard\Action
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterClipboardAction extends AbstractClipboardAction
 {

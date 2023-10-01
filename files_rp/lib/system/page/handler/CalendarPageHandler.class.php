@@ -11,7 +11,7 @@ use wcf\system\WCF;
  * Page handler implementation for the calendar.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Page\Handler
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CalendarPageHandler extends AbstractMenuPageHandler
 {

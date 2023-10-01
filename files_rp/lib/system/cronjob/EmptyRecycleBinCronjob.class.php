@@ -12,7 +12,7 @@ use wcf\system\WCF;
  * Deletes thrashed calendar events.
  * 
  * @author  Marco Daries
- * @package     Daries\RP
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EmptyRecycleBinCronjob extends AbstractCronjob
 {

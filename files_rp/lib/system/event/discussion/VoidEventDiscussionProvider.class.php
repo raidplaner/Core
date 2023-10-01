@@ -10,7 +10,7 @@ use rp\data\event\Event;
  * type of discussion being available. This provider is always being evaluated last.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event\Discussion
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class VoidEventDiscussionProvider extends AbstractEventDiscussionProvider
 {

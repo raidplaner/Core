@@ -30,7 +30,7 @@ use wcf\system\WCF;
  * Default implementation for event controllers.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 abstract class AbstractEventController implements IEventController
 {

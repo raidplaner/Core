@@ -16,7 +16,7 @@ use const WCF_N;
  * Imports character avatars.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterAvatarImporter extends AbstractImporter
 {

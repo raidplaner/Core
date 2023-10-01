@@ -10,7 +10,7 @@ use wcf\system\WCF;
  * Appointment event implementation for event controllers.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class AppointmentEventController extends DefaultEventController
 {

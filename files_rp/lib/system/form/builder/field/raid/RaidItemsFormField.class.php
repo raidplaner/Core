@@ -17,7 +17,7 @@ use wcf\system\WCF;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP\System\Form\Builder\Field\Raid
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class RaidItemsFormField extends AbstractFormField
 {

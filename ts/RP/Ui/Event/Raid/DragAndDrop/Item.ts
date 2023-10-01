@@ -2,7 +2,7 @@
  * It creates an item to go on the list
  *
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Event/Raid/DragAndDrop/Item
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import { Autobind } from "./Autobind";

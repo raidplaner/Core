@@ -10,7 +10,7 @@ use wcf\system\cache\builder\AbstractCacheBuilder;
  * Caches the raid event.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Builder
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class RaidEventCacheBuilder extends AbstractCacheBuilder
 {

@@ -14,7 +14,7 @@ use wcf\system\WCF;
  * Option type implementation for event controller select lists.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Option
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventControllerSelectOptionType extends SelectOptionType
 {

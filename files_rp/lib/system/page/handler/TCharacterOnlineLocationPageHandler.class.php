@@ -14,7 +14,7 @@ use wcf\system\WCF;
  * Implementation of the `IOnlineLocationPageHandler` interface for character-bound pages.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Page\Handler
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 trait TCharacterOnlineLocationPageHandler
 {

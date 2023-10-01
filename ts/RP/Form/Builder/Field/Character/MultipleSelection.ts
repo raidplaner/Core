@@ -2,7 +2,7 @@
  * Handle other characters these Users by selection.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Form/Builder/Field/Character/MultipleSelection
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Core from "WoltLabSuite/Core/Core";

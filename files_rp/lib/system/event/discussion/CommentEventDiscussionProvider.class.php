@@ -11,7 +11,7 @@ use wcf\system\WCF;
  * The built-in discussion provider using the native comment system.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event\Discussion
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CommentEventDiscussionProvider extends AbstractEventDiscussionProvider
 {

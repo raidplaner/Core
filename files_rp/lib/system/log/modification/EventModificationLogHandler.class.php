@@ -13,7 +13,7 @@ use wcf\system\log\modification\AbstractExtendedModificationLogHandler;
  * Handles event modification logs.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Log\Modification
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventModificationLogHandler extends AbstractExtendedModificationLogHandler
 {

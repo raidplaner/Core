@@ -9,7 +9,7 @@ use wcf\system\form\builder\field\TextFormField;
  * Implementation of a form field for character name.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Form\Builder\Field\Character
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterNameFormField extends TextFormField
 {

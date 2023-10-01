@@ -11,7 +11,7 @@ use wcf\system\importer\ImportHandler;
  * Imports event comments.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventCommentImporter extends AbstractCommentImporter
 {

@@ -7,7 +7,7 @@ use rp\data\server\Server;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP\System\Server\Status
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 abstract class AbstractServerStatus implements IServerStatus
 {

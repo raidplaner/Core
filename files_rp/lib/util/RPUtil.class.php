@@ -12,7 +12,7 @@ use wcf\util\StringUtil;
  * Contains raidplaner-related functions.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\Util
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 final class RPUtil
 {

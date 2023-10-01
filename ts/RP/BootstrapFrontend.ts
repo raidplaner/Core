@@ -2,7 +2,7 @@
  * Bootstraps RP's JavaScript with additions for the frontend usage.
  *
  * @author  Marco Daries
- * @module      Daries/RP/BootstrapFrontend
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
  
 import * as ControllerPopover from "WoltLabSuite/Core/Controller/Popover";

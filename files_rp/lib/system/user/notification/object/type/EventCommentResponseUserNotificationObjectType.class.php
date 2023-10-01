@@ -11,7 +11,7 @@ use wcf\system\user\notification\object\type\AbstractUserNotificationObjectType;
  * Represents a comment notification object type for comment responses on events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object\Type
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventCommentResponseUserNotificationObjectType extends AbstractUserNotificationObjectType
 {

@@ -13,7 +13,7 @@ use wcf\system\WCF;
  * Imports characters.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterImporter extends AbstractImporter
 {

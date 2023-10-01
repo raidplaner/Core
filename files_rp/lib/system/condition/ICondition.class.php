@@ -12,7 +12,7 @@ use wcf\system\form\builder\IFormDocument;
  * Every concrete condition implementation needs to implement this interface.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Condition
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 interface ICondition extends IDatabaseObjectProcessor
 {

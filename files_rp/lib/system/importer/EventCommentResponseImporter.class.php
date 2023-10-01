@@ -9,7 +9,7 @@ use wcf\system\importer\AbstractCommentResponseImporter;
  * Imports event comment response.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventCommentResponseImporter extends AbstractCommentResponseImporter
 {

@@ -9,7 +9,7 @@ use wcf\system\WCF;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class StatisticsBoxControllerListener implements IParameterizedEventListener
 {

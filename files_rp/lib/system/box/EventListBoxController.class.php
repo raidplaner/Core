@@ -30,7 +30,7 @@ use wcf\system\WCF;
  * Database object list controller implementation for a list of events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Box
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventListBoxController extends AbstractDatabaseObjectListBoxController
 {

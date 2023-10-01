@@ -12,7 +12,7 @@ use wcf\system\importer\ImportHandler;
  * Imports raid events.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class RaidEventImporter extends AbstractImporter
 {

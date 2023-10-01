@@ -12,7 +12,7 @@ use wcf\system\WCF;
  * Handles character profile about content.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Menu\Character\Profile\Content
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class AboutCharacterProfileMenuContent extends SingletonFactory implements ICharacterProfileMenuContent
 {

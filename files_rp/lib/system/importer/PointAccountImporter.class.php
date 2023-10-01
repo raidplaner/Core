@@ -12,7 +12,7 @@ use wcf\system\importer\ImportHandler;
  * Imports point accounts (DKP).
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Importer
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class PointAccountImporter extends AbstractImporter
 {

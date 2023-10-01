@@ -11,7 +11,7 @@ use wcf\util\DateUtil;
  * Represents a calendar.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Calendar
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 final class Calendar
 {

@@ -12,7 +12,7 @@ use wcf\system\option\SelectOptionType;
  * Option type implementation for game select lists.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Option
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class GameSelectOptionType extends SelectOptionType
 {

@@ -12,7 +12,7 @@ use wcf\system\WCF;
  * Option type implementation for item database selection.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Option
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class ItemDatabasesOptionType extends AbstractOptionType
 {

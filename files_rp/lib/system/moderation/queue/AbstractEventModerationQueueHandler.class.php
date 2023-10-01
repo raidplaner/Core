@@ -18,7 +18,7 @@ use wcf\system\WCF;
  * An abstract implementation of IModerationQueueHandler for events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Moderation\Queue
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class AbstractEventModerationQueueHandler extends AbstractModerationQueueHandler
 {

@@ -9,7 +9,7 @@ use rp\data\server\Server;
  * Any game server status should implement this interface.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Server\Status
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 interface IServerStatus
 {

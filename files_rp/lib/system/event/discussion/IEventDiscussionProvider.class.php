@@ -9,7 +9,7 @@ use rp\data\event\Event;
  * Discussion provider for events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Event\Discussion
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 interface IEventDiscussionProvider
 {

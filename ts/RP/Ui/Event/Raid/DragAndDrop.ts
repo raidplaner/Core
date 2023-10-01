@@ -2,7 +2,7 @@
  * Drag and Drop attendee item's.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Event/Raid/DragAndDrop
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import DragAndDropBox from "./DragAndDrop/Box";

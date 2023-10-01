@@ -12,7 +12,7 @@ use wcf\util\ImageUtil;
  * Implementation of a form field for to upload character avatars.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Form\Builder\Field\Character\Avatar
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class CharacterAvatarUploadFormField extends UploadFormField
 {

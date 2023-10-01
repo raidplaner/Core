@@ -11,7 +11,7 @@ use wcf\system\moderation\queue\activation\IModerationQueueActivationHandler;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP\System\Moderation\Queue\Activation
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventModerationQueueActivationHandler extends AbstractEventModerationQueueHandler implements IModerationQueueActivationHandler
 {

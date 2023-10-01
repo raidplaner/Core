@@ -2,7 +2,7 @@
  * Deletes a given character.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Acp/Ui/Character/Action/Handler/Delete
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Ajax from "WoltLabSuite/Core/Ajax";

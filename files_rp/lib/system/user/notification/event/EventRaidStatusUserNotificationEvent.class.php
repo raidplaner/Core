@@ -8,7 +8,7 @@ use wcf\system\user\notification\event\AbstractUserNotificationEvent;
 
 /**
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object\Type
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  *
  * @method      EventRaidUserNotificationObject     getUserNotificationObject()
  */

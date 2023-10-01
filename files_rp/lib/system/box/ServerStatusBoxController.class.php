@@ -17,7 +17,7 @@ use wcf\system\WCF;
  * Box for the server status.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Box
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class ServerStatusBoxController extends AbstractBoxController implements IConditionBoxController
 {

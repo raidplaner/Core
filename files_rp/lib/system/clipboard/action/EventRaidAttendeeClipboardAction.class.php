@@ -14,7 +14,7 @@ use wcf\system\WCF;
  * Clipboard action implementation for raid attendees.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Clipboard\Action
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventRaidAttendeeClipboardAction extends AbstractClipboardAction
 {

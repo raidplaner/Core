@@ -11,7 +11,7 @@ use wcf\system\WCF;
  * Caches the server.
  * 
  * @author  Marco Daries
- * @package     Daries\RP\System\Cache\Builder
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class ServerCacheBuilder extends AbstractCacheBuilder
 {

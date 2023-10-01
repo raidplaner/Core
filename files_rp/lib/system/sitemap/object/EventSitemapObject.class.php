@@ -12,7 +12,7 @@ use wcf\system\sitemap\object\AbstractSitemapObjectObjectType;
  * Event sitemap implementation.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Sitemap\Object
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventSitemapObject extends AbstractSitemapObjectObjectType
 {

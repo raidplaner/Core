@@ -13,7 +13,7 @@ use wcf\system\WCF;
  * events.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object\Type
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 trait TTestableEventUserNotificationEvent
 {

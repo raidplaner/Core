@@ -11,7 +11,7 @@ use wcf\system\user\notification\object\type\AbstractUserNotificationObjectType;
  * Represents a event raid as a notification object type.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object\Type
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventRaidUserNotificationObjectType extends AbstractUserNotificationObjectType
 {

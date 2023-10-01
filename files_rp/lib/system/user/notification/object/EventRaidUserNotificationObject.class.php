@@ -10,7 +10,7 @@ use wcf\system\user\notification\object\IUserNotificationObject;
  * Represents a event as a notification object type.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\User\Notification\Object
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  *
  * @method      Event       getDecoratedObject()
  * @mixin       Event

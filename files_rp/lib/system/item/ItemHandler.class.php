@@ -19,7 +19,7 @@ use wcf\util\StringUtil;
  * Handles items.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Item
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class ItemHandler extends SingletonFactory
 {

@@ -2,7 +2,7 @@
  * Handles the 'mark as read' action for events.
  *
  * @author  Marco Daries
- * @module      Daries/RP/Ui/Event/MarkAllAsRead
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 
 import * as Ajax from "WoltLabSuite/Core/Ajax";

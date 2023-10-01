@@ -18,7 +18,7 @@ use wcf\system\WCF;
  * Event comment manager implementation.
  *
  * @author  Marco Daries
- * @package     Daries\RP\System\Comment\Manager
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventCommentManager extends AbstractCommentManager implements IViewableLikeProvider
 {

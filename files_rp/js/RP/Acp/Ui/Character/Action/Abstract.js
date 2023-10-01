@@ -6,7 +6,7 @@ define(["require", "exports"], function (require, exports) {
     * An abstract action, to handle character actions.
     *
  * @author  Marco Daries
-    * @module      Daries/RP/Acp/Ui/Character/Action/Abstract
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
     */
     class AbstractCharacterAction {
         constructor(button, characterId, characterDataElement) {

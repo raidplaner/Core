@@ -1,7 +1,10 @@
-<?php * Defines constants for autocompletion in IDEs. This file is not meant to be actively used anywhere!
+<?php 
+
+/**
+ * Defines constants for autocompletion in IDEs. This file is not meant to be actively used anywhere!
  *
  * @author  Marco Daries
- * @package     Daries\RP
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 // automatically defined constants
 define('RP_DIR', '');
