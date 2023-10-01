@@ -31,16 +31,16 @@ use wcf\system\WCF;
  */
 // set default game
 $sql = "SELECT  gameID
-        FROM    rp" . WCF_N . "_game
+        FROM    rp1_game
         WHERE   identifier = ?";
-$statement = WCF::getDB()->prepareStatement($sql, 1);
+$statement = WCF::getDB()->prepare($sql, 1);
 $statement->execute(['default']);
 $gameID = $statement->fetchSingleColumn();
 
-$sql = "UPDATE  wcf" . WCF_N . "_option
+$sql = "UPDATE  wcf1_option
         SET     optionValue = ?
         WHERE   optionName = ?";
-$statement = WCF::getDB()->prepareStatement($sql);
+$statement = WCF::getDB()->prepare($sql);
 $statement->execute([
     $gameID,
     'rp_default_game_id',
@@ -50,10 +50,10 @@ $statement->execute([
 OptionEditor::resetCache();
 
 // Default Rank
-$sql = "INSERT INTO rp" . WCF_N . "_rank
+$sql = "INSERT INTO rp1_rank
                     (rankName, gameID, showOrder, isDefault)
         VALUES      (?, ?, ?, ?)";
-$statement = WCF::getDB()->prepareStatement($sql);
+$statement = WCF::getDB()->prepare($sql);
 $statement->execute([
     'Default',
     GameCache::getInstance()->getGameByIdentifier('default')->gameID,
@@ -62,10 +62,10 @@ $statement->execute([
 ]);
 
 // Default Point Account
-$sql = "INSERT INTO rp" . WCF_N . "_point_account
+$sql = "INSERT INTO rp1_point_account
                     (pointAccountName, description, gameID, showOrder)
         VALUES      (?, ?, ?, ?)";
-$statement = WCF::getDB()->prepareStatement($sql);
+$statement = WCF::getDB()->prepare($sql);
 $statement->execute([
     'Default',
     'Default-Pool',
