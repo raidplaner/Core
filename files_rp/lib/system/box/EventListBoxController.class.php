@@ -29,7 +29,7 @@ use wcf\system\WCF;
 /**
  * Database object list controller implementation for a list of events.
  *
- * @author      Marco Daries
+ * @author  Marco Daries
  * @package     Daries\RP\System\Box
  */
 class EventListBoxController extends AbstractDatabaseObjectListBoxController

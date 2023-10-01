@@ -27,8 +27,8 @@ use wcf\system\WCF;
  */
 
 /**
- * @author      Marco Daries
- * @package     Daries\RP\System\Box
+ * @author  Marco Daries
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  */
 class EventLegendBoxController extends AbstractDatabaseObjectListBoxController
 {

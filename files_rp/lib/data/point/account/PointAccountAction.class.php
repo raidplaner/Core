@@ -11,32 +11,12 @@ use wcf\system\exception\UserInputException;
 use wcf\system\language\I18nHandler;
 use wcf\system\WCF;
 
-/**
- *  Project:    Raidplaner: Core
- *  Package:    dev.daries.rp
- *  Link:       http://daries.dev
- *
- *  Copyright (C) 2018-2023 Daries.dev Developer Team
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as published
- *  by the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 /**
  * Executes point account related actions.
  * 
- * @author      Marco Daries
- * @package     Daries\RP\Data\Point\Account
+ * @author  Marco Daries
+ * @license Raidplaner License <https://daries.dev/licence/raidplaner.txt>
  * 
  * @method      PointAccountEditor[]    getObjects()
  * @method      PointAccountEditor      getSingleObject()
