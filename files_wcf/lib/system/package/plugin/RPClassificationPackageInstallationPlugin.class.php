@@ -179,24 +179,16 @@ class RPClassificationPackageInstallationPlugin extends AbstractXMLPackageInstal
      */
     protected function prepareImport(array $data): array
     {
-        $gameID = null;
-        if (!empty($data['elements']['game'])) {
-            $sql = "SELECT  gameID
-                    FROM    " . $this->application . WCF_N . "_game
-                    WHERE   identifier = ?";
-            $statement = WCF::getDB()->prepareStatement($sql, 1);
-            $statement->execute([$data['elements']['game']]);
-            $row = $statement->fetchSingleRow();
-            if ($row === false) {
-                throw new SystemException("Unable to find game '" . $data['elements']['game'] . "' for classification '" . $data['attributes']['identifier'] . "'");
-            }
-
-            $gameID = $row['gameID'];
+        $sql = "SELECT  gameID
+                FROM    " . $this->application . WCF_N . "_game
+                WHERE   identifier = ?";
+        $statement = WCF::getDB()->prepareStatement($sql, 1);
+        $statement->execute([$data['elements']['game']]);
+        $row = $statement->fetchSingleRow();
+        if ($row === false) {
+            throw new SystemException("Unable to find game '" . $data['elements']['game'] . "' for classification '" . $data['attributes']['identifier'] . "'");
         }
-
-        if ($gameID === null) {
-            throw new SystemException("The classification '" . $data['attributes']['identifier'] . "' must either have an associated game.");
-        }
+        $gameID = $row['gameID'];
 
         $factions = [];
         if (isset($data['elements']['factions'])) {
