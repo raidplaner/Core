@@ -24,7 +24,12 @@
                 <ul>
                     {content}
                         {if $__wcf->getSession()->getPermission('mod.rp.canEditRaid')}
-                            <li><a href="{link controller='RaidEdit' application='rp' id=$raidID}{/link}" class="button"><span class="icon icon16 fa-pencil"></span> <span>{lang}rp.raid.edit{/lang}</span></a></li>
+                            <li>
+                                <a href="{link controller='RaidEdit' application='rp' id=$raidID}{/link}" class="button">
+                                    {icon name='pencil'}
+                                    <span>{lang}rp.raid.edit{/lang}</span>
+                                </a>
+                            </li>
                         {/if}
 
                         {event name='contentHeaderNavigation'}

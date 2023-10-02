@@ -7,7 +7,12 @@
 
     <nav class="contentHeaderNavigation">
         <ul>
-            <li><a href="{link controller='EventLegendAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.acp.event.legend.add{/lang}</span></a></li>
+            <li>
+                <a href="{link controller='EventLegendAdd' application='rp'}{/link}" class="button">
+                    {icon name='plus'} 
+                    <span>{lang}rp.acp.event.legend.add{/lang}</span>
+                </a>
+            </li>
 
             {event name='contentHeaderNavigation'}
         </ul>
@@ -35,7 +40,9 @@
                 {foreach from=$objects item=legend}
                     <tr id="legendContainer{@$legend->legendID}" class="jsEventLegendRow jsObjectActionObject" data-object-id="{@$legend->getObjectID()}">
                         <td class="columnIcon">
-                            <a href="{link controller='EventLegendEdit' application='rp' id=$legend->legendID}{/link}" title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip"><span class="icon icon16 fa-pencil"></span></a>
+                            <a href="{link controller='EventLegendEdit' application='rp' id=$legend->legendID}{/link}" title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip">
+                                {icon name='pencil'}
+                            </a>
                             {objectAction action="delete" objectTitle=$legend->name}
 
                             {event name='rowButtons'}
@@ -61,7 +68,12 @@
 
         <nav class="contentFooterNavigation">
             <ul>
-                <li><a href="{link controller='EventLegendAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.acp.event.legend.add{/lang}</span></a></li>
+                <li>
+                    <a href="{link controller='EventLegendAdd' application='rp'}{/link}" class="button">
+                        {icon name='plus'} 
+                        <span>{lang}rp.acp.event.legend.add{/lang}</span>
+                    </a>
+                </li>
 
                 {event name='contentFooterNavigation'}
             </ul>

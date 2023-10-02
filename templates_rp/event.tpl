@@ -101,18 +101,18 @@
                 {event name='beforeMetaData'}
 
                 <li>
-                    <span class="icon icon16 fa-clock-o"></span>
+                    {icon name='clock'}
                     {@$event->getFormattedTimeFrame()}
                 </li>
 
                 <li>
-                    <span class="icon icon16 fa-user"></span>
+                    {icon name='user'}
                     {user object=$event->getUserProfile()}
 				</li>
                 
 				{if $event->getDiscussionProvider()->getDiscussionCountPhrase()}
 					<li>
-						<span class="icon icon16 fa-comments"></span>
+						</span>{icon name='comments'}
 						{if $event->getDiscussionProvider()->getDiscussionLink()}<a href="{$event->getDiscussionProvider()->getDiscussionLink()}">{else}<span>{/if}
 						{$event->getDiscussionProvider()->getDiscussionCountPhrase()}
 						{if $event->getDiscussionProvider()->getDiscussionLink()}</a>{else}</span>{/if}
@@ -120,13 +120,13 @@
 				{/if}
 
                 <li>
-                    <span class="icon icon16 fa-eye"></span>
+                    {icon name='eye'}
                     {lang}rp.event.eventViews{/lang}
                 </li>
                 
                 {if $event->isRaidEvent() && $event->raidID}
                     <li>
-                        <span class="icon icon16 fa-exchange"></span>
+                        {icon name='exchange'}
                         <a href="{link controller='Raid' application='rp' id=$event->raidID}{/link}">{lang}rp.event.raidLink{/lang}</a>
                     </li>
                 {/if}
@@ -158,12 +158,30 @@
                         {if $event->getController()->getObjectTypeName() == 'dev.daries.rp.event.appointment'}
                             {if !$event->getController()->isExpired()}
                                 <li class="dropdown">
-                                    <a class="button dropdownToggle"><span class="icon icon16 fa-cog"></span> <span>{lang}rp.event.participation{/lang}</span></a>
+                                    <a class="button dropdownToggle">
+                                        {icon name='cog'}
+                                        <span>{lang}rp.event.participation{/lang}</span>
+                                    </a>
                                     <div class="dropdownMenu" id="eventDropdown">
                                         <ul class="scrollableDropdownMenu">
-                                            <li><a href="#" class="button jsButtonEventAccepted" data-status="accepted" title="{lang}rp.event.accepted{/lang}"><span class="icon icon16 fa-check-circle"></span> <span>{lang}rp.event.accepted{/lang}</span></a></li>
-                                            <li><a href="#" class="button jsButtonEventMaybe" data-status="maybe" title="{lang}rp.event.maybe{/lang}"><span class="icon icon16 fa-circle"></span> <span>{lang}rp.event.maybe{/lang}</span></a></li>
-                                            <li><a href="#" class="button jsButtonEventCanceled" data-status="canceled" title="{lang}rp.event.canceled{/lang}"><span class="icon icon16 fa-times-circle"></span> <span>{lang}rp.event.canceled{/lang}</span></a></li>
+                                            <li>
+                                                <a href="#" class="button jsButtonEventAccepted" data-status="accepted" title="{lang}rp.event.accepted{/lang}">
+                                                    {icon name='check-circle'}
+                                                    <span>{lang}rp.event.accepted{/lang}</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="button jsButtonEventMaybe" data-status="maybe" title="{lang}rp.event.maybe{/lang}">
+                                                    {icon name='circle'} 
+                                                    <span>{lang}rp.event.maybe{/lang}</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="button jsButtonEventCanceled" data-status="canceled" title="{lang}rp.event.canceled{/lang}">
+                                                    {icon name='circle'}
+                                                    <span>{lang}rp.event.canceled{/lang}</span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -207,7 +225,12 @@
 
 {capture assign='contentInteractionButtons'}
     {if $event->isRaidEvent() && $event->getController()->isLeader()}
-        <li><a class="button small jsButtonAttendeeAdd"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.event.raid.participate.add{/lang}</span></a></li>
+        <li>
+            <a class="button small jsButtonAttendeeAdd">
+                {icon name='plus'}
+                <span>{lang}rp.event.raid.participate.add{/lang}</span>
+            </a>
+        </li>
         
         <script data-relocate="true">
             require(['Language', 'Daries/RP/Ui/Event/Raid/Leader/Participate'], function(Language, EventRaidLeaderParticipate) {
@@ -221,7 +244,10 @@
     {/if}
     
     <div class="contentInteractionButton dropdown jsOnly jsEventDropdown" style="display: none;">
-        <a href="#" class="button small dropdownToggle"><span class="icon icon16 fa-sliders"></span> <span>{lang}rp.event.settings{/lang}</span></a>
+        <a href="#" class="button small dropdownToggle">
+            {icon name='sliders'}
+            <span>{lang}rp.event.settings{/lang}</span>
+        </a>
         <ul class="dropdownMenu jsEventDropdownItems">
             <li data-option-name="delete"><span>{lang}rp.event.delete{/lang}</span></li>
             <li data-option-name="restore"><span>{lang}rp.event.restore{/lang}</span></li>
@@ -293,14 +319,25 @@
             <ul class="eventLikeButtons buttonGroup buttonList smallButtons">
                 <li>
                     <a href="{$event->getLink()}" class="button wsShareButton jsOnly" data-link-title="{$event->getTitle()}">
-                        <span class="icon icon16 fa-share-alt"></span> <span>{lang}wcf.message.share{/lang}</span>
+                        {icon name='share-alt'}
+                        <span>{lang}wcf.message.share{/lang}</span>
                     </a>
                 </li>
                 {if $__wcf->session->getPermission('user.profile.canReportContent')}
-                    <li class="jsReportEvent jsOnly" data-object-id="{@$event->eventID}"><a href="#" title="{lang}wcf.moderation.report.reportContent{/lang}" class="button jsTooltip"><span class="icon icon16 fa-exclamation-triangle"></span> <span class="invisible">{lang}wcf.moderation.report.reportContent{/lang}</span></a></li>
+                    <li class="jsReportEvent jsOnly" data-object-id="{@$event->eventID}">
+                        <a href="#" title="{lang}wcf.moderation.report.reportContent{/lang}" class="button jsTooltip">
+                            {icon name='exclamation-triangle'}
+                            <span class="invisible">{lang}wcf.moderation.report.reportContent{/lang}</span>
+                        </a>
+                    </li>
                 {/if}
                 {if MODULE_LIKE && RP_EVENT_ENABLE_LIKE && $__wcf->session->getPermission('user.like.canLike') && $event->userID != $__wcf->user->userID}
-                    <li class="jsOnly"><span class="button reactButton{if $eventLikeData[$event->eventID]|isset && $eventLikeData[$event->eventID]->reactionTypeID} active{/if}" title="{lang}wcf.reactions.react{/lang}" data-reaction-type-id="{if $eventLikeData[$event->eventID]|isset && $eventLikeData[$event->eventID]->reactionTypeID}{$eventLikeData[$event->eventID]->reactionTypeID}{else}0{/if}"><span class="icon icon16 fa-smile-o"></span> <span class="invisible">{lang}wcf.reactions.react{/lang}</span></span></li>
+                    <li class="jsOnly">
+                        <span class="button reactButton{if $eventLikeData[$event->eventID]|isset && $eventLikeData[$event->eventID]->reactionTypeID} active{/if}" title="{lang}wcf.reactions.react{/lang}" data-reaction-type-id="{if $eventLikeData[$event->eventID]|isset && $eventLikeData[$event->eventID]->reactionTypeID}{$eventLikeData[$event->eventID]->reactionTypeID}{else}0{/if}">
+                            {icon name='smile'}
+                            <span class="invisible">{lang}wcf.reactions.react{/lang}</span>
+                        </span>
+                    </li>
                 {/if}
             </ul>
         </div>

@@ -7,13 +7,13 @@
     {capture assign='contentHeaderNavigation'}
         <li>
             <a href="{link controller='Event' application='rp' object=$formObject}{/link}" class="button">
-                <span class="icon icon16 fa-arrow-circle-left"></span> 
+                {icon name='arrow-circle-left'}
                 <span>{lang}rp.event.backEvent{/lang}</span>
             </a>
         </li>
             <li>
                 <a href="{link controller='EventAdd' application='rp' presetEventID=$formObject->eventID}{/link}" class="button">
-                    <span class="icon icon16 fa-files-o"></span> 
+                    {icon name='files'}
                     <span>{lang}rp.event.useAsPreset{/lang}</span>
                 </a>
             </li>

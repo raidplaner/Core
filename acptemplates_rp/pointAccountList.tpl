@@ -19,7 +19,12 @@
 
     <nav class="contentHeaderNavigation">
         <ul>
-            <li><a href="{link controller='PointAccountAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.acp.point.account.add{/lang}</span></a></li>
+            <li>
+                <a href="{link controller='PointAccountAdd' application='rp'}{/link}" class="button">
+                    {icon name='plus'} 
+                    <span>{lang}rp.acp.point.account.add{/lang}</span>
+                </a>
+            </li>
 
             {event name='contentHeaderNavigation'}
         </ul>
@@ -41,8 +46,14 @@
                         <a href="{link controller='PointAccountEdit' application='rp' id=$pointAccount->pointAccountID}{/link}">{$pointAccount->getTitle()}</a>
 
                         <span class="statusDisplay sortableButtonContainer">
-                            <span class="icon icon16 fa-arrows sortableNodeHandle"></span>
-                            <a href="{link controller='PointAccountEdit' application='rp' id=$pointAccount->pointAccountID}{/link}"><span title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip icon icon16 fa-pencil"></span></a>
+                            <span class="sortableNodeHandle">
+                                {icon name='arrows'}
+                            </span>
+                            <a href="{link controller='PointAccountEdit' application='rp' id=$pointAccount->pointAccountID}{/link}">
+                                <span title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip">
+                                    {icon name='pencil'}
+                                </span>
+                            </a>
                             {objectAction action="delete" objectTitle=$pointAccount->getTitle()}
 
                             {event name='itemButtons'}

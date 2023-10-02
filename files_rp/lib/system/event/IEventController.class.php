@@ -4,7 +4,7 @@ namespace rp\system\event;
 
 use rp\data\event\Event;
 use wcf\system\form\builder\IFormDocument;
-
+use wcf\system\style\FontAwesomeIcon;
 
 /**
  * Default interface for event controllers.

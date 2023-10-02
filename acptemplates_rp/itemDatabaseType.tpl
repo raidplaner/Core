@@ -28,7 +28,13 @@
 			{foreach from=$availableDatabases item=availableDatabase}
 				<li class="sortableNode">
 					<span class="sortableNodeLabel">
-						<span class="icon icon16 fa-arrows sortableNodeHandle"></span> <label><input type="checkbox" name="values[{$option->optionName}][]" value="{$availableDatabase}"{if $availableDatabase|in_array:$value} checked{/if}> {lang}rp.acp.item.database.{$availableDatabase}{/lang}</label>
+						<span class="sortableNodeHandle">
+							{icon name='arrows'}
+						</span> 
+						<label>
+							<input type="checkbox" name="values[{$option->optionName}][]" value="{$availableDatabase}"{if $availableDatabase|in_array:$value} checked{/if}> 
+							{lang}rp.acp.item.database.{$availableDatabase}{/lang}
+						</label>
 					</span>
 				</li>
 			{/foreach}

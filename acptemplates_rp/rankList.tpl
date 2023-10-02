@@ -22,7 +22,12 @@
 
     <nav class="contentHeaderNavigation">
         <ul>
-            <li><a href="{link controller='RankAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.acp.rank.add{/lang}</span></a></li>
+            <li>
+                <a href="{link controller='RankAdd' application='rp'}{/link}" class="button">
+                    {icon name='plus'} 
+                    <span>{lang}rp.acp.rank.add{/lang}</span>
+                </a>
+            </li>
 
             {event name='contentHeaderNavigation'}
         </ul>
@@ -44,21 +49,32 @@
                         <a href="{link controller='RankEdit' application='rp' id=$rank->rankID}{/link}">{$rank->getTitle()}</a> {if $rank->isDefault} ({lang}wcf.global.defaultValue{/lang}){/if}
 
                         <span class="statusDisplay sortableButtonContainer">
-                            <span class="icon icon16 fa-arrows sortableNodeHandle"></span>
+                            <span class="sortableNodeHandle">
+                                {icon name='arrows'}
+                            </span>
                             {if !$rank->isDefault}
                                 <span 
-                                    class="icon icon16 fa-square-o jsObjectAction pointer" 
+                                    class="jsObjectAction pointer" 
                                     data-object-action="setAsDefault" 
                                     data-object-action-success="reload">
+                                    {icon name='square'}
                                 </span>
                             {else}
-                                <span class="icon icon16 fa-check-square-o disabled"></span>
+                                <span class="disabled">
+                                    {icon name='check-square'}
+                                </span>
                             {/if}
-                            <a href="{link controller='RankEdit' application='rp' id=$rank->rankID}{/link}"><span title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip icon icon16 fa-pencil"></span></a>
+                            <a href="{link controller='RankEdit' application='rp' id=$rank->rankID}{/link}">
+                                <span title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip">
+                                    {icon name='pencil'}
+                                </span>
+                            </a>
                             {if !$rank->isDefault}
                                 {objectAction action="delete" objectTitle=$rank->getTitle()}
                             {else}
-                                <span class="icon icon16 fa-times disabled" title="{lang}wcf.global.button.delete{/lang}"></span>
+                                <span class="disabled" title="{lang}wcf.global.button.delete{/lang}">
+                                    {icon name='times'}
+                                </span>
                             {/if}
 
                             {event name='itemButtons'}

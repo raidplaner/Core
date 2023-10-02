@@ -14,7 +14,12 @@
 
 {capture assign='contentHeaderNavigation'}
     {if $__wcf->getSession()->getPermission('user.rp.canAddCharacter')}
-        <li><a href="{link controller='CharacterAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.character.add{/lang}</span></a></li>
+        <li>
+			<a href="{link controller='CharacterAdd' application='rp'}{/link}" class="button">
+				{icon name='plus'}
+				<span>{lang}rp.character.add{/lang}</span>
+			</a>
+		</li>
     {/if}
 {/capture}
 
@@ -52,7 +57,9 @@
         <div class="containerListDisplayOptions">
             <div class="containerListSortOptions">
                 <a rel="nofollow" href="{link controller='CharactersList' application='rp' id=$searchID}pageNo={@$pageNo}&sortField={$sortField}&sortOrder={if $sortOrder == 'ASC'}DESC{else}ASC{/if}{if $letter}&letter={$letter}{/if}{if $ownCharacters}&ownCharacters=1{/if}{/link}">
-					<span class="icon icon16 fa-sort-amount-{$sortOrder|strtolower} jsTooltip" title="{lang}wcf.global.sorting{/lang} ({lang}wcf.global.sortOrder.{if $sortOrder === 'ASC'}ascending{else}descending{/if}{/lang})"></span>
+					<span class="jsTooltip" title="{lang}wcf.global.sorting{/lang} ({lang}wcf.global.sortOrder.{if $sortOrder === 'ASC'}ascending{else}descending{/if}{/lang})">
+						{icon name='sort-amount-{$sortOrder|strtolower}'}	
+					</span>
 				</a>
                 <span class="dropdown">
                     <span class="dropdownToggle">{lang}rp.character.sortField.{$sortField}{/lang}</span>
@@ -69,15 +76,31 @@
                 <div class="containerListActiveFilters">
                     <ul class="inlineList">
                         {content}
-                            {if $letter}<li><span class="icon icon16 fa-bold jsTooltip" title="{lang}rp.character.characters.sort.letters{/lang}"></span> {$letter}</li>{/if}
-                            {if $ownCharacters}<li><span class="icon icon16 fa-user jsTooltip" title="{lang}rp.character.characters.sort.ownCharacters{/lang}"></span></li>{/if}
+                            {if $letter}
+								<li>
+									<span class="jsTooltip" title="{lang}rp.character.characters.sort.letters{/lang}">
+										{icon name='bold'}
+									</span> 
+									{$letter}
+								</li>
+							{/if}
+                            {if $ownCharacters}
+								<li>
+									<span class="jsTooltip" title="{lang}rp.character.characters.sort.ownCharacters{/lang}">
+										{icon name='user'}
+									</span>
+								</li>
+							{/if}
                         {/content}
                     </ul>
                 </div>
             {/hascontent}
             
             <div class="containerListFilterOptions jsOnly">
-                <button class="small jsStaticDialog" data-dialog-id="charactersListSortFilter"><span class="icon icon16 fa-filter"></span> {lang}wcf.global.filter{/lang}</button>
+                <button class="small jsStaticDialog" data-dialog-id="charactersListSortFilter">
+					{icon name='filter'}
+					{lang}wcf.global.filter{/lang}
+				</button>
             </div>
         </div>
 

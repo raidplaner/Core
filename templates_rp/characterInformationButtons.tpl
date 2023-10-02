@@ -6,7 +6,8 @@
                     {if $__wcf->session->getPermission('user.rp.canEditOwnCharacter')}
                         <li>
                             <a href="{link controller='CharacterEdit' application='rp' id=$character->characterID}{/link}" class="jsTooltip"  title="{lang}rp.character.edit{/lang}">
-                                <span class="icon icon16 fa-pencil"></span> <span class="invisible">{lang}rp.character.edit{/lang}</span>
+                                {icon name='pencil'}
+                                <span class="invisible">{lang}rp.character.edit{/lang}</span>
                             </a>
                         </li>
                     {/if}
@@ -14,12 +15,13 @@
                         <li class="jsObjectActionObject" data-object-id="{@$character->getObjectID()}">
                             <a>
                                 <span 
-                                    class="icon icon16 fa-times jsObjectAction pointer" 
+                                    class="jsObjectAction pointer" 
                                     data-object-action="deleteOwnCharacter" 
                                     data-confirm-message="{lang objectTitle=$character->getTitle() __encode=true}wcf.button.delete.confirmMessage{/lang}"
                                     data-object-action-success="reload" 
                                     data-tooltip="{lang}wcf.global.button.delete{/lang}" 
                                     aria-label="{lang}wcf.global.button.delete{/lang}">
+                                    {icon name='times'}
                                 </span>
                             </a>
                         </li>

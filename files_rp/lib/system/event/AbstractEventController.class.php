@@ -23,8 +23,8 @@ use wcf\system\form\builder\field\SingleSelectionFormField;
 use wcf\system\form\builder\field\validation\FormFieldValidationError;
 use wcf\system\form\builder\field\validation\FormFieldValidator;
 use wcf\system\form\builder\IFormDocument;
+use wcf\system\style\FontAwesomeIcon;
 use wcf\system\WCF;
-
 
 /**
  * Default implementation for event controllers.
@@ -85,9 +85,9 @@ abstract class AbstractEventController implements IEventController
         $legendType = RadioButtonFormField::create('legendType')
             ->options(function () {
                 return [
-                EventLegend::TYPE_DEFAULT => WCF::getLanguage()->get('rp.event.legendType.default'),
-                EventLegend::TYPE_INDIVIDUAL => WCF::getLanguage()->get('rp.event.legendType.individual'),
-                EventLegend::TYPE_SELECT => WCF::getLanguage()->get('rp.event.legendType.select')
+                    EventLegend::TYPE_DEFAULT => WCF::getLanguage()->get('rp.event.legendType.default'),
+                    EventLegend::TYPE_INDIVIDUAL => WCF::getLanguage()->get('rp.event.legendType.individual'),
+                    EventLegend::TYPE_SELECT => WCF::getLanguage()->get('rp.event.legendType.select')
                 ];
             }, false, false)
             ->value(EventLegend::TYPE_DEFAULT)
@@ -97,36 +97,36 @@ abstract class AbstractEventController implements IEventController
             ->label('rp.event.legend')
             ->description('rp.event.legend.description')
             ->appendChildren([
-            $legendType,
-            ColorFormField::create('customFrontColor')
-            ->label('rp.acp.event.legend.frontColor')
-            ->addDependency(
-                ValueFormFieldDependency::create('legendType')
-                ->field($legendType)
-                ->values([0])
-            ),
-            ColorFormField::create('customBGColor')
-            ->label('rp.acp.event.legend.bgColor')
-            ->addDependency(
-                ValueFormFieldDependency::create('legendType')
-                ->field($legendType)
-                ->values([0])
-            ),
-            SingleSelectionFormField::create('legendID')
-            ->label('rp.acp.event.legend.list')
-            ->required()
-            ->options(['' => 'wcf.global.noSelection'] + EventLegendCache::getInstance()->getLegends())
-            ->addDependency(
-                ValueFormFieldDependency::create('legendType')
-                ->field($legendType)
-                ->values([1])
-            )
-            ->addValidator(new FormFieldValidator('empty', static function (SingleSelectionFormField $formField) {
+                $legendType,
+                ColorFormField::create('customFrontColor')
+                    ->label('rp.acp.event.legend.frontColor')
+                    ->addDependency(
+                        ValueFormFieldDependency::create('legendType')
+                            ->field($legendType)
+                            ->values([0])
+                    ),
+                ColorFormField::create('customBGColor')
+                    ->label('rp.acp.event.legend.bgColor')
+                    ->addDependency(
+                        ValueFormFieldDependency::create('legendType')
+                            ->field($legendType)
+                            ->values([0])
+                    ),
+                SingleSelectionFormField::create('legendID')
+                    ->label('rp.acp.event.legend.list')
+                    ->required()
+                    ->options(['' => 'wcf.global.noSelection'] + EventLegendCache::getInstance()->getLegends())
+                    ->addDependency(
+                        ValueFormFieldDependency::create('legendType')
+                            ->field($legendType)
+                            ->values([1])
+                    )
+                    ->addValidator(new FormFieldValidator('empty', static function (SingleSelectionFormField $formField) {
                         if (empty($formField->getSaveValue())) {
                             $formField->addValidationError(new FormFieldValidationError('empty'));
                         }
                     }))
-        ]);
+            ]);
         $form->appendChild($legendContainer);
     }
 
@@ -145,102 +145,102 @@ abstract class AbstractEventController implements IEventController
 
         $container->appendChildren([
             $isFullDay,
-                DateFormField::create('startTime')
+            DateFormField::create('startTime')
                 ->label('rp.event.startTime')
                 ->required()
                 ->supportTime()
                 ->value(TIME_NOW)
                 ->addValidator(new FormFieldValidator('uniqueness', function (DateFormField $formField) {
-                            $value = $formField->getSaveValue();
-                            if ($value === null || $value < -2147483647 || $value > 2147483647) {
-                                $formField->addValidationError(
-                                    new FormFieldValidationError(
-                                        'invalid',
-                                        'rp.event.startTime.error.invalid'
-                                    )
-                                );
-                            }
-                        })),
-                DateFormField::create('endTime')
+                    $value = $formField->getSaveValue();
+                    if ($value === null || $value < -2147483647 || $value > 2147483647) {
+                        $formField->addValidationError(
+                            new FormFieldValidationError(
+                                'invalid',
+                                'rp.event.startTime.error.invalid'
+                            )
+                        );
+                    }
+                })),
+            DateFormField::create('endTime')
                 ->label('rp.event.endTime')
                 ->required()
                 ->supportTime()
                 ->value(TIME_NOW + 7200) // 2h
                 ->addValidator(new FormFieldValidator('uniqueness', function (DateFormField $formField) {
-                            /** @var DateFormField $startFormField */
-                            $startFormField = $formField->getDocument()->getNodeById('startTime');
-                            $startValue = $startFormField->getSaveValue();
+                    /** @var DateFormField $startFormField */
+                    $startFormField = $formField->getDocument()->getNodeById('startTime');
+                    $startValue = $startFormField->getSaveValue();
 
-                            $value = $formField->getSaveValue();
+                    $value = $formField->getSaveValue();
 
-                            if ($value === null || $value <= $startValue || $value > 2147483647) {
-                                $formField->addValidationError(
-                                    new FormFieldValidationError(
-                                        'invalid',
-                                        'rp.event.endTime.error.invalid'
-                                    )
-                                );
-                            } else if ($value - $startValue > RP_CALENDAR_MAX_EVENT_LENGTH * 86400) {
-                                $formField->addValidationError(
-                                    new FormFieldValidationError(
-                                        'tooLong',
-                                        'rp.event.endTime.error.tooLong'
-                                    )
-                                );
-                            }
-                        })),
-                DateFormField::create('fStartTime')
+                    if ($value === null || $value <= $startValue || $value > 2147483647) {
+                        $formField->addValidationError(
+                            new FormFieldValidationError(
+                                'invalid',
+                                'rp.event.endTime.error.invalid'
+                            )
+                        );
+                    } else if ($value - $startValue > RP_CALENDAR_MAX_EVENT_LENGTH * 86400) {
+                        $formField->addValidationError(
+                            new FormFieldValidationError(
+                                'tooLong',
+                                'rp.event.endTime.error.tooLong'
+                            )
+                        );
+                    }
+                })),
+            DateFormField::create('fStartTime')
                 ->label('rp.event.startTime')
                 ->required()
                 ->value(TIME_NOW)
                 ->available($supportFullDay)
                 ->addValidator(new FormFieldValidator('uniqueness', function (DateFormField $formField) {
-                            $value = $formField->getSaveValue();
+                    $value = $formField->getSaveValue();
 
-                            if ($value === null || $value < -2147483647 || $value > 2147483647) {
-                                $formField->addValidationError(
-                                    new FormFieldValidationError(
-                                        'invalid',
-                                        'rp.event.startTime.error.invalid'
-                                    )
-                                );
-                            }
-                        }))
+                    if ($value === null || $value < -2147483647 || $value > 2147483647) {
+                        $formField->addValidationError(
+                            new FormFieldValidationError(
+                                'invalid',
+                                'rp.event.startTime.error.invalid'
+                            )
+                        );
+                    }
+                }))
                 ->addDependency(
                     NonEmptyFormFieldDependency::create('isFullDay')
-                    ->field($isFullDay)
+                        ->field($isFullDay)
                 ),
-                DateFormField::create('fEndTime')
+            DateFormField::create('fEndTime')
                 ->label('rp.event.endTime')
                 ->required()
                 ->value(TIME_NOW + 7200) // 2h
                 ->available($supportFullDay)
                 ->addValidator(new FormFieldValidator('uniqueness', function (DateFormField $formField) {
-                            /** @var DateFormField $startFormField */
-                            $startFormField = $formField->getDocument()->getNodeById('fStartTime');
-                            $startValue = $startFormField->getSaveValue();
+                    /** @var DateFormField $startFormField */
+                    $startFormField = $formField->getDocument()->getNodeById('fStartTime');
+                    $startValue = $startFormField->getSaveValue();
 
-                            $value = $formField->getSaveValue();
+                    $value = $formField->getSaveValue();
 
-                            if ($value === null || $value < $startValue || $value > 2147483647) {
-                                $formField->addValidationError(
-                                    new FormFieldValidationError(
-                                        'invalid',
-                                        'rp.event.endTime.error.invalid'
-                                    )
-                                );
-                            } else if ($value - $startValue > RP_CALENDAR_MAX_EVENT_LENGTH * 86400) {
-                                $formField->addValidationError(
-                                    new FormFieldValidationError(
-                                        'tooLong',
-                                        'rp.event.endTime.error.tooLong'
-                                    )
-                                );
-                            }
-                        }))
+                    if ($value === null || $value < $startValue || $value > 2147483647) {
+                        $formField->addValidationError(
+                            new FormFieldValidationError(
+                                'invalid',
+                                'rp.event.endTime.error.invalid'
+                            )
+                        );
+                    } else if ($value - $startValue > RP_CALENDAR_MAX_EVENT_LENGTH * 86400) {
+                        $formField->addValidationError(
+                            new FormFieldValidationError(
+                                'tooLong',
+                                'rp.event.endTime.error.tooLong'
+                            )
+                        );
+                    }
+                }))
                 ->addDependency(
                     NonEmptyFormFieldDependency::create('isFullDay')
-                    ->field($isFullDay)
+                        ->field($isFullDay)
                 ),
         ]);
 
@@ -285,29 +285,29 @@ abstract class AbstractEventController implements IEventController
 
                     if ($fullDay->getSaveValue()) {
                         $st = \DateTime::createFromFormat(
-                                DateFormField::DATE_FORMAT,
-                                $startTime->getValue(),
-                                new \DateTimeZone('UTC')
+                            DateFormField::DATE_FORMAT,
+                            $startTime->getValue(),
+                            new \DateTimeZone('UTC')
                         );
                         $st->setTime(0, 0);
 
                         $et = \DateTime::createFromFormat(
-                                DateFormField::DATE_FORMAT,
-                                $endTime->getValue(),
-                                new \DateTimeZone('UTC')
+                            DateFormField::DATE_FORMAT,
+                            $endTime->getValue(),
+                            new \DateTimeZone('UTC')
                         );
                         $et->setTime(23, 59);
                     } else {
                         $st = \DateTime::createFromFormat(
-                                DateFormField::TIME_FORMAT,
-                                $startTime->getValue(),
-                                new \DateTimeZone('UTC')
+                            DateFormField::TIME_FORMAT,
+                            $startTime->getValue(),
+                            new \DateTimeZone('UTC')
                         );
 
                         $et = \DateTime::createFromFormat(
-                                DateFormField::TIME_FORMAT,
-                                $endTime->getValue(),
-                                new \DateTimeZone('UTC')
+                            DateFormField::TIME_FORMAT,
+                            $endTime->getValue(),
+                            new \DateTimeZone('UTC')
                         );
 
                         $st->setTimezone(WCF::getUser()->getTimeZone());
@@ -336,10 +336,8 @@ abstract class AbstractEventController implements IEventController
      */
     public function getIcon(?int $size = null): string
     {
-        $iconSize = '';
-        if ($size) $iconSize = 'icon' . $size;
-
-        return '<span class="icon ' . $iconSize . ' fa-calendar-o"></span>';
+        $icon = FontAwesomeIcon::fromValues('calendar');
+        return $icon->toHtml($size ?? 16);
     }
 
     /**

@@ -4,9 +4,27 @@
 {capture assign='contentHeaderNavigation'}
 	<li>
 		<ul class="buttonGroup">
-			{if $month->getPreviousMonth()->getYear() > 1969}<li><a href="{link controller='Calendar' application='rp' year=$month->getPreviousMonth()->getYear() month=$month->getPreviousMonth()->getMonth()}{/link}" class="button jsTooltip" title="{lang}wcf.date.month.{@$month->getPreviousMonth()->getName()}{/lang} {@$month->getPreviousMonth()->getYear()}"><span class="icon icon16 fa-chevron-left"></span> <span class="invisible">{lang}wcf.date.month.{@$month->getPreviousMonth()->getName()}{/lang} {@$month->getPreviousMonth()->getYear()}</span></a></li>{/if}
-			<li><a href="{link controller='Calendar' application='rp'}{/link}" class="button jsTooltip" title="{lang}wcf.date.month.{@$currentMonth->getName()}{/lang} {@$currentMonth->getYear()}">{lang}rp.calendar.today{/lang}</a></li>
-			{if $month->getNextMonth()->getYear() < 2038}<li><a href="{link controller='Calendar' application='rp' year=$month->getNextMonth()->getYear() month=$month->getNextMonth()->getMonth()}{/link}" class="button jsTooltip" title="{lang}wcf.date.month.{@$month->getNextMonth()->getName()}{/lang} {@$month->getNextMonth()->getYear()}"><span class="icon icon16 fa-chevron-right"></span> <span class="invisible">{lang}wcf.date.month.{@$month->getNextMonth()->getName()}{/lang} {@$month->getNextMonth()->getYear()}</span></a></li>{/if}
+			{if $month->getPreviousMonth()->getYear() > 1969}
+                <li>
+                    <a href="{link controller='Calendar' application='rp' year=$month->getPreviousMonth()->getYear() month=$month->getPreviousMonth()->getMonth()}{/link}" class="button jsTooltip" title="{lang}wcf.date.month.{@$month->getPreviousMonth()->getName()}{/lang} {@$month->getPreviousMonth()->getYear()}">
+                        {icon name='chevron-left'} 
+                        <span class="invisible">{lang}wcf.date.month.{@$month->getPreviousMonth()->getName()}{/lang} {@$month->getPreviousMonth()->getYear()}</span>
+                    </a>
+                </li>
+            {/if}
+			<li>
+                <a href="{link controller='Calendar' application='rp'}{/link}" class="button jsTooltip" title="{lang}wcf.date.month.{@$currentMonth->getName()}{/lang} {@$currentMonth->getYear()}">
+                    {lang}rp.calendar.today{/lang}
+                </a>
+            </li>
+			{if $month->getNextMonth()->getYear() < 2038}
+                <li>
+                    <a href="{link controller='Calendar' application='rp' year=$month->getNextMonth()->getYear() month=$month->getNextMonth()->getMonth()}{/link}" class="button jsTooltip" title="{lang}wcf.date.month.{@$month->getNextMonth()->getName()}{/lang} {@$month->getNextMonth()->getYear()}">
+                        {icon name='chevron-right'} 
+                        <span class="invisible">{lang}wcf.date.month.{@$month->getNextMonth()->getName()}{/lang} {@$month->getNextMonth()->getYear()}</span>
+                    </a>
+                </li>
+            {/if}
 		</ul>
 	</li>
 {/capture}
@@ -20,7 +38,10 @@
 {/capture}
 
 {capture assign='contentInteractionButtons'}
-    <a href="#" class="markAllAsReadButton contentInteractionButton button small jsOnly"><span class="icon icon16 fa-check"></span> <span>{lang}wcf.global.button.markAllAsRead{/lang}</span></a>
+    <a href="#" class="markAllAsReadButton contentInteractionButton button small jsOnly">
+        {icon name='check'}
+        <span>{lang}wcf.global.button.markAllAsRead{/lang}</span>
+    </a>
 {/capture}
 
 {include file='header'}
@@ -54,9 +75,13 @@
                                     {@$event->getBackgroundColor()}>
                                     {if !$event->cssMultipleEvent || ($event->cssMultipleEvent != 'rpEventStart' && $day->isFirstDayOfWeek()) || $event->cssMultipleEvent == 'rpEventStart'}
                                         {if $event->getController()->isExpired()}
-                                            <span class="icon icon16 fa-lock rpEventExpired jsTooltip" title="{lang}rp.event.expired{/lang}"{@$event->getFrontColor()}></span>
+                                            <span class="rpEventExpired jsTooltip" title="{lang}rp.event.expired{/lang}"{@$event->getFrontColor()}>
+                                                {icon name='lock'}
+                                            </span>
                                         {elseif $event->getController()->hasLogin()}
-                                            <span class="icon icon16 fa-clock-o rpEventLogin jsTooltip" title="{lang}rp.event.login{/lang}"{@$event->getFrontColor()}></span>
+                                            <span class="rpEventLogin jsTooltip" title="{lang}rp.event.login{/lang}"{@$event->getFrontColor()}>
+                                                {icon name='clock'}
+                                            </span>
                                         {elseif $event->getController()->getIcon(16)}
                                             {@$event->getController()->getIcon(16)}
                                         {/if}
@@ -89,7 +114,12 @@
             <ul>
                 {content}
                     {if $__wcf->user->userID && $__wcf->session->getPermission('user.rp.canCreateEvent')}
-                        <li><a href="#" class="button buttonPrimary jsButtonEventAdd"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.event.add{/lang}</span></a></li>
+                        <li>
+                            <a href="#" class="button buttonPrimary jsButtonEventAdd">
+                                {icon name='plus'}
+                                <span>{lang}rp.event.add{/lang}</span>
+                            </a>
+                        </li>
                     {/if}
                     
 					{event name='contentFooterNavigation'}

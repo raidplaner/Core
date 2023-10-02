@@ -7,7 +7,12 @@
 
     <nav class="contentHeaderNavigation">
         <ul>
-            <li><a href="{link controller='RankList' application='rp'}{/link}" class="button"><span class="icon icon16 fa-list"></span> <span>{lang}rp.acp.rank.list{/lang}</span></a></li>
+            <li>
+                <a href="{link controller='RankList' application='rp'}{/link}" class="button">
+                    {icon name='list'} 
+                    <span>{lang}rp.acp.rank.list{/lang}</span>
+                </a>
+            </li>
 
             {event name='contentHeaderNavigation'}
         </ul>

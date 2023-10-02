@@ -75,7 +75,7 @@ define(["require", "exports", "tslib", "WoltLabSuite/Core/Ajax", "WoltLabSuite/C
             button.className = "button buttonPrimary";
             button.addEventListener("click", () => this._click());
             button.innerHTML = `
-            <span class="icon icon16 ${icon}"></span>
+            {icon name='${icon}'}
             <span>${title}</span>
         `;
             return button;

@@ -14,7 +14,12 @@
 
 {capture assign='contentHeaderNavigation'}
     {if $__wcf->getSession()->getPermission('mod.rp.canAddRaid')}
-        <li><a href="{link controller='RaidAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.raid.add{/lang}</span></a></li>
+        <li>
+            <a href="{link controller='RaidAdd' application='rp'}{/link}" class="button">
+                {icon name='plus'}
+                <span>{lang}rp.raid.add{/lang}</span>
+            </a>
+        </li>
     {/if}
 {/capture}
 
@@ -46,12 +51,13 @@
                                                     <li class="jsObjectActionObject" data-object-id="{@$raid->getObjectID()}">
                                                         <a>
                                                             <span 
-                                                                class="icon icon16 fa-times jsObjectAction pointer" 
+                                                                class="jsObjectAction pointer" 
                                                                 data-object-action="delete" 
                                                                 data-confirm-message="{lang objectTitle=$raid->getTitle() __encode=true}wcf.button.delete.confirmMessage{/lang}"
                                                                 data-object-action-success="reload" 
                                                                 data-tooltip="{lang}wcf.global.button.delete{/lang}" 
                                                                 aria-label="{lang}wcf.global.button.delete{/lang}">
+                                                                {icon name='times'}
                                                             </span>
                                                         </a>
                                                     </li>

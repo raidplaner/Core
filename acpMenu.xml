@@ -3,7 +3,7 @@
     <import>
         <!-- rp -->
         <acpmenuitem name="rp.acp.menu.link.rp">
-            <icon>fa-gamepad</icon>
+            <icon>gamepad</icon>
         </acpmenuitem>
         
         <!-- character -->
@@ -21,13 +21,13 @@
             <controller>rp\acp\form\CharacterSearchForm</controller>
             <parent>rp.acp.menu.link.character.list</parent>
             <permissions>admin.rp.canSearchCharacter</permissions>
-            <icon>fa-search</icon>
+            <icon>search</icon>
         </acpmenuitem>
         <acpmenuitem name="rp.acp.menu.link.character.add">
             <controller>rp\acp\form\CharacterAddForm</controller>
             <parent>rp.acp.menu.link.character.list</parent>
             <permissions>admin.rp.canAddCharacter</permissions>
-            <icon>fa-plus</icon>
+            <icon>plus</icon>
         </acpmenuitem>
         <acpmenuitem name="rp.acp.menu.link.rank.list">
             <controller>rp\acp\page\RankListPage</controller>
@@ -41,7 +41,7 @@
             <parent>rp.acp.menu.link.rank.list</parent>
             <options>rp_enable_rank</options>
             <permissions>admin.rp.canManageRank</permissions>
-            <icon>fa-plus</icon>
+            <icon>plus</icon>
         </acpmenuitem>
         
         <!-- calendar -->
@@ -59,7 +59,7 @@
             <controller>rp\acp\form\EventLegendAddForm</controller>
             <parent>rp.acp.menu.link.event.legend.list</parent>
             <permissions>admin.rp.canManageEventLegend</permissions>
-            <icon>fa-plus</icon>
+            <icon>plus</icon>
         </acpmenuitem>
         
         <!-- event -->
@@ -77,7 +77,7 @@
             <controller>rp\acp\form\RaidEventAddForm</controller>
             <parent>rp.acp.menu.link.raid.event.list</parent>
             <permissions>admin.rp.canManageRaidEvent</permissions>
-            <icon>fa-plus</icon>
+            <icon>plus</icon>
         </acpmenuitem>
         <acpmenuitem name="rp.acp.menu.link.point.account.list">
             <controller>rp\acp\page\PointAccountListPage</controller>
@@ -91,7 +91,7 @@
             <parent>rp.acp.menu.link.point.account.list</parent>
             <permissions>admin.rp.canManagePointAccount</permissions>
             <options>rp_item_account_easymode_disabled</options>
-            <icon>fa-plus</icon>
+            <icon>plus</icon>
         </acpmenuitem>
     </import>
 </data>

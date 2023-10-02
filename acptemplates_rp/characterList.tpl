@@ -31,7 +31,10 @@
                 {content}
                     {if $__wcf->session->getPermission('admin.rp.canSearchCharacter')}
                         <li class="dropdown">
-                            <a class="button dropdownToggle"><span class="icon icon16 fa-search"></span> <span>{lang}rp.acp.character.quickSearch{/lang}</span></a>
+                            <a class="button dropdownToggle">
+                                {icon name='search'}
+                                <span>{lang}rp.acp.character.quickSearch{/lang}</span>
+                            </a>
                             <ul class="dropdownMenu">
 								<li><a href="{link controller='CharacterQuickSearch' application='rp'}mode=disabled{/link}">{lang}rp.acp.character.quickSearch.disabled{/lang}</a></li>
                             </ul>
@@ -39,7 +42,12 @@
                     {/if}
                 
                     {if $__wcf->session->getPermission('admin.rp.canAddCharacter')}
-                        <li><a href="{link controller='CharacterAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.character.add{/lang}</span></a></li>
+                        <li>
+                            <a href="{link controller='CharacterAdd' application='rp'}{/link}" class="button">
+                                {icon name='plus'}
+                                <span>{lang}rp.character.add{/lang}</span>
+                            </a>
+                        </li>
                     {/if}
 
                     {event name='contentHeaderNavigation'}
@@ -79,7 +87,10 @@
                         <td class="columnMark"><input type="checkbox" class="jsClipboardItem" data-object-id="{@$character->characterID}"></td>
                         <td class="columnIcon">
                             <div class="dropdown" id="characterListDropdown{@$character->characterID}">
-                                <a href="#" class="dropdownToggle button small"><span class="icon icon16 fa-pencil"></span> <span>{lang}wcf.global.button.edit{/lang}</span></a>
+                                <a href="#" class="dropdownToggle button small">
+                                    {icon name='pencil'}
+                                    <span>{lang}wcf.global.button.edit{/lang}</span>
+                                </a>
                                 
                                 <ul class="dropdownMenu">
                                     {event name='dropdownItems'}
@@ -115,7 +126,9 @@
                             
                             <span class="characterStatusIcons">
                                 {if $character->isDisabled}
-                                    <span class="icon icon16 fa-power-off jsTooltip jsCharacterDisabled" title="{lang}rp.acp.character.isDisabled{/lang}"></span>
+                                    <span class="jsTooltip jsCharacterDisabled" title="{lang}rp.acp.character.isDisabled{/lang}">
+                                        {icon name='power-off'}
+                                    </span>
                                 {/if}
                             </span>
                             
@@ -145,7 +158,12 @@
                 <ul>
                     {content}
                         {if $__wcf->session->getPermission('admin.rp.canAddCharacter')}
-                            <li><a href="{link controller='CharacterAdd' application='rp'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}rp.character.add{/lang}</span></a></li>
+                            <li>
+                                <a href="{link controller='CharacterAdd' application='rp'}{/link}" class="button">
+                                    {icon name='plus'} 
+                                    <span>{lang}rp.character.add{/lang}</span>
+                                </a>
+                            </li>
                         {/if}
                     
                         {event name='contentFooterNavigation'}

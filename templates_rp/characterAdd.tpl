@@ -7,7 +7,7 @@
     {if $action == 'edit' && !$formObject->isPrimary}
         <li>
             <a href="{link controller='CharacterSetAsMain' application='rp' id=$formObject->characterID}{/link}" class="button">
-                <span class="icon icon16 fa-refresh"></span> 
+                {icon name='refresh'}
                 <span>{lang}rp.character.setAsMain{/lang}</span>
             </a>
         </li>
@@ -15,7 +15,7 @@
 
     <li>
         <a href="{link controller='CharactersList' application='rp'}{/link}" class="button">
-            <span class="icon icon16 fa-list"></span> 
+            {icon name='list'}
             <span>{lang}rp.character.list{/lang}</span>
         </a>
     </li>

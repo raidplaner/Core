@@ -55,7 +55,12 @@
 				<ul class="userProfileButtonContainer">
 					{content}
 						{if $character->userID == $__wcf->user->userID}
-                            <li><a href="{link controller='CharacterEdit' application='rp' object=$character}{/link}" class="button"><span class="icon icon16 fa-pencil"></span> <span>{lang}rp.character.edit{/lang}</span></a></li>
+                            <li>
+                                <a href="{link controller='CharacterEdit' application='rp' object=$character}{/link}" class="button">
+                                    {icon name='pencil'}
+                                    <span>{lang}rp.character.edit{/lang}</span>
+                                </a>
+                            </li>
                         {/if}
 						
 						{event name='contentHeaderNavigation'}
