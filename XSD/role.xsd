@@ -37,10 +37,10 @@
     <xs:complexType name="role_import">
         <xs:complexContent>
             <xs:extension base="role_delete">
-                <xs:choice maxOccurs="unbounded">
+                <xs:all>
                     <xs:element name="game" type="daries_varchar" minOccurs="1" />
                     <xs:element name="icon" type="daries_varchar_nullable" minOccurs="0" />
-                </xs:choice>
+                </xs:all>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

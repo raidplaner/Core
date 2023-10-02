@@ -37,13 +37,13 @@
     <xs:complexType name="classification_import">
         <xs:complexContent>
             <xs:extension base="classification_delete">
-                <xs:choice maxOccurs="unbounded">
+                <xs:all>
                     <xs:element name="factions" type="xs:string" minOccurs="0" />
                     <xs:element name="game" type="daries_varchar" minOccurs="1" />
                     <xs:element name="icon" type="daries_varchar_nullable" minOccurs="0" />
                     <xs:element name="races" type="xs:string" minOccurs="0" />
                     <xs:element name="roles" type="xs:string" minOccurs="0" />
-                </xs:choice>
+                </xs:all>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
